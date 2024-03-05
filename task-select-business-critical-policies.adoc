@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-select-business-critical-policies.html 
+keywords: ransomware, ransomware protection, cyberstorage, cyber attack, cybersecurity, business critical data, policies 
+summary: 'Les politiques de données stratégiques identifient les données que vous considérez comme stratégiques pour votre entreprise. Une fois que vous avez défini ces règles et que vous les avez activées dans la protection BlueXP contre les ransomwares, le tableau de bord et d"autres panneaux ransomware reflètent les problèmes potentiels en fonction de vos données les plus importantes.' 
+---
+= Gérez les règles de données stratégiques de votre entreprise
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les politiques de données stratégiques identifient les données que vous considérez comme stratégiques pour votre entreprise. Une fois que vous avez défini ces règles et que vous les avez activées dans la protection BlueXP contre les ransomwares, le tableau de bord et d'autres panneaux ransomware reflètent les problèmes potentiels en fonction de vos données les plus importantes.
+
+Les autres volets qui utilisent les stratégies que vous définissez comme critiques comprennent :
+
+* Actions recommandées
+* Panneau sur l'altération des données stratégiques
+* Panneau d'analyse des autorisations d'accès aux données critiques de l'entreprise
+
+
+Vous pouvez afficher la page _Business Critical Data Policies_ en cliquant sur l'onglet *Business Critical Data*. Vous pouvez également afficher cette page à partir d'un lien sur les autres panneaux répertoriés ci-dessus.
+
+image:screenshot_critical_data_policies.png["Une capture d'écran montrant la page données critiques de l'entreprise avec une règle sélectionnée comme critique de l'entreprise."]
+
+La page données stratégiques affiche toutes les règles qui ont été définies dans la classification BlueXP. Cela inclut toutes les règles prédéfinies et toutes les règles personnalisées créées par votre organisation. https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html["En savoir plus sur les règles de classification de BlueXP"^].
+
+
+
+== Sélectionnez des règles qui identifient les données stratégiques de votre entreprise
+
+Si vous savez que l'une des stratégies existantes fournit des résultats permettant d'identifier les données critiques pour votre entreprise, vous pouvez sélectionner cette stratégie. Déplacez simplement le curseur dans la colonne « est critique » vers la droite, comme indiqué pour la dernière police dans la figure ci-dessus. Cette action indique au service de protection contre les ransomwares BlueXP d'utiliser les données renvoyées par cette règle dans certains panneaux de ransomware.
+
+Vous pouvez supprimer les règles de votre choix en tant que « critique pour l'entreprise » en déplaçant le curseur vers la position d'arrêt. Cette règle n'est pas supprimée, il l'empêche d'être utilisé par le service de protection contre les ransomwares BlueXP.
+
+Si vous n'êtes pas sûr qu'une stratégie de classification BlueXP existante renvoie des résultats qui identifient des données critiques pour votre organisation, vous pouvez cliquer sur le bouton *Investigation* pour afficher les filtres utilisés pour interroger vos données et voir les résultats de la stratégie dans la page d'investigation de classification BlueXP.
+
+Si vous recherchez une stratégie spécifique ou des types de règles spécifiques, vous pouvez trier, filtrer et rechercher sur cette page.
+
+
+
+== Gestion des règles
+
+Cliquez sur *Créer une stratégie* pour créer de nouvelles stratégies qui identifient les données stratégiques de l'entreprise. Cette action vous amène à la page analyse de classification BlueXP pour vous permettre de créer la règle. https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#creating-custom-policies["En savoir plus sur la création de règles"^].
+
+Cliquez sur image:screenshot_horizontal_more_button.gif["bouton trois points"]> *Modifier la requête* pour une stratégie existante si vous souhaitez la modifier. La page enquête de classification BlueXP s'ouvre pour vous permettre de personnaliser les résultats à l'aide de filtres supplémentaires pour la règle. https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#editing-policies["En savoir plus sur la modification de stratégies"^].
+
+image:screenshot_add_edit_critical_data_policies.png["Capture d'écran affichant le bouton Créer une stratégie et le bouton Modifier la stratégie pour vous permettre de créer et de modifier des stratégies."]
+
+Notez que vous pouvez uniquement modifier les règles personnalisées. Vous ne pouvez pas modifier les règles prédéfinies fournies par la classification BlueXP.

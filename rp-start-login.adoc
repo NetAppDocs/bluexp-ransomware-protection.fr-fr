@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: rp-start-login.html 
+keywords: bluexp login, ransomware protection log in 
+summary: Commencez à utiliser la protection contre les ransomwares BlueXP en accédant au service de BlueXP. 
+---
+= Accédez à la protection BlueXP contre les ransomware
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media
+
+
+[role="lead"]
+Vous utilisez NetApp BlueXP pour vous connecter au service de protection contre les ransomwares BlueXP.
+
+Pour vous connecter à BlueXP, vous pouvez utiliser vos identifiants du site de support NetApp ou vous inscrire à une connexion au cloud NetApp à l'aide de votre e-mail et de votre mot de passe. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["En savoir plus sur la connexion"^].
+
+.Étapes
+. Ouvrez un navigateur Web et accédez au https://console.bluexp.netapp.com/["Console BlueXP"^].
++
+La page de connexion NetApp BlueXP s'affiche.
+
+. Connectez-vous à BlueXP.
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
++
+S'il s'agit de votre première connexion à ce service, la page d'accueil s'affiche.
+
++
+Sinon, le tableau de bord de protection BlueXP contre les ransomwares s'affiche.
+
++
+image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
+
+. Commencez à utiliser le service.
++
+** Si vous ne disposez pas d'un connecteur BlueXP ou que ce n'est pas le cas pour cette présentation, vous devrez peut-être contacter le support NetApp ou suivre les messages pour vous inscrire à cette présentation.
+** Si vous découvrez BlueXP et n'avez utilisé aucun connecteur, lorsque vous sélectionnez « * protection contre les ransomware * », un message s'affiche pour vous inscrire. Envoyez le formulaire. NetApp vous contactera au sujet de votre demande d'évaluation.
+** Si vous utilisez BlueXP avec un connecteur existant, lorsque vous sélectionnez "*protection contre les ransomware*", un message s'affiche pour vous inscrire.
+** Si vous participez déjà à l'aperçu, lorsque vous sélectionnez "*protection contre les ransomware*", vous pouvez continuer avec le service. Si vous ne l'avez pas déjà fait, vous devez sélectionner l'option *découvrir les charges de travail*.
+
+
+

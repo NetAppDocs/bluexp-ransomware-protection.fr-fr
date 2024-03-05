@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: rp-use-dashboard.html 
+keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
+summary: 'Le tableau de bord de protection contre les ransomwares BlueXP fournit des informations sur l"état de protection de vos workloads. Vous pouvez déterminer rapidement les charges de travail à risque ou protégées, les charges de travail impactées par un incident ou en cours de restauration, et évaluer l"étendue de la protection en examinant la quantité de stockage protégée ou en péril. Vous pouvez également utiliser le tableau de bord pour examiner les recommandations de protection et agir en conséquence.' 
+---
+= Consultez rapidement l'état des workloads à l'aide du tableau de bord
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le tableau de bord de protection contre les ransomwares BlueXP fournit des informations d'un coup d'œil sur l'état de la protection de vos workloads. Vous pouvez identifier rapidement les workloads à risque ou protégés, identifier les workloads impactés par un incident ou par la restauration, et évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou en péril.
+
+Vous pouvez également utiliser le tableau de bord pour examiner les recommandations de protection et agir en conséquence.
+
+
+
+== Vérifiez l'état du workload à l'aide du tableau de bord
+
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
++
+Après la découverte, le tableau de bord indique l'état de santé de la protection des données des workloads.
+
++
+image:screen-dashboard-recommended-actions-configure-backup-destinations.png["Page de tableau de bord"]
+
+. Dans chacun de ces volets, vous pouvez afficher et effectuer l'une des opérations suivantes :
++
+** *Protection des données de charge de travail* : cliquez sur *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la section link:rp-use-protect.html["Protégez les workloads"].
+** *Alertes et récupération des données de charge de travail* : cliquez *Afficher tout* pour voir les incidents actifs qui ont affecté votre charge de travail, sont prêts pour la récupération après que les incidents sont neutralisés ou sont en cours de récupération. Reportez-vous à la section link:rp-use-alert.html["Répondre à une alerte détectée"].
++
+Un incident est classé dans l'un des États suivants :
+
++
+*** Impacté (s'affiche sur la page alertes)
+*** Prêt pour la restauration (voir la page récupération)
+*** Récupération (s'affiche sur la page récupération)
+*** Échec de la restauration (s'affiche sur la page récupération)
+*** Récupéré (affiché sur la page récupération)
+
+
+** *Actions recommandées* : pour augmenter la protection, examinez chaque recommandation et cliquez sur *revoir et corriger*.
++
+Reportez-vous à la section link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Passez en revue les recommandations de protection sur le tableau de bord"] ou link:/rp-use-protect.html["Protégez les workloads"].
+
++
+Toutes les recommandations ajoutées depuis la dernière visite du tableau de bord sont indiquées par « Nouveau » pendant au moins 24 heures. Les actions sont répertoriées par ordre de priorité, les plus importantes étant affichées en haut. Vous pouvez examiner et agir sur chacun d'eux ou le rejeter.
+
++
+Le nombre total d'actions n'inclut pas les actions rejetées.
+
+** *Données sur la charge de travail* : surveiller les changements dans la couverture de protection au cours des 7 derniers jours.
+** *Sauvegardes de charge de travail* : surveillez les modifications des sauvegardes de charge de travail créées par le service qui ont échoué ou qui ont réussi au cours des 7 derniers jours.
+
+
+
+
+
+
+== Passez en revue les recommandations de protection sur le tableau de bord
+
+La protection contre les ransomwares BlueXP évalue la protection de vos workloads et recommande des mesures pour améliorer cette protection.
+
+Vous pouvez revoir une recommandation et agir sur celle-ci, ce qui fait passer l'état de la recommandation sur terminé. Ou, si vous voulez agir plus tard, vous pouvez le rejeter. Le rejet d'une action déplace la recommandation vers une liste d'actions rejetées, que vous pouvez examiner ultérieurement.
+
+Voici un échantillon des recommandations que le service offre.
+
+[cols="30,30,30"]
+|===
+| Recommandation | Description | Comment résoudre le problème 
+
+
+| Ajoutez une règle de protection contre les ransomwares | La charge de travail n'est actuellement pas protégée. | Attribuez une stratégie à la charge de travail.
+Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Configurer les destinations de sauvegarde | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
+Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
+Reportez-vous à la section link:rp-use-manage.html["Gérer les charges de travail"]. 
+
+
+| Renforcer la politique. | Certaines charges de travail ne bénéficient peut-être pas d'une protection suffisante. Renforcer la protection des charges de travail à l'aide d'une règle | Augmentez la conservation, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et plus encore.
+Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Protégez les workloads applicatifs stratégiques ou importants contre les ransomwares. | La page protéger affiche les charges de travail d'application critiques ou importantes (selon le niveau de priorité attribué) qui ne sont pas protégées. | Attribuez une règle à ces charges de travail.
+Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Protégez les workloads stratégiques ou importants de partage de fichiers contre les ransomwares. | La page protection affiche les charges de travail critiques ou importantes de type partage de fichiers ou datastore qui ne sont pas protégées. | Attribuez une stratégie à chacun des workloads.
+Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Passez en revue les nouvelles alertes | De nouvelles alertes existent. | Passez en revue les nouvelles alertes.
+Reportez-vous à la section link:rp-use-alert.html["Répondez à la détection d'une alerte par ransomware"]. 
+|===
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Dans le volet actions recommandées, sélectionnez une recommandation et sélectionnez *revoir et corriger*.
+. Pour annuler l'action jusqu'à plus tard, sélectionnez *rejeter*.
++
+La recommandation disparaît de la liste des tâches et apparaît sur la liste des tâches rejetées.
+
++
+
+TIP: Vous pouvez ensuite modifier un élément rejeté en un élément à faire. Lorsque vous marquez un élément terminé ou que vous modifiez un élément rejeté en une action à faire, le nombre total d'actions augmente de 1.
+
+. Pour revoir les informations sur la façon d'agir sur les recommandations, sélectionnez l'icône *information*.
+

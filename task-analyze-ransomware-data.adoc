@@ -1,0 +1,345 @@
+---
+sidebar: sidebar 
+permalink: task-analyze-ransomware-data.html 
+keywords: personal data, personal information, sensitive, personal sensitive data, governance, data sense, ransomware, ransomware protection, cyberstorage, cyber attack, cybersecurity, permissions 
+summary: 'Utilisez le tableau de bord de protection contre les ransomwares BlueXP pour bénéficier d"une vue d"ensemble détaillée de la cyberrésilience de tous vos environnements de travail BlueXP et de sources de données supplémentaires. Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles.' 
+---
+= Gérez les recommandations en matière de cybersécurité pour vos sources de données
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez le tableau de bord de protection contre les ransomwares BlueXP pour obtenir un aperçu général de la cyberrésilience de tous vos environnements de travail BlueXP (anciennement Cloud Manager) et d'autres sources de données. Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles.
+
+Dans le menu de navigation de gauche BlueXP, sélectionnez *gouvernance > protection contre les attaques par ransomware*.
+
+image:screenshot_ransomware_dashboard.png["Capture d'écran du tableau de bord de protection contre les ransomwares BlueXP."]
+
+
+
+== Score de protection contre les ransomwares et actions recommandées
+
+Le panneau Score de protection contre les ransomwares vous permet de découvrir facilement comment résilience de vos données face à une attaque par ransomware. Il s'agit d'une agrégation de toutes les actions recommandées pour améliorer la sécurité des données et la résilience informatique. Ce panneau fonctionne conjointement avec le panneau actions recommandées. Le panneau Score de protection contre les attaques par ransomware comporte deux parties :
+
+* Score global de protection de vos données (protection à 0 à 100 %).
++
+La note est basée sur un calcul pondéré de toutes les recommandations possibles.
+
+* Combien d'actions recommandées sont disponibles pour élever votre protection à 100% - si vous mettez en œuvre les recommandations.
++
+Les trois types d'actions recommandées sont conformes à la https://www.ftc.gov/business-guidance/small-businesses/cybersecurity/nist-framework["Cadre NIST pour la cybersécurité"^]:
+
++
+** Protéger
+** Détection
+** Reprise après incident
+
+
+
+
+image:screenshot_ransomware_protection_score1.png["Capture d'écran affichant le panneau Score de protection contre les attaques par ransomware et le panneau actions recommandées."]
+
+Dans cet exemple de page, sept actions sont recommandées pour la catégorie "protéger". La première recommandation est pertinente pour 258 dossiers.
+
+Ce panneau prend en charge les environnements de travail et les sources de données qui ont été ajoutées à la classification BlueXP.
+
+Notez que des recommandations s'appliquent par source de données. Ainsi, si la même recommandation concerne 3 sources de données, elle sera comptée comme 3 recommandations.
+
+Vous pouvez cliquer sur image:button_down_caret.png["bouton flèche vers le bas"] Pour développer chaque action recommandée, comme indiqué ci-dessous.
+
+image:screenshot_ransomware_rec_actions_expanded.png["Capture d'écran indiquant le panneau actions recommandées développée pour afficher le total des actions par source de données."]
+
+Pour afficher la liste détaillée des données qui ont été identifiées comme ayant une action recommandée, cliquez sur le bouton *Investigation* et vous serez redirigé vers la page d'enquête de classification BlueXP avec la liste de tous les fichiers qui répondent aux critères de l'action recommandée.
+
+Ensuite, vous pouvez décider si vous voulez appliquer l'action recommandée sur tous ces fichiers, ou sur seulement certains d'entre eux.
+
+Après avoir corrigé l'action recommandée, la prochaine actualisation du panneau Score de protection contre les attaques par ransomware (toutes les 5 minutes) ajuste le nombre pour le score. Vous pouvez également cliquer sur le bouton *Re-Scan* pour mettre à jour la page maintenant.
+
+
+
+=== Liste des actions recommandées
+
+Il s'agit des actions recommandées actuellement suivies et des solutions suggérées.
+
+[cols="25,40,35"]
+|===
+| Action recommandée | Description | Solution possible 
+
+
+| Réduisez les autorisations pour les éléments X sensibles avec des autorisations larges | Les fichiers sensibles ayant des autorisations ouvertes se trouvent dans vos sources de données selon la classification BlueXP. Il s'agit notamment de toutes les données sensibles (données personnelles et données personnelles sensibles) qui disposent d'autorisations « ouvertes à l'entreprise » ou « publiques ». | Cliquez sur le bouton *Investigation* pour chaque source de données et vous serez redirigé vers la page d'enquête de classification BlueXP où vous pourrez afficher tous les fichiers sensibles à risque et prendre des mesures supplémentaires pour réduire ce risque. Cela inclut la manière de réduire les autorisations générales sur ces fichiers. 
+
+
+| Déplacez X éléments sensibles de y sources de données non protégées vers des emplacements sécurisés | Les données sensibles ont été trouvées sur des sources de données non protégées par la classification BlueXP ; il s'agit d'emplacements où le logiciel de protection contre les ransomwares ne peut pas protéger les données. Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d'entreprise. Cette action recommandée vous permet d'identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les données sensibles *SONT* autorisées à être stockées. | Vous pouvez utiliser la classification BlueXP pour déplacer rapidement ces fichiers vers une source de données mieux protégée. Vous utiliserez la fonctionnalité de classification BlueXP pour https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Déplacer les fichiers source vers un partage NFS"^]. 
+
+
+| Le patch X ouvre les examens de sécurité des variables à travers les sources de données Y. | Des règles CVE non corrigées (vulnérabilités et expositions courantes) ont été trouvées sur vos systèmes ONTAP et/ou Cloud Volumes ONTAP sur site. Ces problèmes sont identifiés uniquement si le produit BlueXP Digital Advisor (anciennement Active IQ Digital Advisor) est intégré à vos systèmes de stockage. Il s'agit de vulnérabilités connues sur les systèmes de stockage NetApp dont des correctifs sont disponibles pour résoudre le problème CVE. Les PE NetApp sont répertoriés sur le https://security.netapp.com/advisory/["Page sécurité du produit"^]. | Cliquez sur le bouton *Digital Advisor* pour chaque source de données et vous serez redirigé vers la page _Security Vulnerabilities_ dans le conseiller digital BlueXP. Vous y trouverez les détails sur les variables d'évaluation des variables ouvertes et l'action recommandée pour résoudre chaque CVE. Souvent, la solution consiste à mettre à niveau le logiciel ONTAP du système. https://docs.netapp.com/us-en/active-iq/task_increase_protection_against_hackers_and_Ransomware_attacks.html["En savoir plus sur la page failles de sécurité"]. 
+
+
+| Configurez vos données stratégiques | Vous n'avez pas défini vos stratégies de données stratégiques dans la page Configuration des données stratégiques de l'entreprise. Vous devez identifier ce que vous considérez comme une donnée stratégique afin d'attirer votre attention sur d'éventuels problèmes d'attaque par ransomware. | Cliquez sur le bouton image:button_down_caret.png["bouton flèche vers le bas"] Pour développer la recommandation, puis cliquez sur le lien pour ouvrir la page Configuration des données stratégiques pour l'entreprise. Vous pouvez ensuite sélectionner les règles qui définissent les données stratégiques de votre entreprise. link:task-select-business-critical-policies.html["En savoir plus sur la configuration et la sélection des règles de données stratégiques"]. 
+
+
+| Sauvegardez X fichiers stratégiques dans y sources de données | Cette étape permet d'identifier le niveau de sauvegarde de vos catégories de données les plus importantes dans le cloud public ou privé à l'aide de la sauvegarde et de la restauration BlueXP. La recommandation n'affiche les recommandations que si vous avez défini vos données stratégiques. C'est important si vous devez restaurer vos données en raison d'une attaque par ransomware. Cette recommandation identifie uniquement les environnements de travail ONTAP et Cloud Volumes ONTAP sur site. | Cliquez sur le bouton image:button_down_caret.png["bouton flèche vers le bas"] Pour développer la recommandation, puis cliquez sur le bouton *Backup* pour chaque source de données et vous serez redirigé vers le service de sauvegarde et de restauration BlueXP. Vous pouvez y activer la sauvegarde sur les volumes nécessaires. 
+
+
+| Activez les configurations de cyberstockage pour X sources de données  a| 
+Cette recommandation indique si six fonctionnalités ONTAP qui aident à sécuriser les données sont activées ou désactivées. Tous les éléments doivent être activés. Les éléments sont :
+
+* Snapshots : vous devez créer des copies Snapshot de vos volumes afin de pouvoir restaurer les données de volume si nécessaire. https://docs.netapp.com/us-en/ontap/concepts/snapshot-copies-concept.html["En savoir plus >>"^].
+* FPolicy : vous devez capturer les données pour pouvoir surveiller les opérations de fichiers au cas où vous auriez besoin de savoir qui a modifié les fichiers. https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["En savoir plus >>"^].
+* SnapMirror : vous devez créer des copies de vos volumes sur le stockage secondaire afin de pouvoir restaurer les données de volume si nécessaire. https://docs.netapp.com/us-en/ontap/task_dp_configure_mirror.html["En savoir plus >>"^].
+* MAV : la vérification multiadministrateur doit être activée pour que certaines opérations, telles que la suppression de volumes, ne puissent être exécutées qu'après approbation des administrateurs. https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html["En savoir plus >>"^].
+* ARP : la protection anti-ransomware autonome (intégrée contre les ransomware) est activée pour que le système puisse détecter les tentatives de ransomware et y répondre automatiquement. https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["En savoir plus >>"^].
+* Version - vous devez exécuter la version la plus récente du logiciel ONTAP pour des performances et une sécurité optimales. En savoir plus sur https://docs.netapp.com/us-en/ontap/upgrade/index.html["Systèmes ONTAP sur site"^] et pour https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Systèmes Cloud Volumes ONTAP"^].
+
+| Pour plus d'informations sur l'activation de ces six fonctionnalités ONTAP, reportez-vous aux liens de la colonne précédente. 
+|===
+
+
+== Carte de résilience cybernétique
+
+La carte de résilience Cyber est la zone principale du tableau de bord. Il vous permet de visualiser visuellement tous vos environnements de travail et toutes vos sources de données et d'afficher les informations pertinentes relatives à la résilience cybernétique.
+
+image:screenshot_ransomware_cyber_map.png["Copie d'écran du schéma de résilience cybernétique du tableau de bord de protection contre les ransomware BlueXP."]
+
+La carte se compose de trois parties :
+
+Panneau gauche:: Affiche une liste d'alertes pour lesquelles le service surveille toutes vos sources de données. Il indique également le numéro de chaque alerte particulière active dans votre environnement. La présence d'un grand nombre d'un type d'alerte peut être une bonne raison d'essayer de résoudre ces alertes en premier.
+Panneau central:: Affiche toutes vos sources de données, services et Active Directory dans un format graphique. Les environnements sains ont un indicateur vert et les environnements qui ont des alertes ont un indicateur rouge.
+Panneau droit:: Après avoir cliqué sur une source de données dotée d'un indicateur rouge, ce panneau affiche les alertes pour cette source de données et fournit des recommandations pour résoudre l'alerte. Les alertes sont triées de manière à ce que les alertes les plus récentes soient répertoriées en premier. De nombreuses recommandations vous conduisent à un autre service BlueXP où vous pouvez résoudre le problème.
+
+
+Il s'agit des alertes et des corrections proposées actuellement suivies.
+
+[cols="25,40,35"]
+|===
+| Alerte | Description | Résolution 
+
+
+| Taux de cryptage de données élevés détectés | Une augmentation anormale du pourcentage de fichiers cryptés ou de fichiers corrompus s'est produite dans la source de données. Cela signifie qu'au cours des 7 derniers jours, le pourcentage de fichiers cryptés a augmenté de plus de 20 %. Par exemple, si 50 % de vos fichiers sont cryptés, puis un jour plus tard ce nombre augmente à 60 %, vous verrez cette alerte. | Cliquez sur le lien pour lancer le https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Page d'enquête de classification BlueXP"^]. Vous pouvez y sélectionner les filtres pour les _Working Environment_ et _Category (crypté et corrompu)_ spécifiques pour afficher la liste de tous les fichiers cryptés et corrompus. 
+
+
+| Des données sensibles avec des autorisations larges détectées | Des données sensibles sont trouvées dans les fichiers et le niveau d'autorisation d'accès est trop élevé dans une source de données. | Cliquez sur le lien pour lancer le https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html["Page d'enquête de classification BlueXP"^]. Vous pouvez y sélectionner les filtres pour les fichiers _Working Environment_, _Sensitivity Level (Sensitivity Level (Sensitive Personal)_ et _Open permissions_ spécifiques pour afficher la liste des fichiers ayant ce problème. 
+
+
+| Un ou plusieurs volumes ne sont pas sauvegardés à l'aide des fonctionnalités de sauvegarde et de restauration BlueXP | Certains volumes de l'environnement de travail ne sont pas protégés à l'aide de https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^]. | Cliquez sur le lien pour lancer la sauvegarde et la restauration BlueXP, puis identifiez les volumes qui ne sont pas sauvegardés dans l'environnement de travail, puis décidez si vous souhaitez activer les sauvegardes sur ces volumes. 
+
+
+| Un ou plusieurs référentiels (volumes, compartiments, etc.) de vos sources de données ne sont pas analysés par la classification BlueXP | Certaines données de vos sources de données ne sont pas analysées à l'aide de https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classification BlueXP"^] afin d'identifier les problèmes de conformité et de confidentialité, et de trouver des opportunités d'optimisation. | Cliquez sur le lien pour lancer la classification BlueXP et activer l'analyse et le mappage des éléments qui ne sont pas analysés. 
+
+
+| L'anti-ransomwares intégré n'est pas actif pour tous les volumes | Certains volumes du système ONTAP sur site ne disposent pas de la https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Fonctionnalité NetApp anti-ransomware"^] activé. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+
+
+| La version ONTAP n'est pas mise à jour | La version du logiciel ONTAP installée sur vos clusters n'est pas conforme aux recommandations de la https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["Guide NetApp de renforcement de la sécurité des systèmes ONTAP"^]. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+
+
+| Les snapshots ne sont pas configurés pour tous les volumes | Certains volumes de l'environnement de travail ne sont pas protégés en créant des snapshots de volume. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+
+
+| L'audit des opérations de fichiers n'est pas activé pour tous les SVM | Certains ordinateurs virtuels de stockage de l'environnement de travail ne disposent pas d'un audit du système de fichiers activé. Il est recommandé de suivre les actions des utilisateurs sur vos fichiers. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous pouvez déterminer si vous devez activer l'audit NAS sur vos SVM. 
+|===
+
+
+== Incidents d'attaque par ransomware détectés sur vos systèmes
+
+Les incidents d'attaques par ransomware détectés sur vos systèmes gérés s'affichent sous forme d'alertes dans le panneau _ransomware incidents_. Cela inclut les événements de chiffrement, les extensions de fichiers suspects, les attaques par ransomware et les activités malveillantes. Le panneau affiche le type d'incident et indique si des actions automatiques ont été exécutées pour tenter de résoudre le problème. Par exemple, une copie Snapshot d'un volume peut être générée et envoyée dans le cloud.
+
+image:screenshot_ransomware_incidents.png["Capture d'écran du panneau attaques par ransomware."]
+
+Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["En savoir plus sur la protection autonome contre les ransomwares ONTAP"^].
+
+Vous pouvez cliquer sur image:button_down_caret.png["bouton flèche vers le bas"] pour développer un incident afin d'afficher le nombre de fichiers chiffrés identifiés dans le volume suspect, les types d'extensions de fichier et le moment de l'attaque.
+
+image:screenshot_ransomware_incidents_expanded.png["Capture d'écran du panneau incidents ransomware développée pour afficher les actions automatiques de vos volumes."]
+
+Vous pouvez cliquer sur le bouton *Recover* si vous souhaitez tenter de vous remettre de l'attaque par ransomware. Ceci vous amène au tableau de bord BlueXP protection anti-ransomware Recovery où vous pouvez remplacer le volume par une ancienne copie Snapshot qui n'a pas été affectée par les ransomwares. link:task-ransomware-recovery.html["Voir comment utiliser le tableau de bord de récupération"].
+
+.Prérequis
+* Vous devez disposer d'un cluster ONTAP sur site qui exécute ONTAP 9.11 ou version ultérieure.
+* La licence *anti_ransomware* (ONTAP 9.11.1 +) doit être installée sur au moins un nœud du cluster.
+* ARP doit être activé pour chaque volume que vous souhaitez protéger. https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Découvrez comment activer la protection autonome contre les ransomwares"^].
+* Pendant 30 jours, la protection autonome contre les attaques par ransomware (ARP) de NetApp doit avoir été activée pendant une période d'apprentissage initiale (également appelée « exécution à sec ») avant de basculer vers le « mode actif », ce qui lui permet d'évaluer les caractéristiques de la charge de travail et de signaler de façon adéquate les attaques par ransomware suspectes.
+
+
+
+
+== Données répertoriées par les fichiers chiffrés
+
+Le panneau _Encrypted Files_ affiche les 4 principales sources de données avec le pourcentage le plus élevé de fichiers cryptés au fil du temps. Il s'agit généralement d'éléments protégés par un mot de passe. Pour ce faire, il compare les taux de cryptage au cours des 7 derniers jours afin de voir quelles sources de données ont une augmentation supérieure à 20 %. Une augmentation de ce montant pourrait signifier que des attaques par ransomware sont déjà attaqués votre système.
+
+image:screenshot_ransomware_encrypt_files.png["Capture d'écran du graphique de fichiers chiffré sur le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Cliquez sur une ligne correspondant à l'une des sources de données pour afficher les résultats filtrés dans le https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Page d'enquête de classification BlueXP"^] pour que vous puissiez approfondir vos recherches.
+
+
+
+== Principaux référentiels de données en fonction de la sensibilité des données
+
+Le panneau _Top Data Repositories by Sensitivity Level_ répertorie jusqu'aux quatre principaux référentiels de données (environnements de travail et sources de données) contenant les éléments les plus sensibles. Le graphique à barres de chaque environnement de travail est divisé en :
+
+* Données non sensibles
+* Données personnelles
+* Données personnelles sensibles
+
+
+image:screenshot_ransomware_sensitivity.png["Capture d'écran du graphique de sensibilité des données du tableau de bord de protection BlueXP contre les ransomware."]
+
+Vous pouvez passer le curseur sur chaque section pour voir le nombre total d'éléments dans chaque catégorie.
+
+Cliquez sur chaque zone pour afficher les résultats filtrés dans le https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Page d'enquête de classification BlueXP"^] pour que vous puissiez approfondir vos recherches.
+
+
+
+== Contrôle des groupes d'administration de domaine
+
+Le panneau _Domain administrative Groups control_ affiche les utilisateurs les plus récents qui ont été ajoutés à vos groupes d'administrateurs de domaine pour vous permettre de voir si tous les utilisateurs doivent être autorisés dans ces groupes. Vous devez avoir https://docs.netapp.com/us-en/bluexp-classification/task-add-active-directory-datasense.html["A intégré Active Directory"^] Dans la classification BlueXP pour que ce panneau soit actif.
+
+image:screenshot_ransomware_domain_admin.png["Copie d'écran des utilisateurs ajoutés en tant qu'administrateurs de domaine dans le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Les groupes d'administration par défaut sont les suivants : « administrateurs », « administrateurs de domaine », « administrateurs d'entreprise », « administrateurs de clés d'entreprise » et « administrateurs clés ».
+
+
+
+== Données répertoriées par type d'autorisations ouvertes
+
+Le panneau _Open permissions_ affiche le pourcentage de chaque type d'autorisation existant pour tous les fichiers en cours de numérisation. Le graphique est issu de la classification BlueXP et présente les types d'autorisations suivants :
+
+* Aucun accès ouvert
+* Ouvert à l'organisation
+* Ouvert au public
+* Accès inconnu
+
+
+image:screenshot_ransomware_permissions.png["Capture d'écran du graphique de fichiers chiffré sur le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Vous pouvez passer le curseur sur chaque section pour afficher le pourcentage et le nombre total de fichiers dans chaque catégorie.
+
+Cliquez sur chaque zone pour afficher les résultats filtrés dans le https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Page d'enquête de classification BlueXP"^] pour que vous puissiez approfondir vos recherches.
+
+
+
+== Vulnérabilités du système de stockage
+
+Le panneau _vulnérabilités du système de stockage_ indique le nombre total de vulnérabilités de sécurité élevées, moyennes et faibles détectées par l'outil BlueXP Digital Advisor sur chacun de vos clusters ONTAP. Il est important d'immédiatement vérifier que vos systèmes ne sont pas ouverts aux attaques.
+
+.Prérequis
+* BlueXP Connector doit être installé sur votre site, non déployé auprès d'un fournisseur cloud.
+* Vous devez disposer d'un cluster ONTAP sur site
+* Le cluster est configuré dans BlueXP Digital Advisor
+* Vous devez avoir enregistré un compte NSS existant dans BlueXP pour afficher vos clusters et l'interface de BlueXP Digital Advisor.
+
+
+Notez que vous pouvez afficher le conseiller digital BlueXP directement en sélectionnant *Santé > conseiller digital* dans le menu BlueXP.
+
+image:screenshot_ransomware_vulnerabilities.png["Copie d'écran indiquant le nombre de vulnérabilités de sécurité de vos systèmes de stockage ONTAP."]
+
+Cliquez sur le type de vulnérabilité (élevée, moyenne, faible) que vous souhaitez afficher pour l'un de vos clusters et vous êtes redirigé vers la page failles de sécurité dans BlueXP Digital Advisor. (Vous trouverez plus d'informations sur cette page dans le https://docs.netapp.com/us-en/active-iq/task_increase_protection_against_hackers_and_Ransomware_attacks.html["Documentation BlueXP Digital Advisor"].) Vous pouvez visualiser les vulnérabilités, puis suivre l'action recommandée pour résoudre le problème. Souvent, la résolution est de mettre à niveau votre logiciel ONTAP à l'aide d'une version instantanée ou complète qui résout cette vulnérabilité.
+
+
+
+== Renforcement des systèmes ONTAP
+
+Le panneau _Harden Your ONTAP Environments_ indique l'état de certains paramètres de vos systèmes ONTAP qui suivent la sécurité de votre déploiement selon le https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["Guide NetApp de renforcement de la sécurité des systèmes ONTAP"^] et au https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Fonctionnalité ONTAP anti-ransomware"^] cela détecte et avertit de manière proactive des anomalies d'activité.
+
+Vous pouvez passer en revue les recommandations, puis décider comment vous souhaitez résoudre les problèmes potentiels. Suivez les étapes pour modifier les paramètres des clusters, reporter ces modifications à une autre fois ou ignorer la suggestion.
+
+Cet écran prend en charge à l'heure actuelle les systèmes ONTAP, Cloud Volumes ONTAP et Amazon FSX pour NetApp ONTAP.
+
+image:screenshot_ransomware_harden_ontap.png["Copie d'écran de l'état du renforcement de la sécurité ONTAP sur le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Les paramètres suivis sont les suivants :
+
+[cols="25,40,35"]
+|===
+| Objectif de durcissement | Description | Résolution 
+
+
+| ONTAP anti-ransomware | Pourcentage de volumes sur lesquels un anti-ransomware intégré est activé. Valide uniquement pour les systèmes ONTAP sur site.
+Une icône d'état verte indique que > 85 % des volumes sont activés. Le jaune indique que 40 à 85 % sont activés. Le rouge indique que < 40 % sont activés. | https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure["Découvrez comment activer la protection contre les ransomwares sur vos volumes"^] Utiliser System Manager. 
+
+
+| Audit NAS | Le nombre de machines virtuelles de stockage pour lesquelles l'audit du système de fichiers est activé.
+Une icône d'état verte indique que plus de 85 % des SVM ont activé l'audit du système de fichiers NAS. Le jaune indique que 40 à 85 % sont activés. Le rouge indique que < 40 % sont activés. | https://docs.netapp.com/us-en/ontap/nas-audit/auditing-events-concept.html["Découvrez comment activer l'audit NAS sur les SVM"^] Utilisation de l'interface de ligne de commande. 
+
+
+| Version ONTAP | La version du logiciel ONTAP installée sur vos clusters.
+Une icône d'état verte indique que la version est actuelle. Une icône jaune indique que le cluster est derrière une ou deux versions de correctif, ou une version mineure pour les systèmes sur site, ou derrière une version majeure pour Cloud Volumes ONTAP. Une icône rouge indique que le cluster est derrière 3 versions de correctif, 2 versions mineures, ou 1 version majeure pour les systèmes sur site, ou derrière 2 versions principales pour Cloud Volumes ONTAP. | https://docs.netapp.com/us-en/ontap/setup-upgrade/index.html["Découvrez la meilleure façon de mettre à niveau vos clusters sur site"^] ou https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Vos systèmes Cloud Volumes ONTAP"^]. 
+
+
+| Copies Snapshot | La fonctionnalité Snapshot est-elle activée sur les volumes de données, et le pourcentage de volumes disposant de copies Snapshot ?
+Une icône d'état verte indique que plus de 85 % des volumes sont dotés de snapshots. Le jaune indique que 40 à 85 % sont activés. Le rouge indique que < 40 % sont activés. | https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["Découvrez comment activer des copies Snapshot de volumes sur vos clusters sur site"^], ou https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["Sur vos systèmes Cloud Volumes ONTAP"^], ou https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#manage-snapshot-copies["Sur votre système FSX pour les systèmes ONTAP"^]. 
+|===
+
+
+== Statut des autorisations sur vos données stratégiques de l'entreprise
+
+Le panneau _analyse des autorisations de données critiques pour l'entreprise_ affiche l'état des autorisations des données essentielles pour votre entreprise. Cela vous permet d'évaluer rapidement l'efficacité de la protection de vos données stratégiques.
+
+image:screenshot_ransomware_critical_permissions.png["Capture d'écran de l'état des autorisations pour les données que vous gérez dans le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Ce panneau affiche les données en fonction des règles que vous avez sélectionnées dans la page Configuration des données stratégiques de l'entreprise. Elle affiche les données des deux stratégies stratégiques qui ont le plus de fichiers. Cliquez sur le lien pour afficher ou définir d'autres stratégies. link:task-select-business-critical-policies.html["En savoir plus sur la configuration et la sélection des règles de données stratégiques"].
+
+Le graphique montre l'analyse des autorisations de toutes les données qui répondent aux critères de vos politiques. Il indique le nombre d'éléments suivants :
+
+* Ouvert aux autorisations publiques : éléments que la classification BlueXP considère comme ouverts au public
+* Ouvert aux autorisations de l'entreprise : éléments que la classification BlueXP considère comme ouverts à l'entreprise
+* Pas d'autorisations ouvertes : éléments que la classification BlueXP considère comme n'ayant pas d'autorisations ouvertes
+* Autorisations inconnues : éléments que la classification BlueXP considère comme des autorisations inconnues
+
+
+Passez le curseur sur chaque barre des graphiques pour afficher le nombre de résultats dans chaque catégorie. Cliquez sur une barre et sur https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Page d'enquête de classification BlueXP"^] s'affiche pour vous permettre d'examiner plus en détail les éléments ayant des autorisations ouvertes et si vous devez apporter des ajustements aux autorisations de fichier.
+
+
+
+== État de sauvegarde des données stratégiques de votre entreprise
+
+Le panneau _État de la sauvegarde_ montre comment les différentes catégories de données sont protégées à l'aide de la sauvegarde et de la restauration BlueXP. Cela identifie la façon dont les catégories de données les plus importantes sont sauvegardées au cas où vous devez récupérer des données suite à une attaque par ransomware. Ces données représentent visuellement le nombre d'éléments d'une catégorie spécifique dans un environnement de travail sauvegardés.
+
+Ce panneau affiche uniquement les environnements de travail ONTAP et Cloud Volumes ONTAP sur site qui sont déjà sauvegardés à l'aide de la classification BlueXP pour la sauvegarde et la restauration _et_ analysés à l'aide de BlueXP.
+
+image:screenshot_ransomware_backups.png["Copie d'écran de l'état des sauvegardes pour les données que vous gérez dans le tableau de bord de protection contre les ransomwares BlueXP."]
+
+Dans un premier temps, ce volet affiche les données basées sur les catégories par défaut que nous avons sélectionnées. Mais vous pouvez sélectionner les catégories de données que vous souhaitez suivre ; par exemple, codes fichiers, contrats, etc. Consultez la liste complète de https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-categories["catégories"] Disponibles dans la classification BlueXP pour vos environnements de travail. Sélectionnez ensuite jusqu'à 4 catégories.
+
+Une fois les données remplies, passez le curseur de la souris sur chaque carré des graphiques pour afficher le nombre de fichiers sauvegardés dans la même catégorie dans l'environnement de travail. Un carré vert signifie que 85 % ou plus de vos fichiers sont en cours de sauvegarde. Un carré jaune signifie que 40 % à 85 % de vos fichiers sont en cours de sauvegarde. Un carré rouge signifie que 40 % ou moins de fichiers sont en cours de sauvegarde.
+
+Vous pouvez cliquer sur le bouton *Backup* à la fin de la ligne pour accéder à l'interface de sauvegarde et de restauration BlueXP et activer la sauvegarde sur d'autres volumes de chaque environnement de travail.
+
+
+
+== Les données de vos volumes protégés à l'aide de SnapLock
+
+La technologie NetApp SnapLock peut être utilisée sur vos volumes ONTAP pour conserver les fichiers sous une forme non modifiée à des fins réglementaires et de gouvernance. Vous pouvez allouer des fichiers et des copies Snapshot sur le stockage WORM (Write Once, Read Many) et définir des périodes de conservation pour ces données protégées WORM. https://docs.netapp.com/us-en/ontap/snaplock/snaplock-concept.html["En savoir plus sur SnapLock"].
+
+Le panneau _Critical Data immuabilité_ affiche le nombre d'éléments de vos environnements de travail protégés contre les modifications et suppressions sur le stockage WORM grâce à la technologie ONTAP SnapLock. Vous pouvez ainsi afficher la quantité de données dont la copie est inaltérable, pour mieux comprendre vos plans de sauvegarde et de restauration par rapport aux attaques par ransomware.
+
+.Prérequis
+* BlueXP Connector doit être installé sur votre site, non déployé auprès d'un fournisseur cloud.
+* Vous devez disposer d'un cluster ONTAP sur site
+* Une licence *SnapLock* doit être installée sur au moins un nœud du cluster
+
+
+image:screenshot_ransomware_data_snaplocked.png["Capture d'écran du panneau des fonctionnalités stratégiques d'altération des données de vos systèmes de stockage ONTAP"]
+
+Ce panneau affiche les données en fonction des règles que vous avez sélectionnées dans la page Configuration des données stratégiques de l'entreprise. Cliquez sur le lien pour afficher ou définir d'autres stratégies. link:task-select-business-critical-policies.html["En savoir plus sur la configuration et la sélection des règles de données stratégiques"].
+
+Le panneau affiche les informations suivantes pour les données correspondant aux stratégies sélectionnées :
+
+* Le nombre de fichiers stratégiques dans tous vos environnements de travail numérisés configurés pour utiliser SnapLock.
+* Le nombre de fichiers stratégiques dans tous vos environnements de travail analysés, à l'exception de ceux configurés pour SnapLock. Notez que certains de ces fichiers peuvent être protégés à l'aide d'un mécanisme autre que SnapLock.
+
+
+Les règles de classification BlueXP qui incluent les filtres suivants ne sont pas disponibles dans la liste déroulante des règles sélectionnées, car elles excluent les zones de recherche importantes :
+
+* Nom de l'environnement de travail
+* Type d'environnement de travail
+* Référentiel de stockage
+* Chemin des fichiers
+
+
+Ainsi, lorsque vous créez des stratégies pour afficher vos données stratégiques dans le panneau « conservation des données critiques », veillez à garder cela à l'esprit.

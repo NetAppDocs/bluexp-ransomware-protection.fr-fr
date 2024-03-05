@@ -1,0 +1,60 @@
+---
+indexpage:
+  title: Documentation sur la protection contre les ransomwares BlueXP
+  summary: La protection contre les ransomwares BlueXP est un service d'orchestration
+    pour la protection contre les ransomwares, la détection et la restauration. Pour
+    la version de prévisualisation, le service protège les charges de travail basées
+    sur les applications d'Oracle, de MySQL, de datastores de machines virtuelles,
+    et partages de fichiers sur le stockage NAS sur site et Cloud Volumes ONTAP dans
+    Amazon Web Services (à l'aide du protocole NFS) dans chacun des comptes BlueXP,
+    et sauvegarde les données dans un stockage cloud Amazon Web Services (AWS) ou
+    NetApp StorageGRID.
+  keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
+    web services, aws, storagegrid
+  lead: La protection contre les ransomwares BlueXP est un service d'orchestration
+    pour la protection contre les ransomwares, la détection et la restauration. Pour
+    la version de prévisualisation, le service protège les charges de travail basées
+    sur les applications d'Oracle, de MySQL, de datastores de machines virtuelles,
+    et partages de fichiers sur le stockage NAS sur site et Cloud Volumes ONTAP dans
+    Amazon Web Services (à l'aide du protocole NFS) dans chacun des comptes BlueXP,
+    et sauvegarde les données dans un stockage cloud Amazon Web Services (AWS) ou
+    NetApp StorageGRID.
+  tiles:
+  - title: Commencez
+    links:
+    - title: Découvrez la protection contre les ransomwares BlueXP
+      url: "/concept-ransomware-protection.html"
+    - title: Nouveautés de la protection contre les ransomwares BlueXP
+      url: "/whats-new.html"
+    - title: Prérequis
+      url: "/rp-start-prerequisites.html"
+    - title: Démarrage rapide
+      url: "/rp-start-quick-start.html"
+    - title: Configurez la protection BlueXP contre les ransomware
+      url: "/rp-start-setup.html"
+    - title: Accédez à la protection BlueXP contre les ransomware
+      url: "/rp-start-login.html"
+    - title: FAQ
+      url: "/rp-start-faq.html"
+  - title: Utilisez la protection BlueXP contre les ransomwares
+    links:
+    - title: Utilisez la présentation de la protection BlueXP contre les ransomwares
+      url: "/rp-use-overview.html"
+    - title: Découvrir les workloads
+      url: "/rp-use-discover.html"
+    - title: Consultez l'état des charges de travail à l'aide du tableau de bord
+      url: "/rp-use-dashboard.html"
+    - title: Protégez les workloads
+      url: "/rp-use-protect.html"
+    - title: Répondre à une alerte détectée
+      url: "/rp-use-alert.html"
+    - title: Récupérer après une attaque
+      url: "/rp-use-recover.html"
+  - title: Blogs et communauté
+    links:
+    - title: Communauté NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: Webinaires sur le cloud
+      url: https://bluexp.netapp.com/events
+    - title: Protection BlueXP contre les ransomwares sur NetApp.com
+      url: https://www.netapp.com/cyber-resilience/ransomware-protection/

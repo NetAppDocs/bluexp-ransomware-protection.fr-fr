@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: rp-start-discover.html 
+keywords: bluexp, ransomware protection, 
+summary: Pendant la découverte, la protection contre les ransomwares BlueXP analyse tous les volumes et fichiers des environnements de travail sur tous les connecteurs et comptes BlueXP. 
+---
+= Découvrez les workloads dans la solution de protection BlueXP contre les ransomwares
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour utiliser la protection contre les ransomwares BlueXP, le service doit d'abord détecter les données. Pendant la découverte, la protection contre les ransomwares BlueXP analyse tous les volumes et fichiers des environnements de travail sur tous les connecteurs BlueXP et espaces de travail d'un compte.
+
+
+NOTE: Pour la version préliminaire, la protection contre les ransomwares BlueXP évalue les applications MySQL, les applications Oracle, les datastores VMware et les partages de fichiers.
+
+Le service évalue le niveau de protection existant, notamment la protection de sauvegarde actuelle, les copies Snapshot et les options de protection anti-ransomware autonome de NetApp. En fonction de l'évaluation, le service recommande ensuite comment améliorer la protection contre les ransomwares.
+
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Sélectionnez *découvrir les charges de travail* sur la page d'accueil initiale.
++
+Le service détecte les données du workload et affiche l'état de santé de la protection des données dans le tableau de bord.
+
++
+image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
+
+

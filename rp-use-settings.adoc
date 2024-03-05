@@ -1,0 +1,147 @@
+---
+sidebar: sidebar 
+permalink: rp-use-settings.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware settings, backup destination 
+summary: Dans le service de protection contre les ransomwares BlueXP, vous pouvez configurer plusieurs options, notamment la destination de sauvegarde. 
+---
+= Configurez les paramètres de protection contre les ransomwares BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media
+
+
+[role="lead"]
+Vous pouvez configurer une destination de sauvegarde en consultant les recommandations du tableau de bord.
+
+
+
+== Ajouter une destination de sauvegarde
+
+La protection contre les ransomwares BlueXP permet d'identifier les workloads qui ne disposent pas encore de sauvegardes, ainsi que les workloads pour lesquels aucune destination de sauvegarde n'est attribuée.
+
+Pour protéger ces charges de travail, vous devez ajouter une destination de sauvegarde. Vous pouvez choisir l'une des destinations de sauvegarde suivantes :
+
+* NetApp StorageGRID
+* Services Web Amazon (AWS)
+
+
+Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée dans le tableau de bord.
+
+
+
+=== Accédez aux options de destination de sauvegarde à partir des actions recommandées du tableau de bord
+
+Le tableau de bord fournit de nombreuses recommandations. Il peut être recommandé de configurer une destination de sauvegarde.
+
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Vérifiez le volet actions recommandées du tableau de bord.
++
+image:screen-dashboard-recommended-actions-configure-backup-destinations.png["Page de tableau de bord"]
+
+. Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation de "configurer les destinations de sauvegarde".
+. Suivez les instructions en fonction du fournisseur de sauvegarde.
+
+
+
+
+== Ajouter StorageGRID comme destination de sauvegarde
+
+Pour configurer NetApp StorageGRID comme destination de sauvegarde, entrez les informations suivantes.
+
+. Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination-storagegrid.png["Page destinations de sauvegarde"]
+
+. Sélectionnez *StorageGRID*.
+. Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur* :
++
+*** Créez un nouveau compartiment ou utilisez votre propre compartiment pour stocker les sauvegardes.
+*** Nœud de passerelle StorageGRID Nom de domaine complet, port, clé d'accès StorageGRID et informations d'identification de clé secrète.
+
+
+** *Mise en réseau* : choisissez l'IPspace.
++
+*** L'IPspace est le cluster où résident les volumes à sauvegarder. Les LIF intercluster pour cet IPspace doivent avoir un accès Internet sortant.
+
+
+** *Verrou de sauvegarde* : choisissez si vous souhaitez que le service protège les sauvegardes contre la modification ou la suppression. Cette option utilise la technologie NetApp DataLock. Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon de 14 jours maximum.
++
+
+CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pouvez pas le modifier ultérieurement après la configuration de la destination de sauvegarde.
+
++
+*** *Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list-storagegrid.png["Page destinations de sauvegarde l'option Paramètres"]
+
+
+
+== Ajoutez Amazon Web Services comme destination de sauvegarde
+
+Pour configurer AWS en tant que destination de sauvegarde, entrez les informations suivantes.
+
+Pour en savoir plus sur la gestion de votre stockage AWS dans BlueXP, consultez la section https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Gestion de vos compartiments Amazon S3"^].
+
+. Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination-storagegrid.png["Page destinations de sauvegarde"]
+
+. Sélectionnez *Amazon Web Services*.
+. Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur* :
++
+*** Créez un nouveau compartiment, sélectionnez un compartiment existant s'il en existe déjà dans BlueXP, ou utilisez votre propre compartiment pour stocker les sauvegardes.
+*** Compte AWS, région, clé d'accès et clé secrète pour les identifiants AWS
++
+https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["Pour ajouter votre propre compartiment, reportez-vous à la section Ajout de compartiments S3"^].
+
+
+
+** *Encryption* : si vous créez un nouveau compartiment S3, entrez les informations de clé de chiffrement qui vous ont été fournies par le fournisseur. Si vous avez choisi un compartiment existant, les informations de chiffrement sont déjà disponibles.
++
+Les données qui se trouvent dans le compartiment sont chiffrées avec des clés gérées par AWS par défaut. Vous pouvez continuer à utiliser des clés gérées par AWS ou gérer le chiffrement de vos données à l'aide de vos propres clés.
+
+** *Mise en réseau* : choisissez l'IPspace et si vous allez utiliser un terminal privé.
++
+*** L'IPspace est le cluster où résident les volumes à sauvegarder. Les LIF intercluster pour cet IPspace doivent avoir un accès Internet sortant.
+*** Vous pouvez également choisir d'utiliser un terminal privé AWS (PrivateLink) que vous avez configuré précédemment.
++
+Pour utiliser AWS PrivateLink, reportez-vous à la section https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink pour Amazon S3"^].
+
+
+
+** *Verrou de sauvegarde* : choisissez si vous souhaitez que le service protège les sauvegardes contre la modification ou la suppression. Cette option utilise la technologie NetApp DataLock. Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon de 14 jours maximum.
++
+
+CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pouvez pas le modifier ultérieurement après la configuration de la destination de sauvegarde.
+
++
+*** *Mode gouvernance* : des utilisateurs spécifiques (avec l'autorisation s3:BypassGovernanceRetention) peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.
+*** *Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list-aws.png["Page destinations de sauvegarde l'option Paramètres"]

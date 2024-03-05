@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: rp-use-manage.html 
+keywords: ransomware protection workload name, ransomware protection 
+summary: 'Vous pouvez gérer les charges de travail en modifiant le nom de la charge de travail plutôt qu"en utilisant un nom par défaut, qui est plus risqué.' 
+---
+= Gérer les charges de travail
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez gérer des charges de travail en modifiant le nom de la charge de travail. L'utilisation d'un nom par défaut risque d'attaques par ransomware.
+
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Dans le menu, sélectionnez *protection*.
+. Sélectionnez une charge de travail, sélectionnez *actions* ... Sur la droite et sélectionnez *Modifier le nom de la charge de travail*.
+. Entrez le nouveau nom de la charge de travail et sélectionnez *Enregistrer*.
+

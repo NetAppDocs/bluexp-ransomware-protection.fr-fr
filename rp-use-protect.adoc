@@ -1,0 +1,273 @@
+---
+sidebar: sidebar 
+permalink: rp-use-protect.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies 
+summary: Vous pouvez protéger vos workloads contre les attaques par ransomware en définissant des règles à un workload dans la solution de protection BlueXP. 
+---
+= Protégez vos workloads contre les attaques par ransomware
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media
+
+
+[role="lead"]
+Vous pouvez protéger vos workloads contre les attaques par ransomware en effectuant les actions suivantes à l'aide de la protection BlueXP.
+
+* Afficher la protection des charges de travail existantes.
+* Attribuez une stratégie à une charge de travail.
++
+** Renforcez la protection des applications pour éviter les attaques de réinscriptibles futures.
+** Modifier la protection d'une charge de travail précédemment protégée dans le service RW.
+
+
+* Gérer les stratégies (uniquement celles que vous avez créées).
+
+
+La protection contre les ransomwares BlueXP attribue une priorité à chaque workload lors de la découverte. La priorité de la charge de travail est déterminée par les fréquences Snapshot suivantes :
+
+* *Critique* : copies Snapshot prises moins de 1 par heure (planning de protection extrêmement agressif)
+* *Important* : copies snapshot prises moins de 1 par jour mais supérieures à 1 par heure
+* *Standard*: Copies snapshot prises plus de 1 par jour
+
+
+*Etat de protection* : une charge de travail peut afficher l'un des États de protection suivants pour indiquer si une règle est appliquée ou non :
+
+* *Protégé* : une politique est appliquée.
+* *À risque*: Aucune politique n'est appliquée.
+* *En cours*: Une politique est appliquée mais pas encore terminée.
+* *Échec* : une politique est appliquée mais ne fonctionne pas.
+
+
+*Protection de la santé* : une charge de travail peut avoir l'un des États de protection de la santé suivants :
+
+* *Healthy* : la protection est activée pour la charge de travail et des sauvegardes et des copies Snapshot ont été effectuées.
+* *En cours* : des sauvegardes ou des copies Snapshot sont en cours.
+* *Échec* : les sauvegardes ou les copies Snapshot ne se sont pas terminées avec succès.
+* *N/A* : la protection n'est pas activée ou suffisante sur la charge de travail.
+
+
+
+
+== Découvrir la protection des workloads contre les ransomwares
+
+L'une des premières étapes de la protection des charges de travail consiste à consulter vos charges de travail actuelles et leur état de protection. Vous pouvez voir les types de charges de travail suivants :
+
+* Workloads de VM
+* Workloads de partage de fichiers
+
+
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Effectuez l'une des opérations suivantes :
++
+** Dans le volet protection des données du tableau de bord, sélectionnez *Afficher tout*.
+** Dans le menu, sélectionnez *protection*.
++
+image:screen-protection.png["Page protection"]
+
+
+
+. À partir de cette page, vous pouvez attribuer une stratégie à une charge de travail.
+
+
+
+
+== Attribuez une règle de protection prédéfinie aux charges de travail
+
+Pour vous aider à protéger vos données, vous pouvez attribuer une stratégie de protection contre les ransomwares à un ou plusieurs workloads. Vous pouvez également attribuer une stratégie différente à une charge de travail qui possède déjà une stratégie.
+
+La protection contre les ransomwares BlueXP inclut les règles prédéfinies suivantes qui correspondent à la priorité des workloads :
+
+[cols="10,15a,20,15,15,15"]
+|===
+| Niveau des règles | Snapshot | Fréquence | Conservation (jours) | Nombre de copies Snapshot | Nombre maximal de copies Snapshot 
+
+
+.4+| *Politique de la charge de travail critique*  a| 
+Quart horaire
+| Toutes les 15 minutes | 3 | 288 | 309 
+
+
+| Tous les jours  a| 
+Tous les jours
+| 14 | 14 | 309 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 309 
+
+
+| Tous les mois  a| 
+Tous les 30 jours
+| 60 | 2 | 309 
+
+
+.4+| *Politique importante de la charge de travail*  a| 
+Quart horaire
+| Toutes les 30 minutes | 3 | 144 | 165 
+
+
+| Tous les jours  a| 
+Tous les jours
+| 14 | 14 | 165 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 165 
+
+
+| Tous les mois  a| 
+Tous les 30 jours
+| 60 | 2 | 165 
+
+
+.4+| *Politique standard de la charge de travail*  a| 
+Quart horaire
+| Toutes les 60 minutes | 3 | 72 | 93 
+
+
+| Tous les jours  a| 
+Tous les jours
+| 14 | 14 | 93 
+
+
+| Hebdomadaire  a| 
+Toutes les 1 semaine
+| 35 | 5 | 93 
+
+
+| Tous les mois  a| 
+Tous les 30 jours
+| 60 | 2 | 93 
+|===
+.Étapes
+. À partir de la protection contre les ransomwares BlueXP, effectuez l'une des opérations suivantes :
++
+** Dans le volet protection des données du tableau de bord, sélectionnez *Afficher tout*.
+** Dans le volet recommandations du tableau de bord, sélectionnez une recommandation concernant l'attribution d'une stratégie et sélectionnez *revoir et corriger*.
+** Dans le menu, sélectionnez *protection*.
+
+
+. Dans la page protection, examinez les charges de travail et sélectionnez *Protect* en regard de la charge de travail.
++
+Une liste de stratégies s'affiche.
+
++
+image:screen-protect-policy-list.png["Liste des règles de protection"]
+
+. Pour afficher les détails, cliquez sur la flèche vers le bas d'une stratégie.
+. Sélectionnez une stratégie à affecter à la charge de travail.
+. Sélectionnez *protéger*.
+. Consultez le volet actions recommandées du tableau de bord, qui affiche l'action comme « terminée ».
+
+
+
+
+== Créer une règle de protection
+
+Si les règles existantes ne répondent pas aux besoins de votre entreprise, vous pouvez créer une nouvelle règle de protection. Vous pouvez créer votre propre stratégie à partir de zéro ou utiliser une stratégie existante et modifier ses paramètres.
+
+Vous pouvez créer des règles qui régissent le stockage primaire et secondaire et traiter le stockage primaire et secondaire de la même manière ou différemment.
+
+Vous pouvez créer une règle lorsque vous les gérez ou lors du processus d'attribution d'une règle à une charge de travail.
+
+.Étapes de création d'une stratégie pendant la gestion des règles
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
++
+image:screen-protection2.png["Page protection"]
+
+. Dans la page protection, sélectionnez *gérer les stratégies*.
++
+image:screen-protection-policy-manage2.png["Page gérer les stratégies"]
+
+. Sur la page gérer les stratégies, sélectionnez *Ajouter*.
++
+image:screen-protection-policy-add2.png["Ajouter une page de stratégie"]
+
+. Entrez un nouveau nom de stratégie ou un nom de stratégie existant pour le copier. Si vous entrez un nom de stratégie existant, choisissez la stratégie à copier.
++
+
+NOTE: Si vous choisissez de copier et de modifier une stratégie existante, vous devez modifier au moins un paramètre pour la rendre unique.
+
+. Pour chaque élément, sélectionnez la flèche vers le bas.
++
+** *Stockage primaire* :
++
+*** *Plannings de copie Snapshot* : choisissez les options de planification, le nombre de copies Snapshot à conserver et sélectionnez pour activer la planification.
+*** *Détection primaire* : permet au service de détecter les incidents de ransomware sur le stockage primaire.
+*** *Bloquer les extensions de fichier* : activez cette option pour que le bloc de service ait des extensions de fichier suspectes connues. Le service effectue des copies Snapshot automatisées lorsque la détection primaire est activée.
+
+
+** *Stockage secondaire* :
++
+*** *Plannings de sauvegarde* : choisissez des options de planification pour le stockage secondaire et activez le planning.
+*** *Détection secondaire* : activez le service pour détecter les incidents de ransomware sur le stockage secondaire.
+*** *Verrouiller les sauvegardes* : choisissez cette option pour empêcher la modification ou la suppression des sauvegardes sur le stockage secondaire pendant une certaine période. On parle également de _stockage immuable_.
++
+Cette option utilise la technologie NetApp DataLock, qui verrouille les sauvegardes sur le stockage secondaire. La période pendant laquelle le fichier de sauvegarde est verrouillé (et conservé) est appelée période de rétention de DataLock. Elle est basée sur la planification de la stratégie de sauvegarde et le paramètre de conservation que vous avez définis, ainsi qu'une mémoire tampon de 14 jours. Toute stratégie de rétention DataLock inférieure à 30 jours est arrondie à 30 jours minimum.
+
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Étapes de création d'une règle pendant l'affectation de la règle de protection
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
++
+image:screen-protection2.png["Page protection"]
+
+. Dans la page protection, sélectionnez *protéger*.
+. Dans la page protéger, sélectionnez *Ajouter*.
++
+image:screen-protection-policy-add2.png["Ajouter une page de stratégie"]
+
+. Terminez le processus, qui est identique à la création d'une stratégie à partir de la page gérer les stratégies.
+
+
+
+
+== Attribuez une autre stratégie de protection
+
+Vous pouvez choisir une autre règle de protection pour une charge de travail.
+Il est préférable d'augmenter la protection pour prévenir les attaques par ransomware à venir en modifiant la règle de protection.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
+. Dans la page protéger, sélectionnez une charge de travail et sélectionnez *protéger*.
+. Dans la page protéger, sélectionnez une stratégie différente pour la charge de travail.
+. Pour modifier les détails de la police, sélectionnez la flèche vers le bas à droite et modifiez les détails.
+. Sélectionnez *Enregistrer* pour terminer la modification.
+
+
+
+
+== Modifier une stratégie existante
+
+Vous ne pouvez modifier les détails d'une règle que si elle n'est pas associée à une charge de travail.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
+. Dans la page protection, sélectionnez *gérer les stratégies*.
+. Dans la page gérer les stratégies, sélectionnez l'option *actions* pour la stratégie que vous souhaitez modifier.
+. Dans le menu actions, sélectionnez *Modifier la stratégie*.
+. Modifiez les détails.
+. Sélectionnez *Enregistrer* pour terminer la modification.
+
+
+
+
+== Supprimer une règle
+
+Vous pouvez supprimer une règle de protection qui n'est actuellement associée à aucune charge de travail.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
+. Dans la page protection, sélectionnez *gérer les stratégies*.
+. Dans la page gérer les stratégies, sélectionnez l'option *actions* de la stratégie que vous souhaitez supprimer.
+. Dans le menu actions, sélectionnez *Supprimer la stratégie*.
+
