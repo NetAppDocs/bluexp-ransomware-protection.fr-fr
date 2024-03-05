@@ -41,7 +41,7 @@ indexpage:
     - title: Utilisez la présentation de la protection BlueXP contre les ransomwares
       url: "/rp-use-overview.html"
     - title: Découvrir les workloads
-      url: "/rp-use-discover.html"
+      url: "/rp-start-discover.html"
     - title: Consultez l'état des charges de travail à l'aide du tableau de bord
       url: "/rp-use-dashboard.html"
     - title: Protégez les workloads

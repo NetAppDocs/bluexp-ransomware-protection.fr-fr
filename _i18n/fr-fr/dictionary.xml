@@ -995,7 +995,6 @@ Actuellement, seuls les volumes NFS sont pris en charge. Les volumes iSCSI, les 
   <block id="0e645a267bfad78391e9ba300248f4c8" category="list-text">Récupéré (affiché sur la page récupération)</block>
   <block id="e1ea3e4666c6bde33b99591d46854931" category="list-text">*Actions recommandées* : pour augmenter la protection, examinez chaque recommandation et cliquez sur *revoir et corriger*.</block>
   <block id="c09a3324882f0d3d76129ae7f12aff7c" category="inline-link-macro">Passez en revue les recommandations de protection sur le tableau de bord</block>
-  <block id="feb5fd9ce95da4f8222794f85299750e" category="paragraph">Reportez-vous à la section <block ref="299e61f449baeabd97c5a478162c3894" category="inline-link-macro-rx"></block> ou <block ref="557266238ed2b5b635d754ed261b4581" category="inline-link-macro-rx"></block>.</block>
   <block id="101c0effc71862c6f6eba24e5b3882e0" category="paragraph">Toutes les recommandations ajoutées depuis la dernière visite du tableau de bord sont indiquées par « Nouveau » pendant au moins 24 heures. Les actions sont répertoriées par ordre de priorité, les plus importantes étant affichées en haut. Vous pouvez examiner et agir sur chacun d'eux ou le rejeter.</block>
   <block id="c1dd10de17e4b2e973884d48acfb02d0" category="paragraph">Le nombre total d'actions n'inclut pas les actions rejetées.</block>
   <block id="6308193424a44f7cb12ce18a9cc42d47" category="list-text">*Données sur la charge de travail* : surveiller les changements dans la couverture de protection au cours des 7 derniers jours.</block>
@@ -1010,9 +1009,6 @@ Actuellement, seuls les volumes NFS sont pris en charge. Les volumes iSCSI, les 
   <block id="2b23e67a81e3d69dd9c1a80ae371b5ac" category="cell">Attribuez une stratégie à la charge de travail.
 Reportez-vous à la section <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>.</block>
   <block id="e08278c8217792f95a8bc1de9c7a7d8b" category="cell">Le workload ne possède actuellement aucune destination de sauvegarde.</block>
-  <block id="827541907ba6873ebf770b4e03175c3f" category="cell">Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
-Reportez-vous à la section <block ref="9f0b279394cf25f00a608a52b5aed0b2" category="inline-link-macro-rx"></block>.
-Reportez-vous à la section <block ref="8451c8808a80959dcb5e4c769b7fcdd6" category="inline-link-macro-rx"></block>.</block>
   <block id="eebff47fbf7c92aeaa2f87d473eb32ec" category="cell">Renforcer la politique.</block>
   <block id="2efe8733dcd7aa63db28fb5caa6a3f8a" category="cell">Certaines charges de travail ne bénéficient peut-être pas d'une protection suffisante. Renforcer la protection des charges de travail à l'aide d'une règle</block>
   <block id="8db2e9b654cd93f28beeae96f827c30a" category="cell">Augmentez la conservation, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et plus encore.
@@ -1087,4 +1083,7 @@ Reportez-vous à la section <block ref="09d5258094b1e39cdb847e9d6bbdf0b2" catego
   <block id="dbc3399491cf278353174a615694d8f2" category="sidebar">Documents de protection contre les ransomwares BlueXP</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notes de mise à jour</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et support</block>
+  <block id="d05a1c13f5b6a28e222f869b1414a93a" category="paragraph">Reportez-vous à la section <block ref="299e61f449baeabd97c5a478162c3894" category="inline-link-macro-rx"></block> ou <block ref="2b2daeeb32402291362fa9fa843a5c7e" category="inline-link-macro-rx"></block>.</block>
+  <block id="600a7b18be10701f94a8ee3667ed9056" category="cell">Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
+Reportez-vous à la section <block ref="9f0b279394cf25f00a608a52b5aed0b2" category="inline-link-macro-rx"></block>.</block>
 </blocks>

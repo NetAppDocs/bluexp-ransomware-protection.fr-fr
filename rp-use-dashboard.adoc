@@ -45,7 +45,7 @@ Un incident est classé dans l'un des États suivants :
 
 ** *Actions recommandées* : pour augmenter la protection, examinez chaque recommandation et cliquez sur *revoir et corriger*.
 +
-Reportez-vous à la section link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Passez en revue les recommandations de protection sur le tableau de bord"] ou link:/rp-use-protect.html["Protégez les workloads"].
+Reportez-vous à la section link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Passez en revue les recommandations de protection sur le tableau de bord"] ou link:rp-use-protect.html["Protégez les workloads"].
 
 +
 Toutes les recommandations ajoutées depuis la dernière visite du tableau de bord sont indiquées par « Nouveau » pendant au moins 24 heures. Les actions sont répertoriées par ordre de priorité, les plus importantes étant affichées en haut. Vous pouvez examiner et agir sur chacun d'eux ou le rejeter.
@@ -79,8 +79,7 @@ Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads co
 
 
 | Configurer les destinations de sauvegarde | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
-Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
-Reportez-vous à la section link:rp-use-manage.html["Gérer les charges de travail"]. 
+Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
 
 
 | Renforcer la politique. | Certaines charges de travail ne bénéficient peut-être pas d'une protection suffisante. Renforcer la protection des charges de travail à l'aide d'une règle | Augmentez la conservation, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et plus encore.
