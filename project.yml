@@ -45,12 +45,7 @@ sidebar:
       url: "/rp-use-alert.html"
     - title: Évitez les attaques par ransomware
       url: "/rp-use-recover.html"
-  - title: Connaissances et support
-    entries:
-    - title: S'inscrire pour obtenir de l'aide
-      url: "/task-support-registration.html"
-    - title: Obtenez de l'aide
-      url: "/task-get-help.html"
+  - section: support
   - title: Mentions légales
     url: "/legal-notices.html"
 product-family:
