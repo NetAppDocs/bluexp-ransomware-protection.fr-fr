@@ -56,7 +56,7 @@ N'importe quel navigateur moderne fonctionnera.
 Oui, la protection contre les ransomware BlueXP découvre les calendriers Snapshot définis dans ONTAP.
 
 *Si vous avez défini une stratégie à l'aide de la protection contre les ransomware BlueXP, devez-vous apporter des modifications futures uniquement dans ce service ?*
-Non, vous pouvez modifier les règles à partir de n'importe quel service.
+Nous vous recommandons de modifier les règles à partir du service de protection contre les ransomwares BlueXP.
 
 
 
