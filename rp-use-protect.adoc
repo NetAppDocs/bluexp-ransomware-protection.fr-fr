@@ -26,8 +26,8 @@ Vous pouvez protéger vos workloads contre les attaques par ransomware en effect
 
 La protection contre les ransomwares BlueXP attribue une priorité à chaque workload lors de la découverte. La priorité de la charge de travail est déterminée par les fréquences Snapshot suivantes :
 
-* *Critique* : copies Snapshot prises moins de 1 par heure (planning de protection extrêmement agressif)
-* *Important* : copies snapshot prises moins de 1 par jour mais supérieures à 1 par heure
+* *Critique* : copies Snapshot effectuées plus d'un par heure (planning de protection extrêmement agressif)
+* *Important* : copies snapshot prises moins de 1 par heure mais supérieures à 1 par jour
 * *Standard*: Copies snapshot prises plus de 1 par jour
 
 

@@ -808,4 +808,6 @@ Nous vous recommandons de modifier les règles à partir du service de protectio
   <block id="9583d75cd4c629fc5e8bc18b167335c7" category="list-text">Un environnement de travail BlueXP avec le stockage sur site NetApp NAS</block>
   <block id="8bea151378448834f662f674981096f7" category="list-text">Un compte BlueXP avec au moins un connecteur actif connecté aux clusters ONTAP sur site. Tous les environnements source et de travail doivent se trouver sur le même compte BlueXP.</block>
   <block id="baea1fd040c528a3cf05517592d54383" category="list-text">Un compte utilisateur BlueXP avec des privilèges d'administrateur de compte pour la découverte des ressources</block>
+  <block id="1ad5d2b1df5750779a9e10432b0d7a7b" category="list-text">*Critique* : copies Snapshot effectuées plus d'un par heure (planning de protection extrêmement agressif)</block>
+  <block id="1adc4b459e7f50d96280424fb7e06709" category="list-text">*Important* : copies snapshot prises moins de 1 par heure mais supérieures à 1 par jour</block>
 </blocks>
