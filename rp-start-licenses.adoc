@@ -1,0 +1,208 @@
+---
+sidebar: sidebar 
+permalink: rp-start-licenses.html 
+keywords: bluexp license, ransomware protection license, netapp 
+summary: Commencez à utiliser la protection contre les ransomwares BlueXP en configurant vos licences. 
+---
+= Configurez les licences pour la protection BlueXP contre les ransomware
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media
+
+
+[role="lead"]
+Avec la protection contre les ransomwares BlueXP, vous pouvez utiliser différents plans de licence, notamment un essai gratuit, un abonnement avec paiement à l'utilisation ou l'utilisation de votre propre licence.
+
+Vous pouvez utiliser les types de licence suivants :
+
+* Inscrivez-vous pour bénéficier d'un essai gratuit de 90 jours.
+* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace.
+* BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
+
+
+Une fois que vous avez configuré votre modèle BYOL ou que vous avez acheté un abonnement PAYGO dans AWS, vous pouvez voir la licence dans l'onglet portefeuille digital BlueXP *licences de service de données* ou l'abonnement AWS actif dans l'onglet *abonnements* du portefeuille digital BlueXP.
+
+Une fois la version d'essai gratuite terminée, ou après expiration de la licence ou de l'abonnement AWS, vous pouvez toujours effectuer les opérations suivantes dans le service :
+
+* Consultez les workloads et l'état de vos workloads.
+* Supprimez toute ressource, telle qu'une charge de travail ou une règle.
+* Exécutez toutes les opérations planifiées qui ont été créées pendant la période d'essai ou sous la licence.
+
+
+
+
+== Essayez-le gratuitement pendant 90 jours
+
+Essayez la protection contre les ransomwares BlueXP pendant 90 jours gratuitement. Vous devez être administrateur de compte pour démarrer l'essai gratuit.
+
+
+NOTE: Aucune limite de capacité n'est appliquée pendant l'essai.
+
+Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez facturé qu'à la fin de la période d'essai de 90 jours. Pour continuer après l'essai de 90 jours, vous devez acheter une licence BYOL ou un abonnement PAYGO AWS.
+
+Pendant la période d'essai, vous disposez de toutes les fonctionnalités.
+
+.Étapes
+. Accédez au https://console.bluexp.netapp.com/["Console BlueXP"^].
+. Connectez-vous à BlueXP.
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
++
+S'il s'agit de votre première connexion à ce service, la page d'accueil s'affiche.
+
++
+image:screen-rp-landing.png["Copie d'écran de la page d'accueil pour la protection BlueXP contre les ransomware"]
+
+. Si vous n'avez pas encore ajouté de connecteur pour d'autres services, ajoutez-en un.
++
+Pour ajouter un connecteur, voir https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["En savoir plus sur les connecteurs"^].
+
+. Une fois que vous avez configuré un connecteur, sur la page d'accueil de la protection contre les ransomwares BlueXP, le bouton pour ajouter un connecteur change et vous permet d'essayer gratuitement. Sélectionnez *Démarrer essai gratuit*.
+. Consultez les informations sur l'essai gratuit et sélectionnez *allons-y*.
+
+
+*Une fois la période d'essai terminée, obtenez un abonnement ou une licence*
+
+Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via AWS Marketplace ou acheter une licence auprès de NetApp.
+
+<<Abonnez-vous sur AWS Marketplace>>
+<<Modèle BYOL (Bring Your Own License)>>
+
+
+
+== Abonnez-vous sur AWS Marketplace
+
+Dans cette procédure, vous découvrirez comment vous abonner directement à AWS Marketplace.
+
+.Étapes
+. Dans la solution de protection contre les ransomwares BlueXP, effectuez l'une des opérations suivantes :
++
+** Vous voyez un message indiquant que l'essai gratuit expire. Dans le message, sélectionnez *Afficher les modes de paiement*.
+** Cliquez sur l'avis *essai gratuit* en haut à droite et sélectionnez *Afficher les modes de paiement*.
++
+image:screen-license-payment-methods.png["Page méthodes de paiement de la protection contre les ransomwares BlueXP"]
+
+
+
+. Sur la page modes de paiement, sélectionnez *s'abonner à AWS Marketplace*.
+. Dans AWS Marketplace, sélectionnez *Afficher les options d'achat*.
+. Utilisez AWS Marketplace pour souscrire à la protection BlueXP contre les ransomwares.
+. Lorsque vous revenez à la protection contre les ransomwares BlueXP, un message indique que vous êtes abonné.
++
+
+NOTE: Vous recevez un e-mail qui inclut le numéro de série de la protection contre les ransomwares BlueXP et indique que la protection contre les ransomwares BlueXP est souscrite dans AWS Marketplace.
+
+. Retournez à la page BlueXP ransomware protection Payment Methods.
+. Ajoutez la licence à BlueXP en sélectionnant *Ajouter une licence à BlueXP*.
++
+Le service de portefeuille digital BlueXP affiche la page Ajouter une licence.
+
++
+image:screen-license-dw-add-license.png["Page Ajouter une licence du portefeuille digital BlueXP"]
+
+. Sur la page Ajouter une licence du portefeuille digital BlueXP, sélectionnez *entrer le numéro de série*, entrez le numéro de série inclus dans l'e-mail qui vous a été envoyé, puis sélectionnez *Ajouter une licence*.
+. Pour afficher les détails de licence dans le portefeuille digital BlueXP, dans le menu de navigation de gauche de BlueXP, sélectionnez *gouvernance* > *portefeuille digital*.
+. Pour afficher les informations d'abonnement, sélectionnez *abonnements*. Pour afficher les licences BYOL, sélectionnez *Data Services Licenses*.
++
+image:screen-dw-data-services-license.png["Portefeuille digital BlueXP page licences des services de données"]
+
+. Revenez à la protection BlueXP contre les ransomware. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
++
+Un message s'affiche pour indiquer qu'une licence a été ajoutée.
+
+
+
+
+
+== Modèle BYOL (Bring Your Own License)
+
+Si vous souhaitez utiliser votre propre licence (BYOL), vous devez acheter la licence, obtenir le fichier de licence NetApp (NLF) et ajouter la licence au portefeuille digital BlueXP.
+
+*Ajoutez votre fichier de licence au portefeuille digital BlueXP*
+
+Après avoir acheté votre licence de protection contre les ransomwares BlueXP auprès de votre ingénieur commercial NetApp, vous activez la licence en saisissant le numéro de série de la protection contre les ransomware BlueXP et les informations de compte du site de support NetApp (NSS).
+
+.Avant de commencer
+Vous devez disposer des informations suivantes avant de commencer :
+
+* Numéro de série de la protection anti-ransomware BlueXP
++
+Recherchez ce numéro dans votre numéro de commande ou contactez l'équipe chargée du compte pour obtenir ces informations.
+
+* ID de compte BlueXP
++
+Vous pouvez trouver votre ID de compte BlueXP en sélectionnant la liste déroulante *compte* en haut de BlueXP, puis en sélectionnant *gérer le compte* en regard de votre compte. Votre ID de compte se trouve dans l'onglet vue d'ensemble.
+
+
+
+.Étapes
+. Une fois la licence obtenue, retournez à la protection BlueXP contre les ransomware. Sélectionnez l'option *Afficher les modes de paiement* dans le coin supérieur droit. Ou, dans le message indiquant que l'essai gratuit expire, sélectionnez *s'abonner ou acheter une licence*.
+. Sélectionnez *Ajouter une licence à BlueXP*.
++
+Vous serez dirigé vers le portefeuille digital BlueXP.
+
+. Dans le portefeuille digital BlueXP, dans l'onglet *licences des services de données*, sélectionnez *Ajouter une licence*.
++
+image:screen-license-dw-add-license.png["Page Ajouter une licence du portefeuille digital BlueXP"]
+
+. Sur la page Ajouter une licence, entrez le numéro de série et les informations de compte sur le site de support NetApp.
++
+** Si vous disposez du numéro de série de licence BlueXP et que vous connaissez votre compte NSS, sélectionnez l'option *saisir le numéro de série* et entrez ces informations.
++
+Si votre compte sur le site de support NetApp n'est pas disponible dans la liste déroulante, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Ajoutez le compte NSS à BlueXP"^].
+
+** Si vous disposez du fichier de licence BlueXP (requis lorsqu'il est installé sur un site invisible), sélectionnez l'option *Upload License File* et suivez les invites pour joindre le fichier.
+
+
+. Sélectionnez *Ajouter licence*.
+
+
+.Résultat
+Le portefeuille digital BlueXP présente désormais la protection contre les ransomwares BlueXP avec une licence.
+
+
+
+== Mettez à jour votre licence BlueXP lorsqu'elle expire
+
+Si votre période de licence approche la date d'expiration ou si votre capacité sous licence atteint la limite, vous serez informé dans l'interface de protection contre les ransomwares BlueXP. Vous pouvez mettre à jour votre licence de protection BlueXP contre les ransomwares avant son expiration afin que vous puissiez accéder à vos données numérisées sans interruption.
+
+
+TIP: Ce message apparaît également dans le portefeuille digital BlueXP et dans https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Notifications"].
+
+.Étapes
+. Sélectionnez l'icône de chat dans le coin inférieur droit de BlueXP pour demander une extension de votre période ou de la capacité supplémentaire de votre licence pour le numéro de série spécifique. Vous pouvez également envoyer un e-mail pour demander une mise à jour de votre licence.
++
+Une fois que vous avez payé la licence et qu'elle est enregistrée sur le site de support NetApp, BlueXP met automatiquement à jour la licence dans le portefeuille digital BlueXP. La page des licences des services de données reflète le changement en 5 à 10 minutes.
+
+. Si BlueXP ne peut pas mettre à jour automatiquement la licence (par exemple, lorsqu'elle est installée sur un site sombre), vous devrez charger manuellement le fichier de licence.
++
+.. Vous pouvez obtenir le fichier de licence sur le site de support NetApp.
+.. Accédez au portefeuille digital BlueXP.
+.. Sélectionnez l'onglet *licences de services de données*, sélectionnez l'icône *actions ...* pour le numéro de série de service que vous mettez à jour, puis sélectionnez *mettre à jour la licence*.
+
+
+
+
+
+
+== Terminez l'essai gratuit
+
+Vous pouvez interrompre l'essai gratuit à tout moment ou attendre son expiration.
+
+.Étapes
+. Dans la protection contre les ransomware BlueXP, en haut à droite, sélectionnez *essai gratuit - Voir les détails*.
+. Dans la liste déroulante des détails, sélectionnez *Terminer l'essai gratuit*.
++
+image:screen-license-trial-end.png["Fin de la page d'essai gratuite"]
+
+. Si vous souhaitez supprimer toutes les données, cochez l'option *Supprimer les données* après la fin de l'essai gratuit.
++
+Ceci supprimera tous les plannings, plans de réplication, groupes de ressources, vCenters et sites. Les données d'audit, les journaux d'opérations et l'historique des tâches sont conservés jusqu'à la fin de la vie du produit.
+
++
+
+NOTE: Si vous mettez fin à l'essai gratuit sans qu'il soit demandé de supprimer les données et que vous n'achetez pas de licence ou d'abonnement, 60 jours après la fin de l'essai gratuit, la protection contre les ransomwares BlueXP supprime toutes vos données.
+
+. Saisissez « fin de l'essai » dans la zone de texte.
+. Sélectionnez *fin*.
+

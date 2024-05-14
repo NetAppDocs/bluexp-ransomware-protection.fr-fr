@@ -22,17 +22,18 @@ Cette FAQ peut vous aider si vous cherchez juste une réponse rapide à une ques
 Pour l'URL, dans un navigateur, entrez : https://console.bluexp.netapp.com/["https://console.bluexp.netapp.com/"^] Pour accéder à la console BlueXP.
 
 *Avez-vous besoin d'une licence pour utiliser la protection contre les ransomware BlueXP ?*
-Aucun fichier de licence NetApp n'est requis. La préversion de la protection contre les ransomware BlueXP elle-même ne nécessite aucune licence spéciale.  Toutes les licences d'aperçu sont des licences d'évaluation.
 
-La version préliminaire de ce service nécessite une licence du service de sauvegarde et de restauration BlueXP.
+Vous pouvez utiliser les types de licence suivants :
 
+* Inscrivez-vous pour bénéficier d'un essai gratuit de 90 jours.
+* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace.
+* BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
-TIP: Pour la version de prévisualisation, NetApp vous aide à configurer l'évaluation et les licences requises.
 
 *Comment activez-vous la protection contre les ransomware BlueXP ?*
 La protection contre les ransomwares BlueXP ne nécessite aucune activation. L'option de protection contre les ransomware est automatiquement activée dans le menu de navigation gauche de BlueXP.
 
-Pour obtenir la version préliminaire, vous devez vous inscrire ou contacter votre ingénieur commercial NetApp pour essayer ce service. Ensuite, lorsque vous utilisez le connecteur BlueXP, il inclut les fonctionnalités appropriées pour le service.
+Pour ce faire, vous devez vous inscrire ou contacter votre ingénieur commercial NetApp pour essayer ce service. Ensuite, lorsque vous utilisez le connecteur BlueXP, il inclut les fonctionnalités appropriées pour le service.
 
 **La protection BlueXP contre les ransomware est-elle disponible en modes standard, restreint et privé ?**
 Pour l'instant, la protection contre les ransomwares BlueXP n'est disponible qu'en mode standard. Restez à l'affût de tout.
@@ -66,20 +67,17 @@ Nous vous recommandons de modifier les règles à partir du service de protectio
 Une charge de travail inclut tous les volumes utilisés par une seule instance d'application. Par exemple, une instance de base de données Oracle déployée sur ora3.host.com peut avoir vol1 et vol2 pour ses données et ses journaux, respectivement. Ces volumes constituent ensemble la charge de travail de cette instance spécifique de l'instance Oracle DB.
 
 *Comment la protection par ransomware BlueXP hiérarchise-t-elle les données de workload ?*
-La priorité des données pour la version d'aperçu dépend des copies Snapshot effectuées et des sauvegardes planifiées.
+La priorité des données est déterminée par les copies Snapshot effectuées et les sauvegardes planifiées.
 
-La priorité de la charge de travail est déterminée par les fréquences Snapshot suivantes :
+La priorité de la charge de travail est déterminée par les fréquences Snapshot.
 
-* *Critique* : copies Snapshot prises moins de 1 par heure (planning de protection extrêmement agressif)
-* *Important* : copies snapshot prises moins de 1 par jour mais supérieures à 1 par heure
-* *Standard*: Copies snapshot prises plus de 1 par jour
-
+link:rp-use-protect.html["En savoir plus sur les priorités ou l'importance des charges de travail"].
 
 **Nouveau volume ajouté, mais n'apparaît pas encore**
 Si vous avez ajouté un volume à votre environnement, lancez de nouveau la découverte et appliquez des règles de protection pour protéger ce nouveau volume.
 
 **Le tableau de bord n'affiche pas toutes mes charges de travail. Qu'est-ce qui pourrait se passer?**
-Actuellement, seuls les volumes NFS sont pris en charge. Les volumes iSCSI, les volumes CIFS et les autres configurations non prises en charge sont filtrés et n'apparaissent pas dans le tableau de bord.
+Actuellement, seuls les volumes NFS et CIFS sont pris en charge. Les volumes iSCSI et les autres configurations non prises en charge sont filtrés et n'apparaissent pas dans le tableau de bord.
 
 
 

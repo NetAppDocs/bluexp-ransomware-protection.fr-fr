@@ -56,23 +56,9 @@ Révision https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-chec
 
 === Créez un connecteur dans BlueXP
 
-Contactez votre ingénieur commercial NetApp pour essayer ce service. Ensuite, lorsque vous utilisez le connecteur BlueXP, il inclut les fonctionnalités appropriées pour le service de protection contre les ransomware.
+Contactez votre ingénieur commercial NetApp pour essayer ou utiliser ce service. Ensuite, lorsque vous utilisez le connecteur BlueXP, il inclut les fonctionnalités appropriées pour le service de protection contre les ransomware.
 
 Pour créer un connecteur dans BlueXP avant d'utiliser le service, reportez-vous à la documentation BlueXP qui décrit https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Comment créer un connecteur BlueXP"^].
 
 
 NOTE: Si vous disposez de plusieurs connecteurs BlueXP, le service analyse les données entre tous les connecteurs au-delà de celui qui s'affiche actuellement dans l'interface utilisateur BlueXP. Ce service détecte tous les espaces de travail et tous les connecteurs associés à ce compte.
-
-
-
-=== Accédez à la protection BlueXP contre les ransomware
-
-Vous utilisez NetApp BlueXP pour vous connecter au service de protection contre les ransomwares BlueXP. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
-
-Pour plus de détails, reportez-vous à link:rp-start-login.html["Accédez à la protection BlueXP contre les ransomware"].
-
-
-
-=== Configurez les destinations de sauvegarde dans la protection contre les ransomwares BlueXP
-
-Utilisez l'option BlueXP ransomware protection backup destinations pour configurer les destinations de sauvegarde. Pour plus de détails, reportez-vous à link:rp-use-settings.html["Configurer les options de paramètres"].

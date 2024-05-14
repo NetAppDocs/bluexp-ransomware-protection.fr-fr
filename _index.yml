@@ -2,23 +2,21 @@
 indexpage:
   title: Documentation sur la protection contre les ransomwares BlueXP
   summary: La protection contre les ransomwares BlueXP est un service d'orchestration
-    pour la protection contre les ransomwares, la détection et la restauration. Pour
-    la version de prévisualisation, le service protège les charges de travail basées
-    sur les applications d'Oracle, de MySQL, de datastores de machines virtuelles,
-    et partages de fichiers sur le stockage NAS sur site et Cloud Volumes ONTAP dans
-    Amazon Web Services (à l'aide du protocole NFS) dans chacun des comptes BlueXP,
-    et sauvegarde les données dans un stockage cloud Amazon Web Services (AWS) ou
-    NetApp StorageGRID.
+    pour la protection contre les ransomwares, la détection et la restauration. Le
+    service protège les charges de travail basées sur les applications d'Oracle, de
+    MySQL, de datastores de machines virtuelles, et partages de fichiers sur le stockage
+    NAS sur site et Cloud Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles
+    NFS et CIFS) dans chacun des comptes BlueXP, et sauvegarde les données dans un
+    stockage cloud Amazon Web Services (AWS) ou NetApp StorageGRID.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid
   lead: La protection contre les ransomwares BlueXP est un service d'orchestration
-    pour la protection contre les ransomwares, la détection et la restauration. Pour
-    la version de prévisualisation, le service protège les charges de travail basées
-    sur les applications d'Oracle, de MySQL, de datastores de machines virtuelles,
-    et partages de fichiers sur le stockage NAS sur site et Cloud Volumes ONTAP dans
-    Amazon Web Services (à l'aide du protocole NFS) dans chacun des comptes BlueXP,
-    et sauvegarde les données dans un stockage cloud Amazon Web Services (AWS) ou
-    NetApp StorageGRID.
+    pour la protection contre les ransomwares, la détection et la restauration. Le
+    service protège les charges de travail basées sur les applications d'Oracle, de
+    MySQL, de datastores de machines virtuelles, et partages de fichiers sur le stockage
+    NAS sur site et Cloud Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles
+    NFS et CIFS) dans chacun des comptes BlueXP, et sauvegarde les données dans un
+    stockage cloud Amazon Web Services (AWS) ou NetApp StorageGRID.
   tiles:
   - title: Commencez
     links:
@@ -34,6 +32,9 @@ indexpage:
       url: "/rp-start-setup.html"
     - title: Accédez à la protection BlueXP contre les ransomware
       url: "/rp-start-login.html"
+    - title: Configurez les destinations de sauvegarde et activez la détection des
+        menaces
+      url: "/rp-use-settings.html"
     - title: FAQ
       url: "/rp-start-faq.html"
   - title: Utilisez la protection BlueXP contre les ransomwares

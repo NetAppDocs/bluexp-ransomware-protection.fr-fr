@@ -34,10 +34,13 @@ image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les rans
 
 . Commencez à utiliser le service.
 +
-** Si vous ne disposez pas d'un connecteur BlueXP ou que ce n'est pas le cas pour cette présentation, vous devrez peut-être contacter le support NetApp ou suivre les messages pour vous inscrire à cette présentation.
+** Si vous ne disposez pas d'un connecteur BlueXP ou si ce n'est pas le cas pour ce service, vous devrez peut-être contacter le support NetApp ou suivre les messages pour vous inscrire.
 ** Si vous découvrez BlueXP et n'avez utilisé aucun connecteur, lorsque vous sélectionnez « * protection contre les ransomware * », un message s'affiche pour vous inscrire. Envoyez le formulaire. NetApp vous contactera au sujet de votre demande d'évaluation.
 ** Si vous utilisez BlueXP avec un connecteur existant, lorsque vous sélectionnez "*protection contre les ransomware*", un message s'affiche pour vous inscrire.
-** Si vous participez déjà à l'aperçu, lorsque vous sélectionnez "*protection contre les ransomware*", vous pouvez continuer avec le service. Si vous ne l'avez pas déjà fait, vous devez sélectionner l'option *découvrir les charges de travail*.
 
+
+. Si vous ne l'avez pas déjà fait, sélectionnez l'option *découvrir les charges de travail*.
++
+Reportez-vous à la section link:rp-start-discover.html["Découvrir les workloads"].
 
 

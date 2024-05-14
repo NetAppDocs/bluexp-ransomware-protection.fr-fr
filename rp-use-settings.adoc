@@ -12,7 +12,9 @@ summary: Dans le service de protection contre les ransomwares BlueXP, vous pouve
 
 
 [role="lead"]
-Vous pouvez configurer une destination de sauvegarde en consultant les recommandations du tableau de bord.
+Vous pouvez configurer une destination de sauvegarde ou activer la détection des menaces en consultant les recommandations du tableau de bord.
+
+L'activation de la détection des menaces envoie automatiquement des données à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
 
 
 
@@ -38,7 +40,7 @@ Le tableau de bord fournit de nombreuses recommandations. Il peut être recomman
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 . Vérifiez le volet actions recommandées du tableau de bord.
 +
-image:screen-dashboard-recommended-actions-configure-backup-destinations.png["Page de tableau de bord"]
+image:screen-dashboard.png["Page de tableau de bord"]
 
 . Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation de "configurer les destinations de sauvegarde".
 . Suivez les instructions en fonction du fournisseur de sauvegarde.
@@ -46,7 +48,7 @@ image:screen-dashboard-recommended-actions-configure-backup-destinations.png["Pa
 
 
 
-== Ajouter StorageGRID comme destination de sauvegarde
+=== Ajouter StorageGRID comme destination de sauvegarde
 
 Pour configurer NetApp StorageGRID comme destination de sauvegarde, entrez les informations suivantes.
 
@@ -90,7 +92,7 @@ image:screen-settings-backup-destinations-list-storagegrid.png["Page destination
 
 
 
-== Ajoutez Amazon Web Services comme destination de sauvegarde
+=== Ajoutez Amazon Web Services comme destination de sauvegarde
 
 Pour configurer AWS en tant que destination de sauvegarde, entrez les informations suivantes.
 
@@ -145,3 +147,29 @@ CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintena
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
 image:screen-settings-backup-destinations-list-aws.png["Page destinations de sauvegarde l'option Paramètres"]
+
+
+
+== Activer la détection des menaces
+
+Vous pouvez envoyer automatiquement des données à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
+
+. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
+. Vérifiez le volet actions recommandées du tableau de bord.
+. Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation « Activer la détection des menaces ».
++
+La page Paramètres s'affiche.
+
++
+image:screen-settings-threat-detection2.png["Page Paramètres"]
+
+. Dans la page Paramètres, sélectionnez *Connect* dans le volet de détection des menaces.
++
+image:screen-settings-threat-detection-details.png["Activer la page de détails de détection des menaces"]
+
+. Entrez les détails du serveur SIEM pour activer la détection des menaces.
+. Sélectionnez *Activer*.
++
+Le volet de détection des menaces de la page Paramètres affiche « connecté ».
+
+

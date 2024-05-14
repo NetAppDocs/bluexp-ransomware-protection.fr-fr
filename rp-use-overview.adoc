@@ -22,9 +22,9 @@ Avec la protection BlueXP contre les ransomwares, vous pouvez consulter l'état 
 
 * link:rp-use-protect.html["Protégez les workloads"]:
 +
-** Attribuez une stratégie de protection contre les ransomwares à vos workloads.
+** Définissez une stratégie de protection contre les ransomwares pour vos workloads.
 ** Renforcez la protection de vos applications pour prévenir les attaques par ransomware futures.
-** Créez, modifiez ou supprimez une règle de protection.
+** Créer, modifier ou supprimer une stratégie de protection.
 
 
 * link:rp-use-alert.html["Répondez à la détection des attaques par ransomware potentielles"].
