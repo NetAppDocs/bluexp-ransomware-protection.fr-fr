@@ -40,11 +40,13 @@ Pour plus d'informations sur les licences, reportez-vous à la section link:conc
 
 NOTE: Si vous disposez de plusieurs connecteurs BlueXP, le service analyse les données entre tous les connecteurs au-delà de celui qui s'affiche actuellement dans l'interface utilisateur BlueXP.
 
-** Service de sauvegarde et de restauration BlueXP avec sauvegarde activée dans l'environnement de travail
-** Environnement de travail BlueXP avec le stockage sur site NetApp (utilisant les protocoles NAS ou CIFS)
 ** Un compte BlueXP avec au moins un connecteur actif connecté aux clusters ONTAP sur site. Tous les environnements source et de travail doivent se trouver sur le même compte BlueXP.
 ** Un compte utilisateur BlueXP avec des privilèges d'administrateur de compte pour la découverte des ressources
+** Environnement de travail BlueXP avec le stockage sur site NetApp (utilisant les protocoles NAS ou CIFS)
 ** https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Exigences standard de BlueXP"^]
 
 
 
+
+
+NOTE: Le service de sauvegarde et de restauration BlueXP n'a plus besoin d'être déjà activé dans l'environnement de travail. Le service de protection contre les ransomwares BlueXP permet de configurer une destination de sauvegarde via l'option Paramètres. Voir link:rp-use-settings.html["Configurer les paramètres"].
