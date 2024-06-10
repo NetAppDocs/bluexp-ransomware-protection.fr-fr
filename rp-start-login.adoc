@@ -27,17 +27,17 @@ La page de connexion NetApp BlueXP s'affiche.
 S'il s'agit de votre première connexion à ce service, la page d'accueil s'affiche.
 
 +
+image:screen-landing.png["Copie d'écran de la page d'accueil pour la protection BlueXP contre les ransomware"]
+
++
 Sinon, le tableau de bord de protection BlueXP contre les ransomwares s'affiche.
 
 +
 image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
 
-. Commencez à utiliser le service.
 +
-** Si vous ne disposez pas d'un connecteur BlueXP ou si ce n'est pas le cas pour ce service, vous devrez peut-être contacter le support NetApp ou suivre les messages pour vous inscrire.
-** Si vous découvrez BlueXP et n'avez utilisé aucun connecteur, lorsque vous sélectionnez « * protection contre les ransomware * », un message s'affiche pour vous inscrire. Envoyez le formulaire. NetApp vous contactera au sujet de votre demande d'évaluation.
-** Si vous utilisez BlueXP avec un connecteur existant, lorsque vous sélectionnez "*protection contre les ransomware*", un message s'affiche pour vous inscrire.
 
+NOTE: Si vous ne disposez pas d'un connecteur BlueXP ou si ce n'est pas le cas pour ce service, vous devrez peut-être contacter le support NetApp.
 
 . Si vous ne l'avez pas déjà fait, sélectionnez l'option *découvrir les charges de travail*.
 +

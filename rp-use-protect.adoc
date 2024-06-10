@@ -15,16 +15,10 @@ summary: Vous pouvez protéger vos workloads contre les attaques par ransomware 
 Vous pouvez protéger vos workloads contre les attaques par ransomware en effectuant les actions suivantes à l'aide de la protection BlueXP.
 
 * Modifiez les détails de la protection des charges de travail existantes.
-+
-** Modifiez le nom d'une charge de travail (par exemple, les applications et les datastores de machines virtuelles) non gérée dans SnapCenter.
-** Modifiez la priorité ou l'importance de la charge de travail.
-
-
 * Bénéficiez d'une protection cohérente avec les charges de travail, qui fonctionne avec le logiciel SnapCenter ou le plug-in SnapCenter pour VMware vSphere.
 * Créez ou gérez des stratégies de protection contre les ransomware incluant des règles que vous créez pour les copies Snapshot, les sauvegardes et la détection des ransomwares.
 +
 ** Importez une stratégie et ajustez-la.
-** Modifier ou supprimer des stratégies de détection (uniquement celles que vous avez créées).
 
 
 
@@ -69,7 +63,7 @@ La page protection affiche les informations suivantes sur la protection des char
 La protection contre les ransomwares BlueXP attribue une importance ou une priorité à chaque workload lors de sa découverte, sur la base d'une analyse de chaque workload. L'importance de la charge de travail est déterminée par les fréquences Snapshot suivantes :
 
 * *Critique* : copies Snapshot effectuées plus d'un par heure (planning de protection extrêmement agressif)
-* *Élevé* : copies snapshot prises moins de 1 par heure mais supérieures à 1 par jour
+* *Important* : copies snapshot prises moins de 1 par heure mais supérieures à 1 par jour
 * *Standard*: Copies snapshot prises plus de 1 par jour
 
 
@@ -104,7 +98,7 @@ Tous les 30 jours
 | 60 | 2 | 309 
 
 
-.4+| *Politique de charge de travail élevée*  a| 
+.4+| *Politique importante de la charge de travail*  a| 
 Quart horaire
 | Toutes les 30 minutes | 3 | 144 | 165 
 
@@ -126,7 +120,7 @@ Tous les 30 jours
 
 .4+| *Politique standard de la charge de travail*  a| 
 Quart horaire
-| Toutes les 60 minutes | 3 | 72 | 93 
+| Toutes les 30 minutes | 3 | 72 | 93 
 
 
 | Tous les jours  a| 
@@ -161,7 +155,7 @@ L'une des premières étapes de la protection des charges de travail consiste à
 ** Dans le volet protection des données du tableau de bord, sélectionnez *Afficher tout*.
 ** Dans le menu, sélectionnez *protection*.
 +
-image:screen-protection-sc-columns.png["Page protection"]
+image:screen-protection-sc-columns2.png["Page protection"]
 
 
 
@@ -169,22 +163,25 @@ image:screen-protection-sc-columns.png["Page protection"]
 
 
 
+NOTE: Pour les charges de travail qui disposent déjà d'une règle de protection avec le service de sauvegarde et de restauration SnapCenter ou BlueXP, vous ne pouvez pas modifier la protection. Pour ces workloads, le ransomware BlueXP active la protection anti-ransomware autonome et/ou la protection FPolicy s'ils sont déjà activés dans d'autres services. En savoir plus sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] et https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Sauvegarde et restauration BlueXP"^], et https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^].
 
-== Modifiez les détails de la protection des charges de travail
 
-Vous pouvez modifier les informations de protection, telles que la priorité du workload et le nom du workload, si ce dernier n'est pas géré par SnapCenter ou la sauvegarde et la restauration BlueXP.
+
+== Examinez les détails de la protection des workloads
+
+Vous pouvez examiner les détails de protection, tels que la priorité de la charge de travail, les règles de protection et les informations de stockage.
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
 . Dans la page protection, sélectionnez une charge de travail.
 +
-image:screen-protection-details2.png["Détails de la charge de travail sur la page protection"]
+image:screen-protection-details3.png["Détails de la charge de travail sur la page protection"]
 
 +
-À partir de la page de détails du workload, vous pouvez attribuer une stratégie à un workload, modifier le nom ou la priorité d'un workload, afficher les alertes, afficher les destinations de sauvegarde et afficher les informations de restauration.
+À partir de la page de détails du workload, vous pouvez attribuer une stratégie à un workload, afficher des alertes, afficher les destinations de sauvegarde et afficher des informations de restauration.
 
-. Pour modifier le nom d'une charge de travail, cliquez sur *crayon* image:button_pencil.png["Crayon"] en regard du nom de la charge de travail et modifiez le nom.
-. Pour modifier l'importance de la charge de travail par rapport à la priorité attribuée, cliquez sur *crayon* image:button_pencil.png["Crayon"] en regard de la priorité de la charge de travail et modifiez-la.
+
+
 . Pour afficher la stratégie associée à la charge de travail, dans le volet protection de la page Détails de la charge de travail, cliquez sur *Afficher la stratégie*.
 . Pour afficher les destinations de sauvegarde de la charge de travail, dans le volet protection de la page Détails de la charge de travail, cliquez sur *Afficher la destination de sauvegarde*.
 +
@@ -276,6 +273,13 @@ Si vous souhaitez modifier les extensions de fichier bloquées, modifiez-les dan
 ** *Politique Snapshot* :
 +
 *** *Nom de la règle Snapshot* : entrez un nom pour la règle Snapshot.
+*** *Verrouillage Snapshot* : activez cette fonctionnalité pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware parvient à se rendre à la destination du stockage de sauvegarde. On parle également de _stockage immuable_. Cela permet une restauration plus rapide.
++
+Lorsqu'un instantané est verrouillé, la durée d'expiration du volume est définie sur l'heure d'expiration de la copie Snapshot.
+
++
+Le verrouillage des copies Snapshot est disponible avec ONTAP 9.12.1 et les versions ultérieures. Pour en savoir plus sur SnapLock, reportez-vous à la section https://docs.netapp.com/us-en/ontap/snaplock/index.html["SnapLock à ONTAP"^].
+
 *** *Plannings d'instantanés* : choisissez les options de planification, le nombre de copies d'instantanés à conserver et sélectionnez pour activer le planning.
 
 
@@ -333,7 +337,7 @@ image:screen-protect-br-policies.png["Page protéger affichant les politiques de
 
 
 
-=== Attribuez une autre stratégie
+== Attribuez une autre stratégie
 
 Vous pouvez attribuer une stratégie de protection différente en remplacement de la stratégie actuelle.
 
@@ -350,31 +354,3 @@ Vous pouvez attribuer une stratégie de protection différente en remplacement d
 == Gérer les stratégies de protection contre les ransomware
 
 Vous pouvez modifier ou supprimer une stratégie de ransomware.
-
-
-
-=== Modifier une stratégie de protection contre les ransomware
-
-Vous pouvez modifier une stratégie de protection en sélectionnant une stratégie de stratégie de détection préconfigurée différente.
-
-.Étapes
-. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
-. Sur la page protection, sélectionnez *gérer les stratégies de ransomware*.
-. Dans la page gérer les stratégies, sélectionnez *actions* image:screenshot_horizontal_more_button.gif["Bouton actions"] option de la règle que vous souhaitez modifier.
-. Dans le menu actions, sélectionnez *Modifier la stratégie*.
-. Modifiez les détails.
-. Sélectionnez *Enregistrer* pour terminer la modification.
-
-
-
-
-=== Supprimez une stratégie de protection contre les ransomware
-
-Vous pouvez supprimer une stratégie de protection qui n'est actuellement associée à aucune charge de travail.
-
-.Étapes
-. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
-. Sur la page protection, sélectionnez *gérer les stratégies de ransomware*.
-. Dans la page gérer les stratégies, sélectionnez *actions* image:screenshot_horizontal_more_button.gif["Bouton actions"] option de la stratégie à supprimer.
-. Dans le menu actions, sélectionnez *Supprimer la stratégie*.
-

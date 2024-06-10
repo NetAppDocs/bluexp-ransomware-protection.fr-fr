@@ -26,6 +26,7 @@ Pour protéger ces charges de travail, vous devez ajouter une destination de sau
 
 * NetApp StorageGRID
 * Services Web Amazon (AWS)
+* Microsoft Azure
 
 
 Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée dans le tableau de bord.
@@ -42,8 +43,19 @@ Le tableau de bord fournit de nombreuses recommandations. Il peut être recomman
 +
 image:screen-dashboard.png["Page de tableau de bord"]
 
-. Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation de "configurer les destinations de sauvegarde".
+. Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation de « préparer <backup provider> comme destination de sauvegarde ».
 . Suivez les instructions en fonction du fournisseur de sauvegarde.
+
+
+
+
+=== Accédez à la page Paramètres à partir du menu
+
+Vous pouvez facilement accéder à la page Paramètres à partir du menu.
+
+. Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
+. Dans le menu, sélectionnez *Paramètres*.
+. Pour ajouter une destination de sauvegarde, sélectionnez *Ajouter*.
 
 
 
@@ -55,7 +67,7 @@ Pour configurer NetApp StorageGRID comme destination de sauvegarde, entrez les i
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
-image:screen-settings-backup-destination-storagegrid.png["Page destinations de sauvegarde"]
+image:screen-settings-backup-destination-azure.png["Page destinations de sauvegarde"]
 
 . Sélectionnez *StorageGRID*.
 . Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
@@ -88,7 +100,7 @@ CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintena
 .Résultat
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
-image:screen-settings-backup-destinations-list-storagegrid.png["Page destinations de sauvegarde l'option Paramètres"]
+image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
 
 
 
@@ -101,7 +113,7 @@ Pour en savoir plus sur la gestion de votre stockage AWS dans BlueXP, consultez 
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
-image:screen-settings-backup-destination-storagegrid.png["Page destinations de sauvegarde"]
+image:screen-settings-backup-destination-azure.png["Page destinations de sauvegarde"]
 
 . Sélectionnez *Amazon Web Services*.
 . Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
@@ -146,7 +158,65 @@ CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintena
 .Résultat
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
-image:screen-settings-backup-destinations-list-aws.png["Page destinations de sauvegarde l'option Paramètres"]
+image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
+
+
+
+=== Ajoutez Microsoft Azure comme destination de sauvegarde
+
+Pour configurer Azure en tant que destination de sauvegarde, entrez les informations suivantes.
+
+Pour en savoir plus sur la gestion de vos identifiants Azure et de vos abonnements Marketplace dans BlueXP, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gestion de vos identifiants Azure et de vos abonnements Marketplace"^].
+
+. Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination-azure.png["Page destinations de sauvegarde"]
+
+. Sélectionnez *Azure*.
+. Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur* :
++
+*** Créez un nouveau compte de stockage, sélectionnez un compte existant s'il en existe déjà dans BlueXP ou utilisez votre propre compte de stockage pour stocker les sauvegardes.
+*** Abonnement Azure, région et groupe de ressources pour les informations d'identification Azure
++
+https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["Si vous souhaitez utiliser votre propre compte de stockage, reportez-vous à la section Ajouter des comptes de stockage Azure Blob"^].
+
+
+
+** *Cryptage* : si vous créez un nouveau compte de stockage, entrez les informations de clé de cryptage qui vous ont été fournies par le fournisseur. Si vous avez choisi un compte existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du compte sont chiffrées avec des clés gérées par Microsoft par défaut. Vous pouvez continuer à utiliser des clés gérées par Microsoft ou gérer le chiffrement de vos données à l'aide de vos propres clés.
+
+** *Mise en réseau* : choisissez l'IPspace et si vous allez utiliser un terminal privé.
++
+*** L'IPspace est le cluster où résident les volumes à sauvegarder. Les LIF intercluster pour cet IPspace doivent avoir un accès Internet sortant.
+*** Si vous le souhaitez, vous pouvez également choisir d'utiliser un terminal privé Azure que vous avez précédemment configuré.
++
+Pour utiliser Azure PrivateLink, reportez-vous à la section https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^].
+
+
+
+** *Verrou de sauvegarde* : choisissez si vous souhaitez que le service protège les sauvegardes contre la modification ou la suppression. Cette option utilise la technologie NetApp DataLock. Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon de 14 jours maximum.
++
+
+CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pouvez pas le modifier ultérieurement après la configuration de la destination de sauvegarde.
+
++
+*** *Déverrouillé* : certains utilisateurs peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.
+*** *Verrouillé* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation. Cette option répond à la conformité réglementaire complète.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
+
+image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
 
 
 
@@ -155,21 +225,18 @@ image:screen-settings-backup-destinations-list-aws.png["Page destinations de sau
 Vous pouvez envoyer automatiquement des données à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
 
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
-. Vérifiez le volet actions recommandées du tableau de bord.
-. Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation « Activer la détection des menaces ».
+. Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
+. Sélectionnez *Paramètres*.
 +
 La page Paramètres s'affiche.
 
 +
-image:screen-settings-threat-detection2.png["Page Paramètres"]
+image:screen-settings-threat-detection3.png["Page Paramètres"]
 
-. Dans la page Paramètres, sélectionnez *Connect* dans le volet de détection des menaces.
-+
-image:screen-settings-threat-detection-details.png["Activer la page de détails de détection des menaces"]
-
+. Dans la page Paramètres, sélectionnez *connexion* dans le volet de connexion SIEM.
 . Entrez les détails du serveur SIEM pour activer la détection des menaces.
 . Sélectionnez *Activer*.
 +
-Le volet de détection des menaces de la page Paramètres affiche « connecté ».
+La page Paramètres affiche « connecté ».
 
 

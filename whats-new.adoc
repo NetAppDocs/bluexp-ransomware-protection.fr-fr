@@ -18,20 +18,45 @@ Découvrez les nouveautés de la protection contre les ransomwares BlueXP.
 
 
 
+== 10 juin 2024
+
+Cette version de la protection contre les ransomwares BlueXP inclut les mises à jour suivantes :
+
+* *Verrouillage des copies Snapshot sur le stockage primaire* : activez cette option pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware parvient à se rendre à la destination du stockage de sauvegarde.
++
+link:rp-use-protect.html["En savoir plus sur la protection des charges de travail et l'activation du verrouillage de sauvegarde dans une stratégie de protection contre les ransomware"].
+
+* *Cette version prend en charge Cloud Volumes ONTAP pour Microsoft Azure* en tant qu'environnement de travail en plus de Cloud Volumes ONTAP pour AWS et NAS ONTAP sur site.
++
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-azure.html["Démarrage rapide de Cloud Volumes ONTAP dans Azure"^]
+
++
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Découvrez la protection contre les ransomwares BlueXP"].
+
+
+
+* *Microsoft Azure ajouté comme destination de sauvegarde*. Vous pouvez désormais ajouter Microsoft Azure comme destination de sauvegarde avec AWS et NetApp StorageGRID.
++
+link:rp-use-settings.html["Reportez-vous à la section Configuration des paramètres de protection"].
+
+
+
+
+
 == 14 mai 2024
 
 Cette version est la version de disponibilité générale de la protection contre les ransomwares BlueXP. Il comprend les mises à jour suivantes :
 
-* *Mises à jour des licences* : vous pouvez vous inscrire à un essai gratuit de 90 jours, acheter un abonnement payant pendant 1, 2 ou 3 ans sur Amazon Web Services Marketplace ou vous procurer votre propre licence NetApp.
+* *Mises à jour des licences*: Vous pouvez vous inscrire pour un essai gratuit de 90 jours. Vous pourrez bientôt souscrire un abonnement avec paiement à l'utilisation sur Amazon Web Services Marketplace ou utiliser votre propre licence NetApp.
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-licenses.html["En savoir plus sur la configuration des licences"].
 
 * *Protocole CIFS* : le service prend désormais en charge ONTAP et Cloud Volumes ONTAP sur site dans les environnements de travail AWS en utilisant les protocoles NFS et CIFS. La version précédente ne prenaient en charge que le protocole NFS.
-* *Détails de la charge de travail* : cette version fournit maintenant plus de détails dans les informations sur la charge de travail des pages protection pour une meilleure évaluation de la protection de la charge de travail. Dans les détails de la charge de travail, vous pouvez modifier le nom de la charge de travail, modifier l'importance de la charge de travail, consulter la stratégie actuellement affectée et vérifier les destinations de sauvegarde configurées.
+* *Détails de la charge de travail* : cette version fournit maintenant plus de détails dans les informations sur la charge de travail des pages protection et autres pour améliorer l'évaluation de la protection de la charge de travail. Dans les détails de la charge de travail, vous pouvez consulter la stratégie actuellement affectée et les destinations de sauvegarde configurées.
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["Pour en savoir plus sur l'affichage des détails des charges de travail, consultez les pages protection"].
 
-* *Protection et restauration cohérentes avec les applications et les machines virtuelles* : vous pouvez désormais assurer une protection cohérente avec les applications grâce au logiciel NetApp SnapCenter et à la protection cohérente avec les machines virtuelles grâce au plug-in SnapCenter pour VMware vSphere, en obtenant un état de repos et cohérent afin d'éviter des pertes de données potentielles ultérieurement si une restauration est nécessaire. Si une restauration est nécessaire, vous pouvez restaurer l'application ou la machine virtuelle à son état précédent et à sa dernière transaction.
+* *Protection et restauration cohérentes avec les applications et les machines virtuelles* : vous pouvez désormais assurer une protection cohérente avec les applications grâce au logiciel NetApp SnapCenter et à la protection cohérente avec les machines virtuelles grâce au plug-in SnapCenter pour VMware vSphere, en obtenant un état de repos et cohérent afin d'éviter des pertes de données potentielles ultérieurement si une restauration est nécessaire. Si une restauration est nécessaire, vous pouvez restaurer l'application ou la machine virtuelle à l'un des États précédemment disponibles.
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la protection des charges de travail"].
 
@@ -53,7 +78,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html[
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la protection des charges de travail et l'affichage des États de protection"].
 
-* *Téléchargez les fichiers CSV* à partir des pages Tableau de bord, protection, alertes et récupération.
+* *Téléchargez les fichiers CSV* à partir des pages protection, alertes et récupération.
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-reports.html["En savoir plus sur le téléchargement de fichiers CSV à partir du tableau de bord et d'autres pages"].
 

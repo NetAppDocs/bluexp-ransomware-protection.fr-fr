@@ -35,6 +35,7 @@ Pour plus d'informations sur les licences, reportez-vous à la section link:conc
 
 * Dans BlueXP :
 +
+** Environnement de travail BlueXP avec le stockage sur site NetApp (utilisant les protocoles NAS ou CIFS)
 ** Un connecteur BlueXP pour chaque cloud privé virtuel (VPC) ou une région sur site doit être configuré dans BlueXP. Reportez-vous à la section https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Documentation BlueXP pour configurer le connecteur"^].
 +
 

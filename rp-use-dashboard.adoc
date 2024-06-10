@@ -74,24 +74,24 @@ Voici un échantillon des recommandations que le service offre.
 | Recommandation | Description | Comment résoudre le problème 
 
 
-| Ajoutez une règle de protection contre les ransomwares | La charge de travail n'est actuellement pas protégée. | Attribuez une stratégie à la charge de travail.
+| Ajoutez une règle de protection contre les ransomwares. | La charge de travail n'est actuellement pas protégée. | Attribuez une stratégie à la charge de travail.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
-| Configurer les destinations de sauvegarde | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
+| Préparez <backup provider> en tant que destination de sauvegarde pour sauvegarder les données de vos workloads. | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
 Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
 
 
-| Modifier le nom de la charge de travail | Vos charges de travail utilisent des noms par défaut. | Donnez un nom descriptif à votre charge de travail.
+| Modifier le nom de la charge de travail. | Vos charges de travail utilisent des noms par défaut. | Donnez un nom descriptif à votre charge de travail.
 Reportez-vous à la section link:rp-use-manage.html["Gérer les charges de travail"]. 
 
 
-| Activer la détection des menaces | Envoyer des données à un système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces.
+| Activer la détection des menaces. | Envoyer des données à un système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces.
 Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
 Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
 
 
-| Bénéficiez d'une protection cohérente avec les charges de travail pour les applications ou VMware | Ces charges de travail ne sont pas gérées par le logiciel SnapCenter ou le plug-in SnapCenter pour VMware vSphere. | Assurez la gestion de ces données par SnapCenter en assurant une protection cohérente avec les charges de travail.
+| Bénéficiez d'une protection cohérente avec les charges de travail pour les applications ou VMware. | Ces charges de travail ne sont pas gérées par le logiciel SnapCenter ou le plug-in SnapCenter pour VMware vSphere. | Assurez la gestion de ces données par SnapCenter en assurant une protection cohérente avec les charges de travail.
 Reportez-vous à la section link:rp-use-protect.html["Protéger la charge de travail contre les attaques par ransomware"]. 
 
 
@@ -107,7 +107,7 @@ Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads co
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
-| Passez en revue les nouvelles alertes | De nouvelles alertes existent. | Passez en revue les nouvelles alertes.
+| Passez en revue les nouvelles alertes. | De nouvelles alertes existent. | Passez en revue les nouvelles alertes.
 Reportez-vous à la section link:rp-use-alert.html["Répondez à la détection d'une alerte par ransomware"]. 
 |===
 .Étapes
