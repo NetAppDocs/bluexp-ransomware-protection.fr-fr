@@ -24,7 +24,7 @@ Cette version de la protection contre les ransomwares BlueXP inclut les mises à
 
 * *Verrouillage des copies Snapshot sur le stockage primaire* : activez cette option pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware parvient à se rendre à la destination du stockage de sauvegarde.
 +
-link:rp-use-protect.html["En savoir plus sur la protection des charges de travail et l'activation du verrouillage de sauvegarde dans une stratégie de protection contre les ransomware"].
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la protection des charges de travail et l'activation du verrouillage de sauvegarde dans une stratégie de protection contre les ransomware"].
 
 * *Cette version prend en charge Cloud Volumes ONTAP pour Microsoft Azure* en tant qu'environnement de travail en plus de Cloud Volumes ONTAP pour AWS et NAS ONTAP sur site.
 +
@@ -37,7 +37,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-pr
 
 * *Microsoft Azure ajouté comme destination de sauvegarde*. Vous pouvez désormais ajouter Microsoft Azure comme destination de sauvegarde avec AWS et NetApp StorageGRID.
 +
-link:rp-use-settings.html["Reportez-vous à la section Configuration des paramètres de protection"].
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["En savoir plus sur la configuration des paramètres de protection"].
 
 
 
@@ -82,7 +82,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["
 +
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-reports.html["En savoir plus sur le téléchargement de fichiers CSV à partir du tableau de bord et d'autres pages"].
 
-* *Le lien Voir la documentation* est maintenant inclus dans l'interface utilisateur. Vous pouvez accéder à cette documentation à partir de la verticale de Dasbhoard *actions* image:button-actions-vertical.png["Actions verticales"] option. Sélectionnez *Nouveautés* pour afficher les détails dans les notes de version ou dans la *Documentation* pour afficher la page d'accueil de la documentation sur la protection contre les ransomwares BlueXP.
+* *Le lien Voir la documentation* est maintenant inclus dans l'interface utilisateur. Vous pouvez accéder à cette documentation à partir du tableau de bord vertical *actions* image:button-actions-vertical.png["Actions verticales"] option. Sélectionnez *Nouveautés* pour afficher les détails dans les notes de version ou dans la *Documentation* pour afficher la page d'accueil de la documentation sur la protection contre les ransomwares BlueXP.
 * *Sauvegarde et restauration BlueXP* : le service de sauvegarde et de restauration BlueXP n'a plus besoin d'être déjà activé dans l'environnement de travail. Voir link:rp-start-prerequisites.html["prérequis"]. Le service de protection contre les ransomwares BlueXP permet de configurer une destination de sauvegarde via l'option Paramètres. Voir link:rp-use-settings.html["Configurer les paramètres"].
 
 
@@ -92,11 +92,11 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-reports.html["
 
 Cette version préliminaire de la protection contre les ransomwares BlueXP inclut les mises à jour suivantes :
 
-* *Gestion des stratégies de protection* : outre l'utilisation de stratégies prédéfinies, vous pouvez désormais créer, modifier et supprimer des stratégies. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la gestion des règles"].
+* *Gestion des stratégies de protection* : outre l'utilisation de stratégies prédéfinies, vous pouvez maintenant créer des stratégies. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la gestion des règles"].
 * *Immuabilité sur le stockage secondaire (DataLock)* : vous pouvez maintenant rendre la sauvegarde immuable dans le stockage secondaire en utilisant la technologie NetApp DataLock dans le magasin d'objets. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la création de règles de protection"].
 * *Sauvegarde automatique vers NetApp StorageGRID* : en plus d'utiliser AWS, vous pouvez désormais choisir StorageGRID comme destination de sauvegarde. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["En savoir plus sur la configuration des destinations de sauvegarde"].
 * *Fonctions supplémentaires pour enquêter sur les attaques potentielles*: Vous pouvez maintenant afficher plus de détails médico-légaux pour enquêter sur l'attaque potentielle détectée. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["En savoir plus sur la réponse à une alerte de ransomware détectée"].
-* *Processus de récupération*. Le processus de récupération a été amélioré. Désormais, vous pouvez restaurer volume par volume, tous les volumes d'une charge de travail, voire même quelques fichiers à partir du volume, le tout dans un seul workflow. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-recover.html["En savoir plus sur la restauration suite à une attaque par ransomware (après la neutralisation des incidents)"].
+* *Processus de récupération*. Le processus de récupération a été amélioré. Vous pouvez désormais restaurer un volume par volume ou tous les volumes d'une charge de travail. https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-recover.html["En savoir plus sur la restauration suite à une attaque par ransomware (après la neutralisation des incidents)"].
 
 
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Découvrez la protection contre les ransomwares BlueXP"].

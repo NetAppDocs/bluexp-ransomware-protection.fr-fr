@@ -182,54 +182,14 @@ TIP: Le nouveau nom de volume apparaît comme le nom du volume d'origine + le no
 . Dans le menu supérieur, sélectionnez *récupération* pour examiner la charge de travail sur la page récupération, où l'état de l'opération se déplace dans les États.
 
 
-
-
-=== Restaurez une charge de travail applicative au niveau des fichiers
-
-Téléchargez une liste des fichiers impactés* avant de restaurer une charge de travail d'application au niveau du fichier. Vous pouvez maintenant accéder à la page alertes pour télécharger une liste des fichiers affectés, puis utiliser la page récupération pour télécharger la liste et choisir les fichiers à restaurer.
-
-.Étapes
-. Sur la page Restaurer, dans l'étendue Restaurer, sélectionnez *par fichier*.
-. Dans la liste des volumes, sélectionnez le volume à restaurer.
-. *Source* : sélectionnez la flèche vers le bas en regard de Source pour afficher les détails.
-+
-.. Sélectionnez le point de restauration que vous souhaitez utiliser pour restaurer les données.
-+
-
-TIP: La protection contre les ransomwares BlueXP identifie le meilleur point de restauration comme la dernière sauvegarde juste avant l'incident et une indication « recommandée ».
-
-.. Sélectionnez jusqu'à 100 fichiers ou un seul dossier à restaurer.
-
-
-. *Destination* : sélectionnez la flèche vers le bas en regard de destination pour afficher les détails.
-+
-.. Choisissez l'emplacement de restauration des données : emplacement source d'origine ou autre emplacement que vous pouvez spécifier.
-+
-
-TIP: Alors que les fichiers ou répertoires d'origine seront remplacés par les données restaurées, les noms de fichiers et de dossiers d'origine resteront les mêmes, sauf si vous spécifiez de nouveaux noms.
-
-.. Sélectionnez l'environnement de travail.
-.. Sélectionnez la VM de stockage.
-.. Si vous le souhaitez, saisissez le chemin d'accès.
-+
-
-TIP: Si vous ne spécifiez pas de chemin pour la restauration, les fichiers seront restaurés sur un nouveau volume dans le répertoire de niveau supérieur.
-
-.. Indiquez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
-
-
-. Sélectionnez *Enregistrer*.
-. Sélectionnez *Suivant*.
-. Vérifiez vos sélections.
-. Sélectionnez *Restaurer*.
-. Dans le menu supérieur, sélectionnez *récupération* pour examiner la charge de travail sur la page récupération, où l'état de l'opération se déplace dans les États.
+. Indiquez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
 
 
 
 
-=== Restaurez un partage de fichiers ou un datastore au niveau du volume ou du fichier
+=== Restaurer un partage de fichiers ou un datastore
 
-. Après avoir sélectionné un partage de fichiers ou un datastore à restaurer, sur la page Restaurer, dans la portée Restaurer, sélectionnez *par volume* ou *par fichier*.
+. Après avoir sélectionné un partage de fichiers ou un datastore à restaurer, sur la page Restaurer, dans l'étendue Restaurer, sélectionnez *par volume*.
 +
 image:screen-recovery-fileshare.png["Page de récupération affichant la restauration du partage de fichiers"]
 

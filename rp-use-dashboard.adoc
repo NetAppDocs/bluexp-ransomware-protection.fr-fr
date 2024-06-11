@@ -79,10 +79,7 @@ Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads co
 
 
 | Préparez <backup provider> en tant que destination de sauvegarde pour sauvegarder les données de vos workloads. | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
-Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
-
-
-| Modifier le nom de la charge de travail. | Vos charges de travail utilisent des noms par défaut. | Donnez un nom descriptif à votre charge de travail.
+Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
 Reportez-vous à la section link:rp-use-manage.html["Gérer les charges de travail"]. 
 
 
