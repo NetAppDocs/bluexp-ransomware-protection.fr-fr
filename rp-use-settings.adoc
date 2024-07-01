@@ -83,15 +83,6 @@ image:screen-settings-backup-destination.png["Page destinations de sauvegarde"]
 *** L'IPspace est le cluster où résident les volumes à sauvegarder. Les LIF intercluster pour cet IPspace doivent avoir un accès Internet sortant.
 
 
-** *Verrou de sauvegarde* : choisissez si vous souhaitez que le service protège les sauvegardes contre la modification ou la suppression. Cette option utilise la technologie NetApp DataLock. Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon de 14 jours maximum.
-+
-
-CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pouvez pas le modifier ultérieurement après la configuration de la destination de sauvegarde.
-
-+
-*** *Mode de conformité* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation.
-
-
 
 
 . Sélectionnez *Ajouter*.
@@ -196,16 +187,6 @@ Les données du compte sont chiffrées avec des clés gérées par Microsoft par
 +
 Pour utiliser Azure PrivateLink, reportez-vous à la section https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^].
 
-
-
-** *Verrou de sauvegarde* : choisissez si vous souhaitez que le service protège les sauvegardes contre la modification ou la suppression. Cette option utilise la technologie NetApp DataLock. Chaque sauvegarde sera verrouillée pendant la période de conservation, ou pendant un minimum de 30 jours, plus une période tampon de 14 jours maximum.
-+
-
-CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintenant, vous ne pouvez pas le modifier ultérieurement après la configuration de la destination de sauvegarde.
-
-+
-*** *Déverrouillé* : certains utilisateurs peuvent écraser ou supprimer des fichiers protégés pendant la période de conservation.
-*** *Verrouillé* : les utilisateurs ne peuvent pas écraser ou supprimer les fichiers de sauvegarde protégés pendant la période de conservation. Cette option répond à la conformité réglementaire complète.
 
 
 

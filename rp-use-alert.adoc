@@ -14,6 +14,11 @@ summary: 'Si la protection contre les ransomwares BlueXP détecte une attaque, u
 [role="lead"]
 Si la protection contre les ransomwares BlueXP détecte une attaque, une alerte s'affiche dans le tableau de bord de protection contre les ransomwares BlueXP et dans les notifications BlueXP en haut à droite indiquant une attaque potentielle par ransomware. Par ailleurs, le service initie immédiatement la création d'une copie Snapshot. À ce stade, vous devez examiner le risque potentiel dans l'onglet * alertes * de la protection contre les ransomwares BlueXP.
 
+Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement.
+
+
+TIP: Si vous décidez de rejeter l'alerte, le service apprendra ce comportement et l'associera aux opérations normales et ne déclenchera plus d'alerte sur un tel comportement.
+
 Pour commencer à restaurer vos données, cochez l'alerte comme étant prête pour la restauration afin que votre administrateur de stockage puisse commencer le processus de restauration.
 
 Chaque alerte peut avoir plusieurs incidents sur des volumes différents avec des États différents. Veillez donc à examiner tous les incidents.
@@ -39,6 +44,24 @@ Une alerte est basée sur les types de comportement suivants :
 
 La preuve est basée sur des informations issues de la protection anti-ransomware autonome en ONTAP. Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Présentation de la protection autonome contre les ransomwares"^].
 
+Une alerte peut avoir l'un des États suivants :
+
+* *Nouveau*
+* *Inactif*
+
+
+Un incident d'alerte est classé dans l'un des États suivants :
+
+* *Nouveau*: Tous les incidents sont marqués "nouveau" lorsqu'ils sont identifiés pour la première fois.
+* *Rejeté* : si vous soupçonnez que l'activité n'est pas une attaque par ransomware, vous pouvez changer le statut en « rejeté ».
++
+
+CAUTION: Une fois que vous avez rejeté une attaque, vous ne pouvez plus la modifier. Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées.
+
+* *Rejet*: L'incident est en train d'être rejeté.
+* *Résolu*: L'incident a été atténué.
+
+
 
 
 == Afficher les alertes
@@ -54,7 +77,12 @@ Vous pouvez accéder aux alertes à partir du tableau de bord de protection Blue
 +
 image:screen-alerts.png["Page alertes"]
 
-. Passez à <<Marquer les incidents de ransomware comme prêts pour la restauration (après neutralisation des incidents)>>.
+. Continuer :
++
+** <<Marquer les incidents de ransomware comme prêts pour la restauration (après neutralisation des incidents)>>.
+** <<Rejeter les incidents qui ne sont pas des attaques potentielles>>.
+
+
 
 
 
@@ -71,7 +99,7 @@ image:screen-alerts.png["Page alertes"]
 . Dans la page alertes, sélectionnez l'alerte.
 . Passez en revue les incidents dans l'alerte.
 +
-image:screen-alerts-incidents.png["Page incidents d'alerte"]
+image:screen-alerts-incidents2.png["Page incidents d'alerte"]
 
 . Si vous déterminez que les incidents sont prêts à être restaurés, sélectionnez *Marquer la restauration nécessaire*.
 . Confirmez l'action et sélectionnez *Marquer la restauration nécessaire*.
@@ -80,3 +108,67 @@ image:screen-alerts-incidents.png["Page incidents d'alerte"]
 
 .Résultat
 Une fois l'alerte marquée pour la restauration, elle passe de l'onglet alertes à l'onglet récupération.
+
+
+
+== Rejeter les incidents qui ne sont pas des attaques potentielles
+
+Après avoir examiné les incidents, vous devez déterminer si ces incidents sont des attaques potentielles. Si ce n'est pas le cas, ils peuvent être rejetés.
+
+Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement. Si vous décidez de rejeter l'alerte, le service apprendra ce comportement et l'associera aux opérations normales et ne déclenchera plus d'alerte sur un tel comportement.
+
+Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées.
+
+
+CAUTION: Si vous rejetez une alerte, vous ne pouvez pas rétablir cet état à un autre et vous ne pouvez pas annuler cette modification.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
++
+image:screen-alerts.png["Page alertes"]
+
+. Dans la page alertes, sélectionnez l'alerte.
++
+image:screen-alerts-incidents2.png["Page incidents d'alerte"]
+
+. Sélectionnez un ou plusieurs incidents. Vous pouvez également sélectionner tous les incidents en sélectionnant la zone ID incident dans le coin supérieur gauche du tableau.
+. Si vous déterminez que l'incident n'est pas une menace, rejetez-le comme un faux positif :
++
+** Si vous avez sélectionné un incident, sélectionnez *actions* … Sur la droite, sélectionnez *Modifier l'état*.
+** Si vous avez sélectionné plusieurs incidents, sélectionnez le bouton *Modifier état* au-dessus du tableau.
++
+image:screen-alerts-status-edit.png["Page État de modification des alertes"]
+
+
+
+. Dans la zone Modifier l'état, sélectionnez l'état *“rejeté”*.
++
+Pour plus d'informations sur la charge de travail et sur les copies Snapshot à supprimer, reportez-vous à la section.
+
+. Sélectionnez *Enregistrer*.
++
+Le statut de l'incident ou des incidents passe à « rejeté ».
+
+
+
+
+
+== Afficher la liste des fichiers affectés
+
+Avant de restaurer une charge applicative au niveau fichier, vous pouvez afficher la liste des fichiers affectés. Vous pouvez accéder à la page alertes pour télécharger la liste des fichiers affectés. Utilisez ensuite la page récupération pour télécharger la liste et choisir les fichiers à restaurer.
+
+.Étapes
+Utilisez la page alertes pour récupérer la liste des fichiers affectés.
+
+
+TIP: Si un volume comporte plusieurs alertes, vous devrez peut-être télécharger la liste CSV des fichiers affectés pour chaque alerte.
+
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
+. Sur la page alertes, triez les résultats par charge de travail pour afficher les alertes de la charge de travail d'application que vous souhaitez restaurer.
+. Dans la liste des alertes pour cette charge de travail, sélectionnez une alerte.
+. Pour cette alerte, sélectionnez un seul incident.
++
+image:screen-alerts-incidents-impacted-files.png["liste des fichiers affectés pour une alerte spécifique"]
+
+. Pour cet incident, sélectionnez l'icône de téléchargement et téléchargez la liste des fichiers affectés au format CSV.
+

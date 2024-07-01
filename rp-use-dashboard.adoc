@@ -33,14 +33,28 @@ image:screen-dashboard.png["Page de tableau de bord"]
 ** *Protection des données de charge de travail* : cliquez sur *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la section link:rp-use-protect.html["Protégez les workloads"].
 ** *Alertes et récupération des données de charge de travail* : cliquez *Afficher tout* pour voir les incidents actifs qui ont affecté votre charge de travail, sont prêts pour la récupération après que les incidents sont neutralisés ou sont en cours de récupération. Reportez-vous à la section link:rp-use-alert.html["Répondre à une alerte détectée"].
 +
-Un incident est classé dans l'un des États suivants :
-
+*** Un incident est classé dans l'un des États suivants :
 +
-*** Impacté (s'affiche sur la page alertes)
-*** Prêt pour la restauration (voir la page récupération)
-*** Récupération (s'affiche sur la page récupération)
-*** Échec de la restauration (s'affiche sur la page récupération)
-*** Récupéré (affiché sur la page récupération)
+**** Nouveau
+**** Rejeté
+**** Rejet
+**** Résolu
+
+
+*** Une alerte peut avoir l'un des États suivants :
++
+**** Nouveau
+**** Inactif
+
+
+*** Une charge de travail peut avoir l'un des États de restauration suivants :
++
+**** Restauration nécessaire
+**** En cours
+**** Restauré
+**** Échec
+
+
 
 
 ** *Actions recommandées* : pour augmenter la protection, examinez chaque recommandation et cliquez sur *revoir et corriger*.
@@ -78,11 +92,6 @@ Voici un échantillon des recommandations que le service offre.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
-| Préparez <backup provider> en tant que destination de sauvegarde pour sauvegarder les données de vos workloads. | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger.
-Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
-Reportez-vous à la section link:rp-use-manage.html["Gérer les charges de travail"]. 
-
-
 | Activer la détection des menaces. | Envoyer des données à un système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces.
 Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
 Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
@@ -96,12 +105,21 @@ Reportez-vous à la section link:rp-use-protect.html["Protéger la charge de tra
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
+| Préparez <backup provider> en tant que destination de sauvegarde pour sauvegarder les données de vos workloads. | Le workload ne possède actuellement aucune destination de sauvegarde. | Ajoutez des destinations de sauvegarde à ce workload pour le protéger. Reportez-vous à la link:rp-use-settings.html["Configurer les paramètres de protection"]. 
+
+
 | Protégez les workloads applicatifs stratégiques ou hautement importants contre les ransomwares. | La page protéger affiche les charges de travail d'application critiques ou très importantes (selon le niveau de priorité attribué) qui ne sont pas protégées. | Attribuez une règle à ces charges de travail.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
 | Protégez les workloads stratégiques ou hautement importants de partage de fichiers contre les ransomwares. | La page protection affiche les charges de travail critiques ou très importantes de type partage de fichiers ou datastore qui ne sont pas protégées. | Attribuez une stratégie à chacun des workloads.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Enregistrez le plug-in SnapCenter disponible pour VMware vSphere (SCV) avec BlueXP | Aucune charge de travail de machine virtuelle n'est protégée. | Attribuez une protection cohérente aux machines virtuelles à la charge de travail de la machine virtuelle en activant le plug-in SnapCenter pour VMware vSphere. Reportez-vous à la link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
+
+
+| Enregistrez le serveur SnapCenter disponible avec BlueXP | Une application n'est pas protégée. | Attribuez une protection cohérente au niveau des applications à la charge de travail en activant SnapCenter Server. Reportez-vous à la link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
 | Passez en revue les nouvelles alertes. | De nouvelles alertes existent. | Passez en revue les nouvelles alertes.
@@ -123,13 +141,12 @@ TIP: Vous pouvez ensuite modifier un élément rejeté en un élément à faire.
 
 
 
-== Télécharger des fichiers CSV
+== Exporter les données de protection vers des fichiers CSV
 
-Vous pouvez télécharger des fichiers CSV contenant des informations détaillées sur la protection, les alertes et la restauration.
+Vous pouvez exporter des données et télécharger des fichiers CSV contenant des détails sur la protection, les alertes et la récupération.
 
 Vous pouvez télécharger des fichiers CSV à partir de l'une des options du menu principal :
 
-* *Tableau de bord :* contient toutes les informations récapitulatives pour toutes les charges de travail.
 * *Protection* : contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges protégées et à risque.
 * *Alertes* : comprend l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et de snapshots automatisés.
 * *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « en cours », « échec de la restauration » et « Restauration réussie ».
@@ -144,24 +161,29 @@ Les fichiers CSV incluent des données pour tous les workloads dans tous les env
 +
 image:screen-dashboard.png["Page de tableau de bord"]
 
-. Sur la page Tableau de bord ou autre, sélectionnez *Actualiser* image:button-refresh.png["Option d'actualisation"] dans le coin supérieur droit pour actualiser les données qui apparaîtront dans les fichiers.
+. Dans la page, sélectionnez l'option *Rafraîchir* image:button-refresh.png["Option d'actualisation"] en haut à droite pour actualiser les données qui apparaîtront dans les fichiers.
 . Effectuez l'une des opérations suivantes :
 +
-** Dans le tableau de bord ou sur une autre page, sélectionnez *Télécharger* image:button-download.png["Option de téléchargement"] option.
+** Sur la page, sélectionnez l'option *Télécharger* image:button-download.png["Option de téléchargement"] .
 ** Dans le menu protection contre les ransomwares BlueXP, sélectionnez *Rapports*.
 
 
-. Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des fichiers nommés préconfigurés et sélectionnez *Télécharger (CSV)*.
+. Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des fichiers nommés préconfigurés et sélectionnez *Télécharger (CSV)* ou *Télécharger (JSON)*.
 
 
 
 
 == Accédez à la documentation technique
 
-Pour accéder à la documentation technique, consultez la page docs.netapp.com ou accédez au service de protection contre les ransomwares BlueXP.
+Vous pouvez accéder à cette documentation technique sur docs.netapp.com ou depuis le service de protection contre les ransomwares BlueXP.
 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 . Dans le tableau de bord, sélectionnez les *actions* verticales image:button-actions-vertical.png["Actions verticales"] option.
-. Sélectionnez *Nouveautés* pour afficher les détails dans les notes de version ou dans la *Documentation* pour afficher la page d'accueil de la documentation sur la protection contre les ransomwares BlueXP.
+. Sélectionnez l'une des options suivantes :
++
+** *Quoi de neuf* pour afficher des informations sur les fonctionnalités des versions actuelles ou précédentes dans les notes de version.
+** *Documentation* pour afficher la page d'accueil de la documentation sur la protection contre les ransomware BlueXP et cette documentation.
+
+
 

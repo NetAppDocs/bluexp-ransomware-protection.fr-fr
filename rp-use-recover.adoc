@@ -12,14 +12,25 @@ summary: 'Après une attaque, la protection contre le ransomware BlueXP vérifie
 
 
 [role="lead"]
-Une fois que les workloads ont été marqués comme « prêts pour la restauration », la protection contre les ransomwares BlueXP recommande une RPA (point de restauration réel) et orchestre le workflow pour une restauration résistante aux pannes.
+Une fois que les workloads ont été marqués comme « Restauration requise », la protection contre les ransomwares BlueXP recommande une RPA (point de restauration réel) et orchestre le workflow pour une restauration résistante aux pannes.
 
-* Si l'application ou la machine virtuelle est gérée par SnapCenter, la protection contre les ransomwares BlueXP restaure l'application ou la machine virtuelle à son état précédent et la dernière transaction en utilisant le processus cohérent au niveau des applications ou des machines virtuelles.
-* Si l'application ou la machine virtuelle est _non_ gérée par SnapCenter, la protection contre les ransomwares BlueXP restaure l'application ou la machine virtuelle, vous restaurez le workload en sélectionnant tous les volumes, volumes ou fichiers.
+* Si l'application ou la machine virtuelle est gérée par SnapCenter, la protection contre les ransomwares BlueXP restaure l'application ou la machine virtuelle à son état précédent et la dernière transaction en utilisant le processus cohérent au niveau des applications ou des machines virtuelles. La restauration cohérente avec l'application ou les machines virtuelles ajoute aux données du volume toutes les données qui ne sont pas stockées, par exemple les données en cache ou en opération d'E/S.
+* Si l'application ou la machine virtuelle est _non_ gérée par SnapCenter et est gérée par la sauvegarde et la restauration BlueXP ou la protection contre les ransomwares BlueXP, la protection contre les ransomwares BlueXP effectue une restauration cohérente après panne, où toutes les données se trouvant dans le volume au même moment sont restaurées, par exemple, si le système s'est bloqué.
++
+Vous pouvez restaurer la charge de travail en sélectionnant tous les volumes, des volumes spécifiques ou des fichiers spécifiques.
+
 
 
 
 TIP: La restauration des workloads peut avoir un impact sur l'exécution des workloads. Vous devez coordonner les processus de restauration avec les parties prenantes appropriées.
+
+Une charge de travail peut avoir l'un des États de restauration suivants :
+
+* *Restauration nécessaire* : la charge de travail doit être restaurée.
+* *En cours* : l'opération de restauration est en cours.
+* *Restauré* : la charge de travail a été restaurée.
+* *Échec* : le processus de restauration de la charge de travail n'a pas pu être terminé.
+
 
 
 
@@ -113,6 +124,9 @@ TIP: Vous pouvez sélectionner jusqu'à 100 fichiers ou un seul dossier.
 
 === Restaurer tous les volumes
 
+. Dans le menu BlueXP ransomware protection, sélectionnez *Recovery*.
+. Sélectionnez une charge de travail dont l'état est « Restauration requise ».
+. Pour restaurer, sélectionnez *Restaurer*.
 . Sur la page Restaurer, dans la portée Restaurer, sélectionnez *tous les volumes*.
 +
 image:screen-recovery-all-volumes.png["Restaurer par tous les volumes"]
@@ -149,6 +163,9 @@ TIP: Le nouveau nom de volume apparaît sous la forme préfixe + nom du volume d
 
 === Restaurez une charge de travail applicative au niveau du volume
 
+. Dans le menu BlueXP ransomware protection, sélectionnez *Recovery*.
+. Sélectionnez une charge de travail applicative dont l'état est « Restauration requise ».
+. Pour restaurer, sélectionnez *Restaurer*.
 . Sur la page Restaurer, dans l'étendue Restaurer, sélectionnez *par volume*.
 +
 image:screen-recovery-byvolume.png["Restaurer par page de volume"]
@@ -182,7 +199,80 @@ TIP: Le nouveau nom de volume apparaît comme le nom du volume d'origine + le no
 . Dans le menu supérieur, sélectionnez *récupération* pour examiner la charge de travail sur la page récupération, où l'état de l'opération se déplace dans les États.
 
 
-. Indiquez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
+
+
+=== Restaurez une charge de travail applicative au niveau des fichiers
+
+Avant de restaurer une charge applicative au niveau fichier, vous pouvez afficher la liste des fichiers affectés. Vous pouvez accéder à la page alertes pour télécharger la liste des fichiers affectés. Utilisez ensuite la page récupération pour télécharger la liste et choisir les fichiers à restaurer.
+
+Vous pouvez restaurer une charge de travail applicative au niveau fichier dans un environnement de travail identique ou différent.
+
+.Procédure d'obtention de la liste des fichiers affectés
+Utilisez la page alertes pour récupérer la liste des fichiers affectés.
+
+
+TIP: Si un volume comporte plusieurs alertes, vous devez télécharger la liste CSV des fichiers affectés pour chaque alerte.
+
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
+. Sur la page alertes, triez les résultats par charge de travail pour afficher les alertes de la charge de travail d'application que vous souhaitez restaurer.
+. Dans la liste des alertes pour cette charge de travail, sélectionnez une alerte.
+. Pour cette alerte, sélectionnez un seul incident.
++
+image:screen-alerts-incidents-impacted-files.png["liste des fichiers affectés pour une alerte spécifique"]
+
+. Pour afficher la liste complète des fichiers, sélectionnez *cliquez ici* en haut du volet fichiers affectés.
+. Pour cet incident, sélectionnez l'icône de téléchargement et téléchargez la liste des fichiers affectés au format CSV.
+
+
+.Procédure de restauration de ces fichiers
+. Dans le menu BlueXP ransomware protection, sélectionnez *Recovery*.
+. Sélectionnez une charge de travail applicative dont l'état est « Restauration requise ».
+. Pour restaurer, sélectionnez *Restaurer*.
+. Sur la page Restaurer, dans l'étendue Restaurer, sélectionnez *par fichier*.
+. Dans la liste des volumes, sélectionnez le volume contenant les fichiers à restaurer.
+. *Point de restauration* : sélectionnez la flèche vers le bas en regard de *point de restauration* pour afficher les détails. Sélectionnez le point de restauration que vous souhaitez utiliser pour restaurer les données.
++
+
+NOTE: La colonne raison du volet points de restauration affiche la raison pour laquelle la copie Snapshot ou la sauvegarde est planifiée ou « réponse automatisée à un incident de ransomware ».
+
+. *Fichiers* :
++
+** *Sélectionnez automatiquement les fichiers* : laissez la protection contre les ransomware BlueXP sélectionner les fichiers à restaurer.
+** *Télécharger la liste des fichiers* : chargez un fichier CSV contenant la liste des fichiers impactés que vous avez obtenue à partir de la page alertes ou de celle que vous avez. Vous pouvez restaurer jusqu'à 10,000 fichiers à la fois.
++
+image:screen-recovery-app-by-file-upload-csv.png["Téléchargez le fichier CSV qui répertorie les fichiers affectés pour l'alerte"]
+
+** *Sélection manuelle des fichiers* : sélectionnez jusqu'à 10,000 fichiers ou un seul dossier à restaurer.
++
+image:screen-recovery-app-by-file-select-files.png["Sélectionnez les fichiers manuellement à restaurer"]
+
++
+
+NOTE: Si des fichiers ne peuvent pas être restaurés à l'aide du point de restauration sélectionné, un message s'affiche indiquant le nombre de fichiers qui ne peuvent pas être restaurés et vous permet de télécharger la liste de ces fichiers en sélectionnant *Télécharger la liste des fichiers impactés*.
+
+
+
+. *Destination* : sélectionnez la flèche vers le bas en regard de destination pour afficher les détails.
++
+.. Choisissez l'emplacement de restauration des données : emplacement source d'origine ou autre emplacement que vous pouvez spécifier.
++
+
+TIP: Alors que les fichiers ou répertoires d'origine seront remplacés par les données restaurées, les noms de fichiers et de dossiers d'origine resteront les mêmes, sauf si vous spécifiez de nouveaux noms.
+
+.. Sélectionnez l'environnement de travail.
+.. Sélectionnez la VM de stockage.
+.. Si vous le souhaitez, saisissez le chemin d'accès.
++
+
+TIP: Si vous ne spécifiez pas de chemin pour la restauration, les fichiers seront restaurés sur un nouveau volume dans le répertoire de niveau supérieur.
+
+.. Indiquez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
+
+
+. Sélectionnez *Suivant*.
+. Vérifiez vos sélections.
+. Sélectionnez *Restaurer*.
+. Dans le menu supérieur, sélectionnez *récupération* pour examiner la charge de travail sur la page récupération, où l'état de l'opération se déplace dans les États.
 
 
 

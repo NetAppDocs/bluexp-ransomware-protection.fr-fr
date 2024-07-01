@@ -18,7 +18,7 @@ Vous pouvez utiliser les types de licence suivants :
 
 * Inscrivez-vous pour bénéficier d'un essai gratuit de 90 jours.
 * Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace.  Ce sera bientôt disponible.
-* BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP. Ce sera bientôt disponible.
+* BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
 
 Une fois que vous avez configuré votre modèle BYOL ou que vous avez acheté un abonnement PAYGO dans AWS, vous pouvez voir la licence dans l'onglet portefeuille digital BlueXP *licences de service de données* ou l'abonnement AWS actif dans l'onglet *abonnements* du portefeuille digital BlueXP.

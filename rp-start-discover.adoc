@@ -23,11 +23,20 @@ Le service évalue le niveau de protection existant, notamment la protection de 
 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
-. Sélectionnez *découvrir les charges de travail* sur la page d'accueil initiale.
++
+S'il s'agit de votre première connexion à ce service, la page d'accueil s'affiche.
+
++
+image:screen-landing.png["Copie d'écran de la page d'accueil pour la protection BlueXP contre les ransomware"]
+
+. Sur la page d'accueil initiale, sélectionnez *commencer par découvrir les charges de travail*.
 +
 Le service détecte les données du workload et affiche l'état de santé de la protection des données dans le tableau de bord.
 
 +
 image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
+
++
+link:rp-use-dashboard.html["Découvrez ce que le tableau de bord vous montre."]
 
 
