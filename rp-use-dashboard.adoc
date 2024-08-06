@@ -28,9 +28,13 @@ Après la découverte, le tableau de bord indique l'état de santé de la protec
 +
 image:screen-dashboard.png["Page de tableau de bord"]
 
-. Dans chacun de ces volets, vous pouvez afficher et effectuer l'une des opérations suivantes :
+. Dans chaque volet du tableau de bord, vous pouvez effectuer les actions suivantes :
 +
 ** *Protection des données de charge de travail* : cliquez sur *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la section link:rp-use-protect.html["Protégez les workloads"].
++
+
+TIP: Cliquez sur la note i pour voir des conseils sur ces données. Pour augmenter la limite de la charge de travail, cliquez sur *augmenter la limite de la charge de travail* à l'intérieur de ce i note. Cliquez sur ce bouton pour accéder à la page de support BlueXP , où vous pouvez créer un ticket de dossier.
+
 ** *Alertes et récupération des données de charge de travail* : cliquez *Afficher tout* pour voir les incidents actifs qui ont affecté votre charge de travail, sont prêts pour la récupération après que les incidents sont neutralisés ou sont en cours de récupération. Reportez-vous à la section link:rp-use-alert.html["Répondre à une alerte détectée"].
 +
 *** Un incident est classé dans l'un des États suivants :
@@ -92,9 +96,7 @@ Voici un échantillon des recommandations que le service offre.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 
 
-| Activer la détection des menaces. | Envoyer des données à un système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces.
-Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"].
-Reportez-vous à la section link:rp-use-settings.html["Configurer les paramètres de protection"]. 
+| Se connecter à SEIM pour signaler les menaces. | Envoyer des données à un système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. | Saisissez les détails du serveur SIEM/XDR pour activer la détection des menaces. Reportez-vous à la link:rp-use-settings.html["Configurer les paramètres de protection"]. 
 
 
 | Bénéficiez d'une protection cohérente avec les charges de travail pour les applications ou VMware. | Ces charges de travail ne sont pas gérées par le logiciel SnapCenter ou le plug-in SnapCenter pour VMware vSphere. | Assurez la gestion de ces données par SnapCenter en assurant une protection cohérente avec les charges de travail.

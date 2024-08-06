@@ -17,13 +17,18 @@ Avec la protection contre les ransomwares BlueXP, vous pouvez utiliser différen
 Vous pouvez utiliser les types de licence suivants :
 
 * Inscrivez-vous pour bénéficier d'un essai gratuit de 90 jours.
-* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace.  Ce sera bientôt disponible.
+* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace ou Azure Marketplace (prochainement).
 * BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
 
-Une fois que vous avez configuré votre modèle BYOL ou que vous avez acheté un abonnement PAYGO dans AWS, vous pouvez voir la licence dans l'onglet portefeuille digital BlueXP *licences de service de données* ou l'abonnement AWS actif dans l'onglet *abonnements* du portefeuille digital BlueXP.
+La licence de protection contre les ransomwares BlueXP  n'inclut pas d'autres produits NetApp. La protection contre les ransomwares de BlueXP  peut utiliser la sauvegarde et la restauration BlueXP  même si vous ne disposez pas d'une licence pour celle-ci.
 
-Une fois la version d'essai gratuite terminée, ou après expiration de la licence ou de l'abonnement AWS, vous pouvez toujours effectuer les opérations suivantes dans le service :
+
+NOTE: Si vous disposez à la fois de la sauvegarde et de la restauration BlueXP  et de la protection contre les ransomwares BlueXP , toutes les données communes protégées par les deux produits seront uniquement facturées par la protection contre les ransomwares BlueXP .
+
+Une fois que vous avez configuré votre modèle BYOL ou que vous avez acheté un abonnement PAYGO, vous pouvez voir la licence dans l'onglet portefeuille numérique BlueXP  *licences de services de données* ou l'abonnement actif dans l'onglet *abonnements* du portefeuille numérique BlueXP .
+
+Après la fin de la période d'essai gratuite ou l'expiration de la licence ou de l'abonnement, vous pouvez toujours effectuer les opérations suivantes dans le service :
 
 * Consultez les workloads et l'état de vos workloads.
 * Supprimez toute ressource, telle qu'une charge de travail ou une règle.
@@ -39,7 +44,7 @@ Essayez la protection contre les ransomwares BlueXP pendant 90 jours gratuitemen
 
 NOTE: Aucune limite de capacité n'est appliquée pendant l'essai.
 
-Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez facturé qu'à la fin de la période d'essai de 90 jours. Pour continuer après l'essai de 90 jours, vous devez acheter une licence BYOL ou un abonnement PAYGO AWS.
+Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez facturé qu'à la fin de la période d'essai de 90 jours. Après l'essai de 90 jours, vous devez acheter une licence BYOL ou un abonnement PAYGO.
 
 Pendant la période d'essai, vous disposez de toutes les fonctionnalités.
 
@@ -65,8 +70,7 @@ Pour ajouter un connecteur, voir https://docs.netapp.com/us-en/bluexp-setup-admi
 
 Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via AWS Marketplace ou acheter une licence auprès de NetApp.
 
-<<Abonnez-vous sur AWS Marketplace>>
-<<Modèle BYOL (Bring Your Own License)>>
+<<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
 
 
 
