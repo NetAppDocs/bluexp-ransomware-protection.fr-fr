@@ -1269,5 +1269,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="dd6b8bf5a56c8beb81b173991906c83e" category="section-title">5 août 2024</block>
   <block id="3660cbb805c1bf63e1967ed1339a3bbd" category="paragraph">Cette version de la protection contre les ransomware BlueXP  inclut la mise à jour suivante.</block>
   <block id="11f5c2b9557e3c8b41afc65159260e17" category="list-text">*Détection des menaces avec Splunk Cloud* : vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. Avec les versions précédentes, vous pouviez uniquement sélectionner AWS Security Hub comme système SIEM. Avec cette version, vous pouvez sélectionner AWS Security Hub ou Splunk Cloud en tant que système SIEM.</block>
-  <block id="3a7cd5901f60d9fe1ad078b90ed19aa9" category="paragraph">Pour plus de détails, reportez-vous à <block ref="5870fcfbb57d837071c2ed4a31f53401" category="inline-link-macro-rx"></block>.</block>
+  <block id="0d0fda3a15e7f6f6406a0dde3997c91f" category="inline-link">En savoir plus sur la configuration des paramètres de protection contre les ransomwares de BlueXP </block>
+  <block id="5b0f75e0c31233c18e6f9318b8569cf7" category="paragraph"><block ref="25291e882ba76639fccc7a13f1838641" category="inline-link-rx"></block>.</block>
 </blocks>
