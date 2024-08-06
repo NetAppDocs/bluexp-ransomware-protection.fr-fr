@@ -1240,7 +1240,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="bf6953a41efa897b0862fca0fe547641" category="list-text">Sélectionnez *politiques*.</block>
   <block id="2228b7980f61d80481608141744ecee0" category="list-text">Créez une règle en utilisant le code suivant au format JSON :</block>
   <block id="9ccf45c8190b08c78e0be70f31ab71c4" category="section-title">Configurez Splunk Cloud pour la détection des menaces</block>
-  <block id="e215e0c1eb10681907a819d2fd1344c9" category="paragraph">Avant d'activer Splunk Cloud dans la protection contre les ransomwares BlueXP , vous devez effectuer les étapes générales suivantes dans Splunk Enterprise :</block>
   <block id="2023b8ec64adfca5ffadf54679575f52" category="list-text">Activez un collecteur d'événements HTTP dans Splunk Cloud pour recevoir des données d'événements via HTTP ou HTTPS depuis BlueXP .</block>
   <block id="a0df7816503d32b52e0b8eaf94868e56" category="list-text">Créez un jeton Event Collector dans Splunk Cloud.</block>
   <block id="2c65d4e0cdac9c48880857277c1bc9e3" category="list-title">Procédure d'activation d'un collecteur d'événements HTTP dans Splunk</block>
@@ -1271,4 +1270,5 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="11f5c2b9557e3c8b41afc65159260e17" category="list-text">*Détection des menaces avec Splunk Cloud* : vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. Avec les versions précédentes, vous pouviez uniquement sélectionner AWS Security Hub comme système SIEM. Avec cette version, vous pouvez sélectionner AWS Security Hub ou Splunk Cloud en tant que système SIEM.</block>
   <block id="0d0fda3a15e7f6f6406a0dde3997c91f" category="inline-link">En savoir plus sur la configuration des paramètres de protection contre les ransomwares de BlueXP </block>
   <block id="5b0f75e0c31233c18e6f9318b8569cf7" category="paragraph"><block ref="25291e882ba76639fccc7a13f1838641" category="inline-link-rx"></block>.</block>
+  <block id="38f076b49309ac077a903c6521bcf590" category="paragraph">Avant d'activer la solution de protection contre les ransomwares BlueXP  pour Splunk Cloud, vous devez effectuer les étapes générales suivantes :</block>
 </blocks>
