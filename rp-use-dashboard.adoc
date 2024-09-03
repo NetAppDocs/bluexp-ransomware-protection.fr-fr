@@ -103,6 +103,9 @@ Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads co
 Reportez-vous à la section link:rp-use-protect.html["Protéger la charge de travail contre les attaques par ransomware"]. 
 
 
+| Améliorer la sécurité de l'environnement de travail | NetApp Digital Advisor a identifié au moins un risque de sécurité élevé ou critique. | Passez en revue tous les risques liés à la sécurité dans NetApp Digital Advisor. Reportez-vous à la https://docs.netapp.com/us-en/active-iq/index.html["Documentation de Digital Advisor"^]. 
+
+
 | Renforcer la politique. | Certaines charges de travail ne bénéficient peut-être pas d'une protection suffisante. Renforcer la protection des charges de travail à l'aide d'une règle | Augmentez la conservation, ajoutez des sauvegardes, appliquez des sauvegardes immuables, bloquez les extensions de fichiers suspectes, activez la détection sur le stockage secondaire et plus encore.
 Reportez-vous à la section link:rp-use-protect.html["Protégez vos workloads contre les attaques par ransomware"]. 
 

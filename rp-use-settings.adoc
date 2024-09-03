@@ -42,6 +42,7 @@ Pour protéger ces charges de travail, vous devez ajouter une destination de sau
 
 * NetApp StorageGRID
 * Services Web Amazon (AWS)
+* Google Cloud Platform
 * Microsoft Azure
 
 
@@ -107,7 +108,7 @@ image:screen-settings-backup-destination.png["Page destinations de sauvegarde"]
 .Résultat
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
-image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
+image:screen-settings-backup-destinations-list2.png["Page destinations de sauvegarde l'option Paramètres"]
 
 
 
@@ -165,7 +166,47 @@ CAUTION: Si vous configurez le paramètre de verrouillage de sauvegarde maintena
 .Résultat
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
-image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
+image:screen-settings-backup-destinations-list2.png["Page destinations de sauvegarde l'option Paramètres"]
+
+
+
+=== Ajoutez Google Cloud Platform comme destination de sauvegarde
+
+Pour configurer Google Cloud Platform (GCP) en tant que destination de sauvegarde, entrez les informations suivantes.
+
+Pour plus d'informations sur la gestion du stockage GCP dans BlueXP , reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-google.html["Options d'installation de Connector dans Google Cloud"^]la section .
+
+. Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
+. Entrez un nom pour la destination de sauvegarde.
++
+image:screen-settings-backup-destination-gcp.png["Page destinations de sauvegarde"]
+
+. Sélectionnez *Google Cloud Platform*.
+. Sélectionnez la flèche vers le bas en regard de chaque paramètre et entrez ou sélectionnez des valeurs :
++
+** *Paramètres du fournisseur* :
++
+*** Créer un nouveau compartiment. Entrez la clé d'accès et la clé secrète.
+*** Entrez ou sélectionnez votre projet et votre région Google Cloud Platform.
+
+
+** *Chiffrement* : si vous créez un nouveau compartiment, entrez les informations de clé de chiffrement qui vous ont été fournies par le fournisseur. Si vous avez choisi un compartiment existant, les informations de chiffrement sont déjà disponibles.
++
+Les données du compartiment sont chiffrées avec des clés gérées par Google. Vous pouvez continuer à utiliser les clés gérées par Google.
+
+** *Mise en réseau* : choisissez l'IPspace et si vous allez utiliser un terminal privé.
++
+*** L'IPspace est le cluster où résident les volumes à sauvegarder. Les LIF intercluster pour cet IPspace doivent avoir un accès Internet sortant.
+*** Vous pouvez également choisir d'utiliser un terminal privé GCP (PrivateLink) que vous avez configuré précédemment.
+
+
+
+
+. Sélectionnez *Ajouter*.
+
+
+.Résultat
+La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
 
 
@@ -213,7 +254,7 @@ Pour utiliser Azure PrivateLink, reportez-vous à la section https://azure.micro
 .Résultat
 La nouvelle destination de sauvegarde est ajoutée à la liste des destinations de sauvegarde.
 
-image:screen-settings-backup-destinations-list-azure.png["Page destinations de sauvegarde l'option Paramètres"]
+image:screen-settings-backup-destinations-list2.png["Page destinations de sauvegarde l'option Paramètres"]
 
 
 

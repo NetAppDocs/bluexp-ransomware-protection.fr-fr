@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rp-start-login.html 
-keywords: bluexp login, ransomware protection log in 
+keywords: bluexp login, ransomware protection, bluexp,cyber attack, log in 
 summary: Commencez à utiliser la protection contre les ransomwares BlueXP en accédant au service de BlueXP. 
 ---
 = Accédez à la protection BlueXP contre les ransomware
@@ -13,6 +13,8 @@ summary: Commencez à utiliser la protection contre les ransomwares BlueXP en ac
 
 [role="lead"]
 Vous utilisez NetApp BlueXP pour vous connecter au service de protection contre les ransomwares BlueXP.
+
+La protection contre les ransomwares BlueXP  utilise le contrôle d'accès basé sur des rôles (RBAC) pour régir l'accès dont chaque utilisateur dispose à des actions spécifiques. Pour plus de détails sur les actions que chaque rôle peut exécuter, reportez-vous à la section link:rp-reference-roles.html["Privileges de contrôle d'accès basé sur des rôles, protection contre les ransomwares de BlueXP "].
 
 Pour vous connecter à BlueXP, vous pouvez utiliser vos identifiants du site de support NetApp ou vous inscrire à une connexion au cloud NetApp à l'aide de votre e-mail et de votre mot de passe. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["En savoir plus sur la connexion"^].
 

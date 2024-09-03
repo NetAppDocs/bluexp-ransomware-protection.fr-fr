@@ -1,0 +1,225 @@
+---
+sidebar: sidebar 
+permalink: rp-reference-roles.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights 
+summary: Dans le service de protection contre les ransomwares BlueXP, vous pouvez configurer plusieurs options, notamment la destination de sauvegarde. 
+---
+= Privileges de contrôle d'accès basé sur des rôles, protection contre les ransomwares de BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media
+
+
+[role="lead"]
+La protection contre les ransomwares BlueXP  utilise le contrôle d'accès basé sur des rôles (RBAC) pour régir l'accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l'administrateur de compte et de l'afficheur (non-administrateur de compte 0).
+
+Le tableau suivant indique les actions que chaque rôle peut effectuer.
+
+[cols="40,20a,20a"]
+|===
+| Fonction et action | Administrateur de compte BlueXP  | Non Admin (visualiseur) 
+
+
+| Essayer gratuitement  a| 
+Y
+ a| 
+N
+
+
+
+| Voir le tableau de bord  a| 
+Y
+ a| 
+Y
+
+
+
+| Afficher l'onglet protection  a| 
+Y
+ a| 
+Y
+
+
+
+| Afficher l'onglet alertes  a| 
+Y
+ a| 
+Y
+
+
+
+| Afficher l'onglet récupérer  a| 
+Y
+ a| 
+Y
+
+
+
+| Afficher l'onglet Rapports  a| 
+Y
+ a| 
+Y
+
+
+
+| Afficher l'onglet Paramètres  a| 
+Y
+ a| 
+Y
+
+
+
+| Lancez la découverte des charges de travail  a| 
+Y
+ a| 
+N
+
+
+
+| Protégez : modifiez ou supprimez des règles  a| 
+Y
+ a| 
+N
+
+
+
+| Protéger : ajoutez des règles  a| 
+Y
+ a| 
+N
+
+
+
+| Protégez : protégez les workloads  a| 
+Y
+ a| 
+N
+
+
+
+| Protégez : identifiez les données sensibles  a| 
+Y
+ a| 
+N
+
+
+
+| Protéger : modifiez la protection des charges de travail  a| 
+Y
+ a| 
+N
+
+
+
+| Protégez : affichez les détails du workload  a| 
+Y
+ a| 
+Y
+
+
+
+| Protéger : télécharger les données  a| 
+Y
+ a| 
+Y
+
+
+
+| Alertes : permet d'afficher les détails des alertes  a| 
+Y
+ a| 
+Y
+
+
+
+| Alertes : permet de modifier l'état d'un incident  a| 
+Y
+ a| 
+N
+
+
+
+| Alertes : permet d'afficher les détails de l'incident  a| 
+Y
+ a| 
+Y
+
+
+
+| Alertes : obtenez la liste complète des fichiers affectés  a| 
+Y
+ a| 
+N
+
+
+
+| Alertes : téléchargez les données d'alertes  a| 
+Y
+ a| 
+Y
+
+
+
+| Restaurer : téléchargez les fichiers affectés  a| 
+Y
+ a| 
+N
+
+
+
+| Restaurer : restaurez la charge de travail  a| 
+Y
+ a| 
+N
+
+
+
+| Restaurer : téléchargez les données de récupération  a| 
+Y
+ a| 
+Y
+
+
+
+| Restaurer : téléchargez des rapports  a| 
+Y
+ a| 
+Y
+
+
+
+| Paramètres : permet d'ajouter ou de modifier des cibles de sauvegarde  a| 
+Y
+ a| 
+N
+
+
+
+| Paramètres : permet d'ajouter ou de modifier des cibles SIEM  a| 
+Y
+ a| 
+N
+
+
+
+| Rapports : télécharger des rapports  a| 
+Y
+ a| 
+Y
+
+
+
+| Documentation : permet d'afficher la documentation relative au produit  a| 
+Y
+ a| 
+Y
+
+
+
+| Documentation : consultez la documentation sur les nouveautés du produit  a| 
+Y
+ a| 
+Y
+
+|===
