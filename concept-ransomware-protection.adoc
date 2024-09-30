@@ -192,6 +192,6 @@ En outre, si vous utilisez SnapCenter ou SnapCenter pour VMware, tous les worklo
 
 Pour en savoir plus sur la terminologie relative à la protection contre les ransomwares,
 
-* *Protection* : la protection dans BlueXP contre les ransomware signifie que les snapshots et les sauvegardes immuables s'effectuent sur une base régulière vers un domaine de sécurité différent à l'aide de politiques de protection.
+* *Protection* : la protection dans la protection contre les ransomware BlueXP  signifie que les snapshots et les sauvegardes immuables s'effectuent sur une base régulière vers un domaine de sécurité différent à l'aide de politiques de protection.
 * *Workload* : un workload protégé par ransomware BlueXP peut inclure des bases de données MySQL ou Oracle, des datastores VMware ou des partages de fichiers.
 

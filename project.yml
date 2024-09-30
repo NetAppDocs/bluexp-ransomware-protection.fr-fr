@@ -43,7 +43,10 @@ sidebar:
     - title: Consultez l'état des charges de travail à l'aide du tableau de bord
       url: "/rp-use-dashboard.html"
     - title: Protégez les workloads
-      url: "/rp-use-protect.html"
+      entries:
+      - title: Protégez vos workloads avec des stratégies de protection contre les
+          ransomwares
+        url: "/rp-use-protect.html"
     - title: Répondre à une alerte détectée
       url: "/rp-use-alert.html"
     - title: Évitez les attaques par ransomware
