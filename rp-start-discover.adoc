@@ -12,7 +12,7 @@ summary: Pendant la découverte, la protection contre les ransomwares BlueXP ana
 
 
 [role="lead"]
-Pour utiliser la protection contre les ransomwares BlueXP, le service doit d'abord détecter les données. Pendant la découverte, la protection contre les ransomwares BlueXP analyse tous les volumes et fichiers des environnements de travail sur tous les connecteurs BlueXP et espaces de travail d'un compte.
+Pour utiliser la protection contre les ransomwares BlueXP, le service doit d'abord détecter les données. Pendant la découverte, la protection contre les ransomwares de BlueXP  analyse tous les volumes et fichiers des environnements de travail sur tous les connecteurs BlueXP  et les projets d'une entreprise.
 
 La protection contre les ransomwares BlueXP évalue les applications MySQL, les applications Oracle, les datastores VMware et les partages de fichiers.
 

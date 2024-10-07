@@ -39,7 +39,7 @@ Après la fin de la période d'essai gratuite ou l'expiration de la licence ou d
 
 == Essayez-le gratuitement pendant 90 jours
 
-Essayez la protection contre les ransomwares BlueXP pendant 90 jours gratuitement. Vous devez être administrateur de compte pour démarrer l'essai gratuit.
+Essayez la protection contre les ransomwares BlueXP pendant 90 jours gratuitement. Vous devez être administrateur de l'organisation BlueXP  pour pouvoir lancer l'essai gratuit.
 
 
 NOTE: Aucune limite de capacité n'est appliquée pendant l'essai.
@@ -179,17 +179,7 @@ Si vous souhaitez utiliser votre propre licence (BYOL), vous devez acheter la li
 Après avoir acheté votre licence de protection contre les ransomwares BlueXP auprès de votre ingénieur commercial NetApp, vous activez la licence en saisissant le numéro de série de la protection contre les ransomware BlueXP et les informations de compte du site de support NetApp (NSS).
 
 .Avant de commencer
-Vous devez disposer des informations suivantes avant de commencer :
-
-* Numéro de série de la protection anti-ransomware BlueXP
-+
-Recherchez ce numéro dans votre numéro de commande ou contactez l'équipe chargée du compte pour obtenir ces informations.
-
-* ID de compte BlueXP
-+
-Vous pouvez trouver votre ID de compte BlueXP en sélectionnant la liste déroulante *compte* en haut de BlueXP, puis en sélectionnant *gérer le compte* en regard de votre compte. Votre ID de compte se trouve dans l'onglet vue d'ensemble.
-
-
+Vous aurez besoin du numéro de série de la protection contre les ransomware BlueXP . Recherchez ce numéro dans votre numéro de commande ou contactez l'équipe chargée du compte pour obtenir ces informations.
 
 .Étapes
 . Une fois la licence obtenue, retournez à la protection BlueXP contre les ransomware. Sélectionnez l'option *Afficher les modes de paiement* dans le coin supérieur droit. Ou, dans le message indiquant que l'essai gratuit expire, sélectionnez *s'abonner ou acheter une licence*.

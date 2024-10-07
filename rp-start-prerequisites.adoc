@@ -20,8 +20,8 @@ Pour utiliser la protection contre les ransomwares BlueXP , vous devez disposer
 
 == Dans BlueXP 
 
-* Un compte utilisateur BlueXP  avec Privileges d'administrateur de compte pour la découverte des ressources.
-* Compte BlueXP  avec au moins un connecteur BlueXP  actif se connectant aux clusters ONTAP sur site ou à Cloud Volumes ONTAP dans AWS ou dans Azure.
+* Un compte utilisateur BlueXP  avec Privileges de l'administrateur de l'organisation pour la découverte des ressources.
+* Organisation BlueXP  avec au moins un connecteur BlueXP  actif se connectant aux clusters ONTAP sur site ou à Cloud Volumes ONTAP dans AWS ou dans Azure.
 * Au moins un environnement de travail BlueXP  avec un cluster ONTAP sur site NetApp ou Cloud Volume ONTAP dans AWS ou Azure (avec les protocoles NAS ou CIFS).
 +
 ** Les clusters ONTAP ou Cloud volumes ONTAP avec le système d'exploitation ONTAP version 9.11.1 ou supérieure sont pris en charge.
@@ -31,7 +31,7 @@ Reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connec
 
 +
 
-NOTE: Si vous avez plusieurs connecteurs BlueXP  dans un seul compte BlueXP , le service de protection contre les ransomwares de BlueXP  analyse les ressources ONTAP sur tous les connecteurs au-delà de celui actuellement sélectionné dans l'interface utilisateur de BlueXP .
+NOTE: Si vous avez plusieurs connecteurs BlueXP  dans une seule organisation BlueXP , le service de protection contre les ransomwares de BlueXP  scanne les ressources ONTAP sur tous les connecteurs au-delà de celui actuellement sélectionné dans l'interface utilisateur de BlueXP .
 
 
 
@@ -73,7 +73,7 @@ Le service de protection contre les ransomwares BlueXP permet de configurer une 
 
 Si vous devez mettre à jour les autorisations utilisateur non administratives pour un environnement de travail particulier, procédez comme suit.
 
-. Connectez-vous au compte BlueXP  et recherchez l'environnement de travail dont les autorisations utilisateur ONTAP doivent être mises à jour.
+. Connectez-vous à BlueXP  et recherchez l'environnement de travail dont les autorisations utilisateur ONTAP doivent être mises à jour.
 . Double-cliquez sur l'environnement de travail pour afficher les détails.
 . Cliquez sur *Afficher les informations supplémentaires* qui indiquent le nom d'utilisateur.
 . Connectez-vous à l'interface de ligne de commandes du cluster ONTAP à l'aide de l'utilisateur admin.

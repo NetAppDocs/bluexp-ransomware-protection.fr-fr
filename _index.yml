@@ -2,21 +2,21 @@
 indexpage:
   title: Documentation sur la protection contre les ransomwares BlueXP
   summary: La protection contre les ransomwares BlueXP est un service d'orchestration
-    pour la protection contre les ransomwares, la détection et la restauration. Le
-    service protège les charges de travail basées sur les applications d'Oracle, de
-    MySQL, de datastores de machines virtuelles, et partages de fichiers sur le stockage
-    NAS sur site et Cloud Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles
-    NFS et CIFS) dans chacun des comptes BlueXP, et sauvegarde les données dans un
-    stockage cloud Amazon Web Services (AWS) ou NetApp StorageGRID.
+    pour la protection contre les ransomwares, la détection et la restauration. Ce
+    service protège les workloads basés sur les applications d'Oracle, de MySQL, de
+    datastores de machines virtuelles et de partages de fichiers sur un stockage NAS
+    sur site, ainsi que sur Cloud Volumes ONTAP dans Amazon Web Services (à l'aide
+    des protocoles NFS et CIFS) dans toutes les entreprises BlueXP  et sauvegarde
+    les données dans le stockage cloud Amazon Web Services (AWS) ou dans NetApp StorageGRID.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid
   lead: La protection contre les ransomwares BlueXP est un service d'orchestration
-    pour la protection contre les ransomwares, la détection et la restauration. Le
-    service protège les charges de travail basées sur les applications d'Oracle, de
-    MySQL, de datastores de machines virtuelles, et partages de fichiers sur le stockage
-    NAS sur site et Cloud Volumes ONTAP dans Amazon Web Services (à l'aide des protocoles
-    NFS et CIFS) dans chacun des comptes BlueXP, et sauvegarde les données dans un
-    stockage cloud Amazon Web Services (AWS) ou NetApp StorageGRID.
+    pour la protection contre les ransomwares, la détection et la restauration. Ce
+    service protège les workloads basés sur les applications d'Oracle, de MySQL, de
+    datastores de machines virtuelles et de partages de fichiers sur un stockage NAS
+    sur site, ainsi que sur Cloud Volumes ONTAP dans Amazon Web Services (à l'aide
+    des protocoles NFS et CIFS) dans toutes les entreprises BlueXP  et sauvegarde
+    les données dans le stockage cloud Amazon Web Services (AWS) ou dans NetApp StorageGRID.
   tiles:
   - title: Commencez
     links:

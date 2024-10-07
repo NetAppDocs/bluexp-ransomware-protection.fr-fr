@@ -45,7 +45,7 @@ Pour plus d'informations sur ces modes dans tous les services BlueXP, reportez-v
 *Quelle est l'URL de protection contre les ransomware BlueXP ?*
 Pour l'URL, dans un navigateur, entrez : https://console.bluexp.netapp.com/["https://console.bluexp.netapp.com/"^] Pour accéder à la console BlueXP.
 
-*Comment les autorisations d'accès sont-elles gérées?* Seuls les administrateurs de comptes ont la possibilité de lancer le service et de découvrir les workloads (car cela implique de s'engager à utiliser une ressource). Les interactions suivantes peuvent être effectuées par n'importe quel rôle.
+*Comment les autorisations d'accès sont-elles gérées?* Seuls les administrateurs de l'entreprise ont la possibilité de lancer le service et de découvrir les workloads (car cela implique de s'engager à utiliser une ressource). Les interactions suivantes peuvent être effectuées par n'importe quel rôle.
 
 *Quelle est la meilleure résolution de périphérique ?* La résolution recommandée pour la protection contre les ransomwares BlueXP est de 1920 x 1080 ou supérieure.
 
