@@ -8,11 +8,11 @@ summary: Dans le service de protection contre les ransomwares BlueXP, vous pouve
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]
-Vous pouvez configurer une destination de sauvegarde ou activer la détection des menaces en consultant les recommandations du tableau de bord ou en accédant à l'option *Settings*.
+Vous pouvez configurer une destination de sauvegarde ou activer la détection des menaces en consultant les recommandations du tableau de bord ou en accédant à l'option *Settings*. Vous pouvez également afficher les fonctions d'aperçu futures.
 
 L'activation de la détection des menaces envoie automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse des menaces.
 
@@ -28,6 +28,7 @@ Vous pouvez facilement accéder à la page Paramètres à partir de l'option act
 +
 ** Ajouter une destination de sauvegarde.
 ** Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
+** Afficher les fonctions d'aperçu à venir.
 
 
 
@@ -70,6 +71,7 @@ image:screen-dashboard.png["Page de tableau de bord"]
 
 Vous pouvez facilement accéder à la page Paramètres à partir de l'option actions située près du menu supérieur.
 
+.Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
 . Dans le menu déroulant, sélectionnez *Paramètres*.
 . Pour ajouter une destination de sauvegarde, sélectionnez *Ajouter*.
@@ -81,6 +83,7 @@ Vous pouvez facilement accéder à la page Paramètres à partir de l'option act
 
 Pour configurer NetApp StorageGRID comme destination de sauvegarde, entrez les informations suivantes.
 
+.Étapes
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
@@ -118,6 +121,7 @@ Pour configurer AWS en tant que destination de sauvegarde, entrez les informatio
 
 Pour en savoir plus sur la gestion de votre stockage AWS dans BlueXP, consultez la section https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Gestion de vos compartiments Amazon S3"^].
 
+.Étapes
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
@@ -176,6 +180,7 @@ Pour configurer Google Cloud Platform (GCP) en tant que destination de sauvegard
 
 Pour plus d'informations sur la gestion du stockage GCP dans BlueXP , reportez-vous à https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-google.html["Options d'installation de Connector dans Google Cloud"^]la section .
 
+.Étapes
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
@@ -216,6 +221,7 @@ Pour configurer Azure en tant que destination de sauvegarde, entrez les informat
 
 Pour en savoir plus sur la gestion de vos identifiants Azure et de vos abonnements Marketplace dans BlueXP, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gestion de vos identifiants Azure et de vos abonnements Marketplace"^].
 
+.Étapes
 . Sur la page *Paramètres > destinations de sauvegarde*, sélectionnez *Ajouter*.
 . Entrez un nom pour la destination de sauvegarde.
 +
@@ -260,7 +266,7 @@ image:screen-settings-backup-destinations-list2.png["Page destinations de sauveg
 
 == Activer la détection des menaces
 
-Vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. Vous pouvez sélectionner AWS Security Hub ou Splunk Cloud en tant que système SIEM.
+Vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. Vous pouvez sélectionner AWS Security Hub, Microsoft Sentinel ou Splunk Cloud en tant que système SIEM.
 
 Avant d'activer le système SIEM dans la protection anti-ransomware BlueXP , vous devez configurer votre système SIEM.
 
@@ -303,6 +309,117 @@ Avant d'activer AWS Security Hub dans la protection contre les ransomwares BlueX
 
 
 
+=== Configurez Microsoft Sentinel pour la détection des menaces
+
+Avant d'activer Microsoft Sentinel dans la protection contre les ransomwares BlueXP , vous devez effectuer les étapes générales suivantes dans Microsoft Sentinel :
+
+* * Conditions préalables*
++
+** Activez Microsoft Sentinel.
+** Créez un rôle personnalisé dans Microsoft Sentinel.
+
+
+* *Enregistrement*
++
+** Enregistrez la protection contre les ransomwares BlueXP  pour recevoir des événements de Microsoft Sentinel.
+** Créez un secret pour l'enregistrement.
+
+
+* *Autorisations* : attribuez des autorisations à l'application.
+* *Authentification* : saisissez les informations d'authentification de l'application.
+
+
+.Procédure d'activation de Microsoft Sentinel
+. Rendez-vous sur Microsoft Sentinel.
+. Créez un espace de travail *Log Analytics*.
+. Activez Microsoft Sentinel pour utiliser l'espace de travail Log Analytics que vous venez de créer.
+
+
+.Procédure de création d'un rôle personnalisé dans Microsoft Sentinel
+. Rendez-vous sur Microsoft Sentinel.
+. Sélectionnez *abonnement* > *contrôle d'accès (IAM)*.
+. Entrez un nom de rôle personnalisé. Utilisez le nom *BlueXP  ransomware protection Sentinel Configurator*.
+. Copiez le fichier JSON suivant et collez-le dans l'onglet *JSON*.
++
+[listing]
+----
+{
+  "roleName": "BlueXP Ransomware Protection Sentinel Configurator",
+  "description": "",
+  "assignableScopes":["/subscriptions/{subscription_id}"],
+  "permissions": [
+
+  ]
+}
+----
+. Vérifiez et enregistrez vos paramètres.
+
+
+.Étapes d'enregistrement de la protection contre les ransomwares BlueXP  pour recevoir des événements de Microsoft Sentinel
+. Rendez-vous sur Microsoft Sentinel.
+. Sélectionnez *Entra ID* > *applications* > *enregistrements d'applications*.
+. Pour le *Nom d'affichage* de l'application, entrez "*BlueXP  ransomware protection*".
+. Dans le champ *type de compte pris en charge*, sélectionnez *comptes dans ce répertoire organisationnel uniquement*.
+. Sélectionnez un *Index par défaut* dans lequel les événements seront poussés.
+. Sélectionnez *Revue*.
+. Sélectionnez *Enregistrer* pour enregistrer vos paramètres.
++
+Après l'enregistrement, le centre d'administration Microsoft Entra affiche le volet Présentation de l'application.
+
+
+
+.Étapes de création d'un secret pour l'enregistrement
+. Rendez-vous sur Microsoft Sentinel.
+. Sélectionnez *certificats et secrets* > *secrets clients* > *Nouveau secret client*.
+. Ajoutez une description pour le secret de votre application.
+. Sélectionnez un *expiration* pour le secret ou spécifiez une durée de vie personnalisée.
++
+
+TIP: La durée de vie d'un secret client est limitée à deux ans (24 mois) ou moins. Microsoft vous recommande de définir une valeur d'expiration inférieure à 12 mois.
+
+. Sélectionnez *Ajouter* pour créer votre secret.
+. Enregistrez le secret à utiliser à l'étape authentification. Le secret n'est plus affiché après avoir quitté cette page.
+
+
+.Procédure d'attribution des autorisations à l'application
+. Rendez-vous sur Microsoft Sentinel.
+. Sélectionnez *abonnement* > *contrôle d'accès (IAM)*.
+. Sélectionnez *Ajouter* > *Ajouter une affectation de rôle*.
+. Pour le champ *Privileged Administrator roles*, sélectionnez *BlueXP  ransomware protection Sentinel Configurator*.
++
+
+TIP: Il s'agit du rôle personnalisé que vous avez créé précédemment.
+
+. Sélectionnez *Suivant*.
+. Dans le champ *affecter un accès à*, sélectionnez *utilisateur, groupe ou principal de service*.
+. Sélectionnez *Sélectionner membres*. Ensuite, sélectionnez *BlueXP  ransomware protection Sentinel Configurator*.
+. Sélectionnez *Suivant*.
+. Dans le champ *que peut faire l'utilisateur* feld, sélectionnez *Autoriser l'utilisateur à attribuer tous les rôles à l'exception des rôles d'administrateur privilégié propriétaire, UAA, RBAC (recommandé)*.
+. Sélectionnez *Suivant*.
+. Sélectionnez *consulter et affecter* pour attribuer les autorisations.
+
+
+.Procédure de saisie des informations d'authentification pour l'application
+. Rendez-vous sur Microsoft Sentinel.
+. Entrez les informations d'identification :
++
+.. Entrez l'ID du locataire, l'ID de l'application client et le secret de l'application client.
+.. Cliquez sur *authentifier*.
++
+
+NOTE: Une fois l'authentification réussie, un message « authentifié » s'affiche.
+
+
+
+. Entrez les détails de l'espace de travail Log Analytics de l'application.
++
+.. Sélectionnez l'ID d'abonnement, le groupe de ressources et l'espace de travail Log Analytics.
+
+
+
+
+
+
 === Configurez Splunk Cloud pour la détection des menaces
 
 Avant d'activer la solution de protection contre les ransomwares BlueXP  pour Splunk Cloud, vous devez effectuer les étapes générales suivantes :
@@ -336,6 +453,7 @@ Avant d'activer la solution de protection contre les ransomwares BlueXP  pour S
 
 L'activation du système SIEM envoie les données de la protection contre les ransomwares BlueXP  à votre serveur SIEM à des fins d'analyse et de reporting des menaces.
 
+.Étapes
 . Dans le menu BlueXP , sélectionnez *protection* > *protection contre les ransomware*.
 . Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
 . Sélectionnez *Paramètres*.
@@ -343,9 +461,12 @@ L'activation du système SIEM envoie les données de la protection contre les ra
 La page Paramètres s'affiche.
 
 +
-image:screen-settings-threat-detection3.png["Page Paramètres"]
+image:screen-settings2.png["Page Paramètres"]
 
-. Dans la page Paramètres, sélectionnez *connexion* dans le volet de connexion SIEM.
+. Dans la page Paramètres, sélectionnez *connexion* dans la mosaïque de connexion SIEM.
++
+image:screen-settings-threat-detection-3options.png["Activer la page de détails de détection des menaces"]
+
 . Choisissez l'un des systèmes SIEM.
 . Entrez le jeton et les informations d'authentification que vous avez configurés dans AWS Security Hub ou Splunk Cloud.
 +
@@ -360,14 +481,20 @@ La page Paramètres affiche « connecté ».
 
 
 
-=== Déconnecter SIEM
+== Afficher les fonctions d'aperçu
 
-La déconnexion de SIEM empêche le service d'envoyer des données au serveur SIEM.
+Vous pouvez essayer les fonctions à venir intitulées « Aperçu » avant leur publication. Ces fonctionnalités apparaissent dans l'interface utilisateur avec un libellé « Aperçu ».
+
+.Avant de commencer
+Pour découvrir les fonctionnalités de la version préliminaire, vous avez besoin d'une clé de l'équipe de protection contre les ransomwares de BlueXP . Pour obtenir la clé, envoyez un e-mail à mailto:ng-rps-Key@NetApp.com.
 
 .Étapes
-. Dans le menu BlueXP , sélectionnez *protection* > *protection contre les ransomware*.
 . Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
 . Sélectionnez *Paramètres*.
-. Dans le volet de connexion SIEM, sélectionnez *déconnecter*.
-. Sur la page de confirmation, sélectionnez *déconnecter*.
++
+image:screen-settings2.png["Page Paramètres"]
+
+. Dans la mosaïque *Aperçu des fonctions*, sélectionnez *Afficher*.
+. Entrez la clé.
+. Sélectionnez *Afficher*.
 

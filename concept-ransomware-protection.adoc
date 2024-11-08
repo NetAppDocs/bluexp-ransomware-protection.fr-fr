@@ -72,6 +72,9 @@ La protection contre les ransomwares BlueXP offre les avantages suivants :
 
 NetApp ne vous facture pas pour l'utilisation de la version d'essai de la protection contre les ransomwares BlueXP.
 
+
+NOTE: Pour la version d'octobre 2024, les nouveaux déploiements de la protection contre les ransomware BlueXP  disposent de 30 jours d'essai gratuit. Auparavant, la protection contre les ransomwares de BlueXP  nous a permis de bénéficier de 90 jours d'essai gratuit. Si vous êtes déjà dans l'essai gratuit de 90 jours, cette offre se poursuit pendant les 90 jours.
+
 Si vous disposez à la fois de la sauvegarde et de la restauration BlueXP  et de la protection contre les ransomwares BlueXP , toutes les données communes protégées par les deux produits seront uniquement facturées par la protection contre les ransomwares BlueXP .
 
 Après l'achat d'une licence ou d'un abonnement PayGo, tous les workloads pour lesquels une stratégie de détection des ransomwares (protection anti-ransomware autonome) est activée (découverte ou définition par la protection anti-ransomware de BlueXP ) et au moins une copie Snapshot ou règle de sauvegarde, la protection contre les ransomwares BlueXP  la classe « protégée » et compte par rapport à la capacité achetée ou à l'abonnement PayGo. Si une charge de travail est découverte sans ARP (Detection policy) même si elle dispose de règles de sauvegarde ou de snapshots, elle est classée « à risque » et ne tient pas compte de la capacité achetée.
@@ -84,7 +87,7 @@ Les charges de travail protégées sont prises en compte par rapport à la capac
 
 Avec la protection contre les ransomware BlueXP, vous pouvez utiliser différents plans de licence, notamment un essai gratuit, un abonnement avec paiement basé sur l'utilisation ou l'utilisation de votre propre licence.
 
-Le service de protection contre les ransomwares BlueXP requiert une licence NetApp ONTAP.
+Le service de protection contre les ransomwares BlueXP  requiert une licence NetApp ONTAP One.
 
 La licence de protection contre les ransomwares BlueXP  n'inclut pas d'autres produits NetApp. La protection contre les ransomwares de BlueXP  peut utiliser la sauvegarde et la restauration BlueXP  même si vous ne disposez pas d'une licence pour celle-ci.
 
@@ -168,7 +171,7 @@ Utilisez la protection contre les ransomwares de BlueXP  pour découvrir commen
 * NAS ONTAP sur site (à l'aide des protocoles NFS et CIFS) avec ONTAP version 9.11.1 et supérieure
 * Cloud Volumes ONTAP 9.11.1 ou version supérieure pour AWS (avec protocoles NFS et CIFS)
 * Cloud Volumes ONTAP 9.11.1 ou version supérieure pour Google Cloud Platform (avec protocoles NFS et CIFS)
-* Cloud Volumes ONTAP 9.11.1 ou version supérieure pour Microsoft Azure (avec protocoles NFS et CIFS)
+* Cloud Volumes ONTAP 9.12.1 ou version supérieure pour Microsoft Azure (avec protocoles NFS et CIFS)
 
 
 

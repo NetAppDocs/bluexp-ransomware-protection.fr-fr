@@ -8,13 +8,15 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,it-it
 sidebar:
   entries:
   - title: Documents de protection contre les ransomwares BlueXP
     url: "/index.html"
   - title: Notes de mise à jour
-    url: "/whats-new.html"
+    entries:
+    - title: Nouveautés de la protection contre les ransomwares BlueXP
+      url: "/whats-new.html"
   - title: Commencez
     entries:
     - title: Découvrez la protection contre les ransomwares BlueXP
@@ -47,6 +49,8 @@ sidebar:
       - title: Protégez vos workloads avec des stratégies de protection contre les
           ransomwares
         url: "/rp-use-protect.html"
+      - title: Recherchez les données personnelles identifiables
+        url: "/rp-use-protect-classify.html"
     - title: Répondre à une alerte détectée
       url: "/rp-use-alert.html"
     - title: Évitez les attaques par ransomware

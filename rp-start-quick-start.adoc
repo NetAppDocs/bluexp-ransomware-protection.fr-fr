@@ -8,7 +8,7 @@ summary: Commencez à utiliser le service de protection contre les ransomwares N
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

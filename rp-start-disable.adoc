@@ -8,7 +8,7 @@ summary: Si vous ne souhaitez plus utiliser le service de protection contre les 
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

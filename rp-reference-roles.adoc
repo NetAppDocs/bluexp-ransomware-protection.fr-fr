@@ -1,24 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: rp-reference-roles.html 
-keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights 
-summary: Dans le service de protection contre les ransomwares BlueXP, vous pouvez configurer plusieurs options, notamment la destination de sauvegarde. 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
+summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"accès basé sur des rôles (RBAC) pour régir l"accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l"administrateur et de l"afficheur de l"organisation (non-administrateur de l"organisation).' 
 ---
 = Privileges de contrôle d'accès basé sur des rôles, protection contre les ransomwares de BlueXP 
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]
-La protection contre les ransomwares BlueXP  utilise le contrôle d'accès basé sur des rôles (RBAC) pour régir l'accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l'administrateur de compte et de l'afficheur (non-administrateur de compte 0).
+La protection contre les ransomwares BlueXP  utilise le contrôle d'accès basé sur des rôles (RBAC) pour régir l'accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l'administrateur et de l'afficheur de l'organisation (non-administrateur de l'organisation).
 
 Le tableau suivant indique les actions que chaque rôle peut effectuer.
 
 [cols="40,20a,20a"]
 |===
-| Fonction et action | Administrateur de compte BlueXP  | Non Admin (visualiseur) 
+| Fonction et action | Administrateur d'entreprise BlueXP  | Non Admin (visualiseur) 
 
 
 | Essayer gratuitement  a| 

@@ -8,7 +8,7 @@ summary: Commencez à utiliser la protection contre les ransomwares BlueXP en ac
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

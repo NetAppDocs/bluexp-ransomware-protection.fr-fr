@@ -8,7 +8,7 @@ summary: Commencez à utiliser la protection contre les ransomwares BlueXP en co
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -16,8 +16,8 @@ Avec la protection contre les ransomwares BlueXP, vous pouvez utiliser différen
 
 Vous pouvez utiliser les types de licence suivants :
 
-* Inscrivez-vous pour bénéficier d'un essai gratuit de 90 jours.
-* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace ou Azure Marketplace (prochainement).
+* Inscrivez-vous pour bénéficier d'un essai gratuit de 30 jours.
+* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace ou Azure Marketplace (prochainement).
 * BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
 
@@ -31,20 +31,22 @@ Une fois que vous avez configuré votre modèle BYOL ou que vous avez acheté un
 Après la fin de la période d'essai gratuite ou l'expiration de la licence ou de l'abonnement, vous pouvez toujours effectuer les opérations suivantes dans le service :
 
 * Consultez les workloads et l'état de vos workloads.
-* Supprimez toute ressource, telle qu'une charge de travail ou une règle.
+* Supprimez toute ressource, telle qu'une règle.
 * Exécutez toutes les opérations planifiées qui ont été créées pendant la période d'essai ou sous la licence.
 
 
 
 
-== Essayez-le gratuitement pendant 90 jours
+== Essayez-le gratuitement pendant 30 jours
 
-Essayez la protection contre les ransomwares BlueXP pendant 90 jours gratuitement. Vous devez être administrateur de l'organisation BlueXP  pour pouvoir lancer l'essai gratuit.
+Essayez la protection contre les ransomwares BlueXP pendant 30 jours gratuitement. Vous devez être administrateur de l'organisation BlueXP  pour pouvoir lancer l'essai gratuit.
 
 
-NOTE: Aucune limite de capacité n'est appliquée pendant l'essai.
+NOTE: Avec la version d'octobre 2024, les nouveaux déploiements de la protection contre les ransomware BlueXP  disposent désormais de 30 jours pour un essai gratuit. Auparavant, la protection contre les ransomwares de BlueXP  nous a permis de bénéficier de 90 jours d'essai gratuit. Si vous êtes déjà dans l'essai gratuit de 90 jours, cette offre se poursuit pendant les 90 jours.
 
-Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez facturé qu'à la fin de la période d'essai de 90 jours. Après l'essai de 90 jours, vous devez acheter une licence BYOL ou un abonnement PAYGO.
+Aucune limite de capacité n'est appliquée pendant l'essai.
+
+Vous pouvez obtenir une licence ou vous abonner à tout moment et vous ne serez facturé qu'à la fin de la période d'essai de 30 jours. Après l'essai de 30 jours, vous devez acheter une licence BYOL ou un abonnement PAYGO.
 
 Pendant la période d'essai, vous disposez de toutes les fonctionnalités.
 
@@ -68,9 +70,9 @@ Pour ajouter un connecteur, voir https://docs.netapp.com/us-en/bluexp-setup-admi
 
 *Une fois la période d'essai terminée, obtenez un abonnement ou une licence*
 
-Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via AWS Marketplace ou acheter une licence auprès de NetApp.
+Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via l'un des Marketplaces ou acheter une licence auprès de NetApp.
 
-<<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
+<<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Abonnez-vous via Google Cloud Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
 
 
 
@@ -143,6 +145,54 @@ image:screen-license-payment-methods2.png["Page méthodes de paiement de la prot
 +
 
 NOTE: Vous recevez un e-mail qui inclut le numéro de série de la protection contre les ransomwares BlueXP et indique que la protection contre les ransomwares BlueXP est souscrite dans Azure Marketplace.
+
+. Retournez à la page BlueXP ransomware protection Payment Methods.
+. Ajoutez la licence à BlueXP en sélectionnant *Ajouter une licence à BlueXP*.
++
+Le service de portefeuille digital BlueXP affiche la page Ajouter une licence.
+
++
+image:screen-license-dw-add-license.png["Page Ajouter une licence du portefeuille digital BlueXP"]
+
+. Sur la page Ajouter une licence du portefeuille digital BlueXP, sélectionnez *entrer le numéro de série*, entrez le numéro de série inclus dans l'e-mail qui vous a été envoyé, puis sélectionnez *Ajouter une licence*.
+. Pour afficher les détails de licence dans le portefeuille digital BlueXP, dans le menu de navigation de gauche de BlueXP, sélectionnez *gouvernance* > *portefeuille digital*.
++
+** Pour afficher les informations d'abonnement, sélectionnez *abonnements*.
+** Pour afficher les licences BYOL, sélectionnez *Data Services Licenses*.
++
+image:screen-dw-data-services-license.png["Portefeuille digital BlueXP page licences des services de données"]
+
+
+
+. Revenez à la protection BlueXP contre les ransomware. Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
++
+Un message s'affiche pour indiquer qu'une licence a été ajoutée.
+
+
+
+
+
+== Abonnez-vous via Google Cloud Marketplace
+
+Dans cette procédure, vous découvrirez comment vous abonner directement dans Google Cloud Marketplace.
+
+.Étapes
+. Dans la solution de protection contre les ransomwares BlueXP, effectuez l'une des opérations suivantes :
++
+** Vous voyez un message indiquant que l'essai gratuit expire. Dans le message, sélectionnez *Afficher les modes de paiement*.
+** Cliquez sur l'avis *essai gratuit* en haut à droite et sélectionnez *Afficher les modes de paiement*.
++
+image:screen-license-payment-methods3-gcp.png["Page méthodes de paiement de la protection contre les ransomwares BlueXP"]
+
+
+
+. Sur la page modes de paiement, sélectionnez *s'abonner à Google Cloud Marketplace*.
+. Dans Google Cloud Marketplace, sélectionnez *s'abonner*.
+. Abonnez-vous à la solution de protection BlueXP  contre les ransomwares à l'aide de Google Cloud Marketplace. image:screen-license-payments-gcp.png["Page d'abonnement Google Cloud Marketplace"]
+. Lorsque vous revenez à la protection contre les ransomwares BlueXP, un message indique que vous êtes abonné.
++
+
+NOTE: Nous vous envoyons un e-mail contenant le numéro de série de la protection contre les ransomwares BlueXP  et indiquant que la protection BlueXP  contre les ransomwares est souscrite dans Google Cloud Marketplace.
 
 . Retournez à la page BlueXP ransomware protection Payment Methods.
 . Ajoutez la licence à BlueXP en sélectionnant *Ajouter une licence à BlueXP*.
