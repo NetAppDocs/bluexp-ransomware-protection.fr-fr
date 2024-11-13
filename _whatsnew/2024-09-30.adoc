@@ -1,0 +1,11 @@
+= Regroupement personnalisé des workloads de partage de fichiers
+:allow-uri-read: 
+
+
+
+
+=== Regroupement personnalisé des workloads de partage de fichiers
+
+Avec cette version, vous pouvez désormais regrouper les partages de fichiers en groupes afin de protéger plus facilement l'intégrité de vos données. Le service peut protéger simultanément tous les volumes d'un groupe. Auparavant, chaque volume devait être protégé séparément.
+
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur le regroupement des workloads de partage de fichiers dans des stratégies de protection contre les ransomwares"].
