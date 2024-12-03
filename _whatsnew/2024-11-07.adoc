@@ -8,23 +8,13 @@
 
 Avec cette version, vous pouvez activer la classification BlueXP , un composant clé de la gamme BlueXP , pour analyser et classer les données dans les workloads de partage de fichiers. La classification des données vous aide à déterminer si vos données incluent des informations personnelles ou privées, ce qui peut augmenter les risques de sécurité. Ce processus a également un impact sur l'importance des workloads et vous aide à vous assurer que vous protégez ces mêmes workloads avec le niveau de protection approprié.
 
-L'analyse des données de RP dans la protection contre les ransomwares BlueXP  est généralement disponible pour les clients qui ont déployé la classification BlueX. La classification BlueXP  est disponible gratuitement en tant que composant de la plateforme BlueXP  et peut être déployée sur site ou dans le cloud du client.
-
-La classification BlueXP  peut également être déployée en tant que modèle SaaS dans le cadre d'une présentation de la technologie. Pour activer les fonctionnalités de prévisualisation, utilisez l'option protection contre les ransomware BlueXP  *Paramètres*. Si vous activez l'aperçu, un libellé « Aperçu » apparaît en regard de la colonne *exposition privée* de la page protection avec d'autres emplacements.
+L'analyse des données de RP dans la protection contre les ransomwares BlueXP  est généralement disponible pour les clients qui ont déployé la classification BlueXP . La classification BlueXP  est disponible gratuitement en tant que composant de la plateforme BlueXP  et peut être déployée sur site ou dans le cloud du client.
 
 Reportez-vous à la https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Configurez les paramètres de protection contre les ransomwares BlueXP"].
 
 Pour lancer la numérisation, sur la page protection, cliquez sur *identifier l'exposition* dans la colonne exposition privée.
 
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect-classify.html["Analysez les données sensibles à caractère personnel pour les classer BlueXP "].
-
-
-
-=== Essayez les fonctions de prévisualisation à venir avant leur sortie
-
-Vous pouvez maintenant essayer certaines fonctions intitulées « Aperçu » avant leur publication. Pour ce faire, utilisez l'option *Settings* pour afficher ces fonctions, qui sont marquées d'un libellé "Preview".
-
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["En savoir plus sur la configuration des paramètres de protection contre les ransomwares de BlueXP "].
 
 
 

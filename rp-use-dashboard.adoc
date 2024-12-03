@@ -33,7 +33,7 @@ image:screen-dashboard.png["Page de tableau de bord"]
 ** *Protection des données de charge de travail* : cliquez sur *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la section link:rp-use-protect.html["Protégez les workloads"].
 +
 
-TIP: Cliquez sur la note i pour voir des conseils sur ces données. Pour augmenter la limite de la charge de travail, cliquez sur *augmenter la limite de la charge de travail* à l'intérieur de ce i note. Cliquez sur ce bouton pour accéder à la page de support BlueXP , où vous pouvez créer un ticket de dossier.
+TIP: Cliquez sur la note « i » pour voir des conseils sur ces données. Pour augmenter la limite de la charge de travail, cliquez sur *augmenter la limite de la charge de travail* à l'intérieur de ce i note. Cliquez sur ce bouton pour accéder à la page de support BlueXP , où vous pouvez créer un ticket de dossier.
 
 ** *Alertes et récupération des données de charge de travail* : cliquez *Afficher tout* pour voir les incidents actifs qui ont affecté votre charge de travail, sont prêts pour la récupération après que les incidents sont neutralisés ou sont en cours de récupération. Reportez-vous à la section link:rp-use-alert.html["Répondre à une alerte détectée"].
 +
