@@ -42,10 +42,7 @@ image:screen-protection-sensitive-preview-column.png["Page de protection afficha
 
 
 .Résultat
-La classification BlueXP  installe un connecteur BlueXP , se connecte à distance aux données de vos workloads et les analyse dans le cloud NetApp (Amazon Web Services, US-West-1). Le cloud NetApp ne conserve que les informations et les metrics identifiés.
-
-
-NOTE: L'analyse peut prendre plusieurs minutes en fonction de la quantité de données. La page protection indique que la classification BlueXP  identifie les fichiers et indique le nombre de fichiers qu'elle analyse.
+L'analyse peut prendre plusieurs minutes en fonction de la quantité de données. La page protection indique que la classification BlueXP  identifie les fichiers et indique le nombre de fichiers qu'elle analyse.
 
 Une fois la numérisation terminée, la colonne exposition privée affiche le niveau d'exposition faible, moyen ou élevé.
 
