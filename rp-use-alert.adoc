@@ -12,7 +12,7 @@ summary: 'Si la protection contre les ransomwares BlueXP détecte une attaque, u
 
 
 [role="lead"]
-Si la protection contre les ransomwares BlueXP détecte une attaque, une alerte s'affiche dans le tableau de bord de protection contre les ransomwares BlueXP et dans les notifications BlueXP en haut à droite indiquant une attaque potentielle par ransomware. Par ailleurs, le service initie immédiatement la création d'une copie Snapshot. À ce stade, vous devez examiner le risque potentiel dans l'onglet * alertes * de la protection contre les ransomwares BlueXP.
+Si la protection contre les ransomwares BlueXP détecte une attaque, une alerte s'affiche dans le tableau de bord de protection contre les ransomwares BlueXP et dans les notifications BlueXP en haut à droite indiquant une attaque potentielle par ransomware. Le service lance également immédiatement la création d'une copie Snapshot. À ce stade, vous devez examiner le risque potentiel dans l'onglet * alertes * de la protection contre les ransomwares BlueXP.
 
 Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement.
 
@@ -66,11 +66,11 @@ CAUTION: Une fois que vous avez rejeté une attaque, vous ne pouvez plus la modi
 
 == Afficher les alertes
 
-Vous pouvez accéder aux alertes à partir du tableau de bord de protection BlueXP contre les ransomware ou de l'onglet *alertes*.
+Vous pouvez accéder aux alertes depuis le tableau de bord de protection contre les ransomwares de BlueXP  ou depuis l'onglet *alertes*.
 
 .Étapes
 . Dans le tableau de bord de protection contre les ransomwares BlueXP, consultez le volet alertes.
-. Sélectionnez *Afficher tout* sous l'une des statues.
+. Sélectionnez *Afficher tout* sous l'un des États.
 . Cliquez sur une alerte pour examiner tous les incidents sur chaque volume pour chaque alerte.
 . Pour consulter d'autres alertes, cliquez sur *Alert* dans le fil d'Ariane en haut à gauche.
 . Consultez les alertes sur la page alertes.
@@ -79,8 +79,101 @@ image:screen-alerts.png["Page alertes"]
 
 . Continuer :
 +
+** <<Detect anomalous user behavior>>.
 ** <<Marquer les incidents de ransomware comme prêts pour la restauration (après neutralisation des incidents)>>.
 ** <<Rejeter les incidents qui ne sont pas des attaques potentielles>>.
+
+
+
+
+
+
+== Détectez les activités malveillantes et les comportements anormaux des utilisateurs
+
+L'onglet alertes vous permet d'identifier les activités malveillantes. Les détails qui s'affichent dépendent de la manière dont l'alerte a été déclenchée :
+
+* Déclenché par la fonctionnalité de protection anti-ransomware autonome de ONTAP. Cette action détecte les activités malveillantes en fonction du comportement des fichiers présents dans le volume.
+* Déclenché par la sécurité des workloads d'informations sur l'infrastructure de données. Cette configuration nécessite une licence pour Data Infrastructure Insights Workload Security et vous l'activez dans la protection BlueXP  contre les ransomware. Cette fonctionnalité détecte les comportements anormaux des utilisateurs dans vos workloads de stockage et vous permet de bloquer cet utilisateur pour qu'il n'y ait plus d'accès.
++
+Pour activer la sécurité de la charge de travail dans la protection contre les ransomware BlueXP , allez à la page *Paramètres* et sélectionnez l'option *connexion de sécurité de la charge de travail*.
+
++
+Pour une présentation de l'infrastructure de données Insights Workload Security, consultez https://docs.netapp.com/us-en/data-infrastructure-insights/cs_intro.html["À propos de la sécurité des workloads"^]
+
+
+
+
+TIP: Si vous ne possédez pas de licence pour la sécurité des workloads d'infrastructure de données et que vous ne l'activez pas dans la protection contre les ransomwares BlueXP , vous ne verrez pas les informations sur le comportement anormal des utilisateurs.
+
+En cas d'activité malveillante, une alerte est générée et une copie Snapshot automatique est effectuée.
+
+
+
+=== Affichez les activités malveillantes de la protection anti-ransomware autonome uniquement
+
+Lorsque la protection anti-ransomware autonome déclenche une alerte dans la protection contre les ransomware BlueXP , vous pouvez afficher les informations suivantes :
+
+* Entropie des données entrantes
+* Taux de création prévu de nouveaux fichiers par rapport au taux détecté
+* Taux de suppression attendu des fichiers par rapport au taux détecté
+* Taux de renommage prévu des fichiers par rapport au taux détecté
+
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
+. Sélectionnez une alerte.
+. Passez en revue les incidents dans l'alerte.
++
+image:screen-alerts-incidents3.png["Page incidents d'alerte"]
+
+. Sélectionnez un incident pour consulter les détails de l'incident.
++
+image:screen-alerts-incidents-details-arp.png["Page de détails de l'incident"]
+
+
+
+
+
+=== Consultez les comportements anormaux des utilisateurs dans Data Infrastructure Insights Workload Security
+
+Lorsque Data Infrastructure Insights Workload Security déclenche une alerte dans la protection BlueXP  contre les ransomwares, vous pouvez afficher l'utilisateur suspect, bloquer l'utilisateur et étudier l'activité des utilisateurs directement dans Data Infrastructure Insights Workload Security.
+
+
+TIP: Ces fonctionnalités viennent compléter les détails disponibles avec la simple protection anti-ransomware autonome.
+
+.Avant de commencer
+Cette option requiert une licence pour Data Infrastructure Insights Workload Security et vous l'activez dans la protection BlueXP  contre les ransomware.
+
+Pour activer la sécurité des workloads dans la protection contre les ransomware BlueXP , procédez comme suit :
+
+. Accédez à la page *Paramètres*.
+. Sélectionnez l'option *Workload Security connection*.
++
+Pour plus de détails, voir link:rp-use-settings.html["Configurez les paramètres de protection contre les ransomwares BlueXP"].
+
+
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
+. Sélectionnez une alerte.
+. Passez en revue les incidents dans l'alerte.
++
+image:screen-alerts-incidents-diiws.png["Page des incidents d'alerte affichant les détails de Workload Security"]
+
+. Pour empêcher un utilisateur suspecté d'accéder davantage à votre environnement surveillé par BlueXP , sélectionnez le lien *bloquer l'utilisateur*.
+. Recherchez l'alerte ou un incident dans l'alerte :
++
+.. Pour approfondir la recherche dans Data Infrastructure Insights Workload Security, cliquez sur le lien *Investiguer dans Workload Security*.
+.. Sélectionnez un incident pour consulter les détails de l'incident.
++
+image:screen-alerts-incidents-details-arp-diiws.png["Page de détails de l'incident affichant les détails de Workload Security"]
+
++
+Informations sur l'infrastructure de données Workload Security s'ouvre dans un nouvel onglet.
+
++
+image:screen-alerts-incidents-diiws-diiwspage.png["Analysez la sécurité des workloads"]
+
 
 
 
@@ -99,7 +192,7 @@ image:screen-alerts.png["Page alertes"]
 . Dans la page alertes, sélectionnez l'alerte.
 . Passez en revue les incidents dans l'alerte.
 +
-image:screen-alerts-incidents2.png["Page incidents d'alerte"]
+image:screen-alerts-incidents3.png["Page incidents d'alerte"]
 
 . Si vous déterminez que les incidents sont prêts à être restaurés, sélectionnez *Marquer la restauration nécessaire*.
 . Confirmez l'action et sélectionnez *Marquer la restauration nécessaire*.
@@ -134,8 +227,8 @@ image:screen-alerts-incidents2.png["Page incidents d'alerte"]
 . Sélectionnez un ou plusieurs incidents. Vous pouvez également sélectionner tous les incidents en sélectionnant la zone ID incident dans le coin supérieur gauche du tableau.
 . Si vous déterminez que l'incident n'est pas une menace, rejetez-le comme un faux positif :
 +
-** Si vous avez sélectionné un incident, sélectionnez *actions* … Sur la droite, sélectionnez *Modifier l'état*.
-** Si vous avez sélectionné plusieurs incidents, sélectionnez le bouton *Modifier état* au-dessus du tableau.
+** Sélectionnez l'incident.
+** Sélectionnez le bouton *Modifier état* au-dessus du tableau.
 +
 image:screen-alerts-status-edit.png["Page État de modification des alertes"]
 

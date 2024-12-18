@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-settings.html 
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware settings, backup destination 
-summary: Dans le service de protection contre les ransomwares BlueXP, vous pouvez configurer plusieurs options, notamment la destination de sauvegarde. 
+summary: Vous pouvez configurer plusieurs options, notamment la destination de la sauvegarde, la détection des menaces et la connexion à Data Infrastructure Insights Workload Security dans le service de protection contre les ransomwares de BlueXP . 
 ---
 = Configurez les paramètres de protection contre les ransomwares BlueXP
 :hardbreaks:
@@ -12,9 +12,14 @@ summary: Dans le service de protection contre les ransomwares BlueXP, vous pouve
 
 
 [role="lead"]
-Vous pouvez configurer une destination de sauvegarde ou activer la détection des menaces en consultant les recommandations du tableau de bord ou en accédant à l'option *Settings*.
+Vous pouvez configurer une destination de sauvegarde, activer la détection des menaces ou configurer la connexion à Data Infrastructure Insights Workload Security en accédant à l'option *Settings*. L'activation de la détection des menaces envoie automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse des menaces.
 
-L'activation de la détection des menaces envoie automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse des menaces.
+À partir de la page Paramètres, vous pouvez effectuer les opérations suivantes :
+
+* Configurez la connexion au système de sécurité des workloads Data Infrastructure Insights pour voir les informations concernant les utilisateurs suspects dans des alertes de ransomware.
+* Ajouter une destination de sauvegarde.
+* Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
+
 
 
 
@@ -24,12 +29,38 @@ Vous pouvez facilement accéder à la page Paramètres à partir de l'option act
 
 . Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
 . Dans le menu déroulant, sélectionnez *Paramètres*.
-. À partir de la page Paramètres, vous pouvez effectuer les opérations suivantes :
+
+
+
+
+== Connectez-vous à la sécurité des workloads Data Infrastructure Insights pour détecter les comportements anormaux des utilisateurs
+
+Avant d'afficher les détails des comportements anormaux des utilisateurs suspectés dans la protection contre les ransomwares BlueXP , vous devez configurer la connexion au système de sécurité des workloads NetApp Data Infrastructure Insights.
+
+
+
+=== Obtenez un jeton d'accès aux API depuis le système de sécurité de la charge de travail Data Infrastructure Insights
+
+Obtenez un jeton d'accès aux API depuis le système de sécurité de la charge de travail Data Infrastructure Insights.
+
+. Connectez-vous au système de sécurité de la charge de travail Data Infrastructure Insights.
+. Dans le menu de navigation de gauche, sélectionnez *Admin* > *API Access*.
 +
-** Ajouter une destination de sauvegarde.
-** Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
+image:../media/screen-alerts-ci-api-access-token.png["Page accès API dans Data Infrastructure Insights sécurité des workloads"]
+
+. Créez un jeton d'accès API ou utilisez un jeton existant.
+. Copiez le jeton d'accès à l'API.
 
 
+
+
+=== Connectez-vous à Data Infrastructure Insights Workload Security
+
+. Dans le menu BlueXP  ransomware protection Settings, sélectionnez *Workload Security connection*.
+. Sélectionnez *connexion*.
+. Entrez l'URL de l'interface utilisateur Data Infrastructure Workload Security.
+. Entrez le jeton d'accès à l'API qui permet l'accès à la sécurité de la charge de travail.
+. Sélectionnez *connexion*.
 
 
 
@@ -46,7 +77,7 @@ Pour protéger ces charges de travail, vous devez ajouter une destination de sau
 * Microsoft Azure
 
 
-Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée dans le tableau de bord.
+Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée à partir du tableau de bord ou en accédant à l'option Paramètres du menu.
 
 
 
@@ -62,18 +93,6 @@ image:screen-dashboard.png["Page de tableau de bord"]
 
 . Dans le tableau de bord, sélectionnez *revoir et corriger* pour la recommandation de « préparer <backup provider> comme destination de sauvegarde ».
 . Suivez les instructions en fonction du fournisseur de sauvegarde.
-
-
-
-
-=== Accédez aux options destination de la sauvegarde dans le menu déroulant actions
-
-Vous pouvez facilement accéder à la page Paramètres à partir de l'option actions située près du menu supérieur.
-
-.Étapes
-. Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
-. Dans le menu déroulant, sélectionnez *Paramètres*.
-. Pour ajouter une destination de sauvegarde, sélectionnez *Ajouter*.
 
 
 

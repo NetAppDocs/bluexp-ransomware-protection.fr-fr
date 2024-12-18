@@ -78,6 +78,7 @@ TIP: La protection contre les ransomwares BlueXP identifie le meilleur point de 
 
 
 . Si la destination d'origine ne dispose pas de suffisamment d'espace pour restaurer la charge de travail, une ligne « mémoire temporaire » apparaît. Vous pouvez sélectionner le stockage temporaire pour restaurer les données de la charge de travail. Les données restaurées seront copiées du stockage temporaire vers l'emplacement d'origine. Cliquez sur la flèche *Bas* dans la ligne stockage temporaire et définissez le cluster de destination, la machine virtuelle de stockage et le niveau local.
+. *Emplacement de la quarantaine* : vous pouvez éventuellement sélectionner l'emplacement de stockage des données potentiellement infectées avant de lancer le processus de restauration pour une analyse ultérieure après la récupération.
 . Sélectionnez *Enregistrer*.
 . Sélectionnez *Suivant*.
 . Vérifiez vos sélections.
@@ -152,6 +153,7 @@ TIP: Le nouveau nom de volume apparaît sous la forme préfixe + nom du volume d
 
 
 
+. *Emplacement de la quarantaine* : vous pouvez éventuellement sélectionner l'emplacement de stockage des données potentiellement infectées avant de lancer le processus de restauration pour une analyse ultérieure après la récupération.
 . Sélectionnez *Enregistrer*.
 . Sélectionnez *Suivant*.
 . Vérifiez vos sélections.
@@ -192,6 +194,7 @@ TIP: Le nouveau nom de volume apparaît comme le nom du volume d'origine + le no
 
 
 
+. *Emplacement de la quarantaine* : vous pouvez éventuellement sélectionner l'emplacement de stockage des données potentiellement infectées avant de lancer le processus de restauration pour une analyse ultérieure après la récupération.
 . Sélectionnez *Enregistrer*.
 . Sélectionnez *Suivant*.
 . Vérifiez vos sélections.
@@ -269,6 +272,7 @@ TIP: Si vous ne spécifiez pas de chemin pour la restauration, les fichiers sero
 .. Indiquez si vous souhaitez que les noms des fichiers ou du répertoire restaurés soient les mêmes que ceux de l'emplacement actuel ou des noms différents.
 
 
+. *Emplacement de la quarantaine* : vous pouvez éventuellement sélectionner l'emplacement de stockage des données potentiellement infectées avant de lancer le processus de restauration pour une analyse ultérieure après la récupération.
 . Sélectionnez *Suivant*.
 . Vérifiez vos sélections.
 . Sélectionnez *Restaurer*.

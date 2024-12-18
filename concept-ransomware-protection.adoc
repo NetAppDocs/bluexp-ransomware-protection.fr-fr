@@ -41,7 +41,7 @@ Le service de protection contre les ransomwares BlueXP permet d'exploiter pleine
 
 * *Identifier* toutes les charges de travail basées sur les applications, les partages de fichiers ou gérées par VMware dans NetApp NAS sur site avec les environnements de travail NFS ou CIFS dans BlueXP , entre les organisations, les projets et les connecteurs BlueXP  BlueXP . Il catégorise ensuite la priorité des données et fournit des recommandations d'amélioration de la protection contre les ransomware.
 * *Protégez* vos workloads en activant les sauvegardes, les copies Snapshot et les stratégies de protection contre les ransomware sur vos données.
-* *Détecter* les anomalies qui pourraient être des attaques par ransomware.Note de bas de page :[aucun système de détection ou de prévention des ransomware ne peut garantir complètement la sécurité d'une attaque par ransomware. Même s'il est possible qu'une attaque ne soit pas détectée, la technologie NetApp joue un rôle de couche supplémentaire importante de défense.]
+* *Détecter* anomalies qui pourraient être des attaques par ransomware.Note de bas de page : [même s'il est possible qu'une attaque ne soit pas détectée, notre recherche indique que la technologie NetApp a entraîné un degré élevé de détection de certaines attaques par ransomware basées sur le chiffrement de fichiers.]
 * *Répondre* aux attaques potentielles par ransomware en lançant automatiquement une copie NetApp ONTAP inviolable qui est verrouillée de sorte que la copie ne puisse pas être supprimée accidentellement ou de manière malveillante. Vos données de sauvegarde resteront immuables et protégées de bout en bout des attaques par ransomware à la source et à la destination.
 * *Récupérez* vos charges de travail qui accélèrent la disponibilité des charges de travail grâce à l'orchestration de plusieurs technologies NetApp. Vous pouvez choisir de restaurer des volumes spécifiques. Le service fournit des recommandations sur les meilleures options.
 * *Régir* : mettre en œuvre votre stratégie de protection contre les ransomware et surveiller les résultats.
@@ -91,6 +91,8 @@ Le service de protection contre les ransomwares BlueXP  requiert une licence Ne
 
 La licence de protection contre les ransomwares BlueXP  n'inclut pas d'autres produits NetApp. La protection contre les ransomwares de BlueXP  peut utiliser la sauvegarde et la restauration BlueXP  même si vous ne disposez pas d'une licence pour celle-ci.
 
+Pour détecter les comportements anormaux d'utilisateurs, la protection contre les ransomwares BlueXP  utilise la protection anti-ransomware autonome de NetApp, un modèle de machine learning (ML) dans ONTAP qui détecte les activités de fichiers malveillants. Ce modèle est inclus dans la licence de protection contre les ransomwares de BlueXP . Vous pouvez également utiliser la sécurité des workloads avec Data Infrastructure Insights (anciennement Cloud Insights) (licence requise) pour étudier le comportement des utilisateurs et bloquer des utilisateurs spécifiques à d'autres activités.
+
 Pour plus de détails, voir link:rp-start-licenses.html["Configuration des licences"].
 
 
@@ -127,7 +129,7 @@ En savoir plus sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.htm
 | *DÉTECTER*  a| 
 * Détecte les attaques potentielles à l'aide d'un modèle de machine learning intégré qui détecte les activités et le chiffrement potentiellement anormaux.
 * Cette fonctionnalité propose une détection double couche, qui commence par détecter les attaques par ransomware potentielles dans le stockage primaire et répondre aux activités anormales avec des copies Snapshot automatisées supplémentaires qui créent les points de restauration de données les plus proches. Ce service permet d'approfondir l'identification des attaques potentielles avec plus de précision sans affecter les performances des principaux workloads.
-* Déterminez les fichiers suspects spécifiques et mappent cette attaque aux workloads associés à l'aide de ONTAP, de la protection anti-ransomware autonome et des technologies FPolicy.
+* Déterminez les fichiers suspects spécifiques et mappent cette attaque aux workloads associés à l'aide de ONTAP, de la protection anti-ransomware autonome, de la sécurité des workloads liée aux informations d'infrastructure de données (anciennement Cloud Insights) et des technologies FPolicy.
 
 
 
