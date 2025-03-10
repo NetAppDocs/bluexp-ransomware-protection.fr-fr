@@ -33,8 +33,10 @@ sidebar:
       url: "/rp-start-licenses.html"
     - title: Découvrir les workloads
       url: "/rp-start-discover.html"
-    - title: Configurez les destinations de sauvegarde et activez la détection des
-        menaces
+    - title: Simulez une attaque par ransomware
+      url: "/rp-start-simulate.html"
+    - title: Configurez les sauvegardes, la détection des menaces et les simulations
+        d'attaque dans Paramètres
       url: "/rp-use-settings.html"
     - title: FAQ
       url: "/rp-start-faq.html"

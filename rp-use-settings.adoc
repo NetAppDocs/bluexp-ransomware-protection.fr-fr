@@ -12,13 +12,15 @@ summary: Vous pouvez configurer plusieurs options, notamment la destination de l
 
 
 [role="lead"]
-Vous pouvez configurer une destination de sauvegarde, activer la détection des menaces ou configurer la connexion à Data Infrastructure Insights Workload Security en accédant à l'option *Settings*. L'activation de la détection des menaces envoie automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse des menaces.
+Vous pouvez configurer les destinations de sauvegarde, activer la détection des menaces, effectuer une étude de préparation aux attaques, configurer la détection des charges de travail ou configurer la connexion à la sécurité de la charge de travail de Data Infrastructure Insights en accédant à l'option *Settings*.
 
 À partir de la page Paramètres, vous pouvez effectuer les opérations suivantes :
 
+* Simulez une attaque par ransomware en effectuant une analyse du niveau de préparation et répondez à une simulation d'alerte par ransomware. Pour plus de détails, voir link:rp-start-simulate.html["Évaluez le niveau de préparation à une attaque par ransomware"].
+* Configurer la détection des charges de travail.
 * Configurez la connexion au système de sécurité des workloads Data Infrastructure Insights pour voir les informations concernant les utilisateurs suspects dans des alertes de ransomware.
 * Ajouter une destination de sauvegarde.
-* Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces.
+* Activez la détection des menaces et connectez votre système de sécurité et de gestion des événements (SIEM) pour l'analyse et la détection des menaces. L'activation de la détection des menaces envoie automatiquement des données à votre SIEM pour analyse des menaces.
 
 
 
@@ -33,7 +35,33 @@ Vous pouvez facilement accéder à la page Paramètres à partir de l'option act
 
 
 
-== Connectez-vous à la sécurité des workloads Data Infrastructure Insights pour détecter les comportements anormaux des utilisateurs
+== Simulez une attaque par ransomware
+
+Effectuez une analyse de préparation en cas de ransomware en simulant une attaque par ransomware sur un workload échantillon nouvellement créé. Ensuite, étudiez l'attaque simulée et restaurez la charge de travail de l'échantillon. Cette fonctionnalité vous aide à être sûr d'être préparé en cas d'attaque par ransomware réelle en testant les processus de notification d'alerte, de réponse et de restauration. Vous pouvez effectuer plusieurs exercices de préparation aux ransomwares.
+
+Pour plus de détails, reportez-vous à link:rp-start-simulate.html["Évaluez le niveau de préparation à une attaque par ransomware"].
+
+
+
+== Configurer la détection des charges de travail
+
+Vous pouvez configurer la découverte des charges de travail pour détecter automatiquement les nouvelles charges de travail dans votre environnement.
+
+. Dans la page Paramètres, localisez la mosaïque *Workload Discovery*.
+. Dans la mosaïque *Workload Discovery*, sélectionnez *Discover workloads*.
++
+Cette page présente les connecteurs BlueXP  avec des environnements de travail qui n'ont pas été sélectionnés précédemment, les nouveaux connecteurs BlueXP  disponibles et les nouveaux environnements de travail disponibles. Cette page n'affiche pas les environnements de travail précédemment sélectionnés.
+
+. Sélectionnez le connecteur sur lequel vous souhaitez découvrir les workloads.
+. Consultez la liste des environnements de travail.
+. Cochez les environnements de travail dans lesquels vous souhaitez identifier les charges de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.
+. Procédez ainsi pour d'autres environnements de travail, si nécessaire.
+. Sélectionnez *découvrir* pour que la protection contre les ransomware BlueXP  découvre automatiquement les nouveaux workloads dans le connecteur sélectionné.
+
+
+
+
+== Observez les comportements anormaux des utilisateurs en vous connectant à la sécurité des workloads Data Infrastructure Insights
 
 Avant d'afficher les détails des comportements anormaux des utilisateurs suspectés dans la protection contre les ransomwares BlueXP , vous devez configurer la connexion au système de sécurité des workloads NetApp Data Infrastructure Insights.
 
@@ -56,7 +84,7 @@ image:../media/screen-alerts-ci-api-access-token.png["Page accès API dans Data 
 
 === Connectez-vous à Data Infrastructure Insights Workload Security
 
-. Dans le menu BlueXP  ransomware protection Settings, sélectionnez *Workload Security connection*.
+. Dans le menu Paramètres de protection contre les ransomware de BlueXP , localisez la mosaïque *connexion de sécurité de la charge de travail*.
 . Sélectionnez *connexion*.
 . Entrez l'URL de l'interface utilisateur Data Infrastructure Workload Security.
 . Entrez le jeton d'accès à l'API qui permet l'accès à la sécurité de la charge de travail.

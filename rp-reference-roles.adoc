@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rp-reference-roles.html 
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
-summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"accès basé sur des rôles (RBAC) pour régir l"accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l"administrateur et de l"afficheur de l"organisation (non-administrateur de l"organisation).' 
+summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"accès basé sur des rôles (RBAC) pour régir l"accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise des rôles spécifiques à la protection contre les ransomware BlueXP  (RPS).' 
 ---
-= Privileges de contrôle d'accès basé sur des rôles, protection contre les ransomwares de BlueXP 
+= La protection BlueXP  contre les ransomwares permet un accès basé sur des rôles aux fonctionnalités
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,13 +12,19 @@ summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"a
 
 
 [role="lead"]
-La protection contre les ransomwares BlueXP  utilise le contrôle d'accès basé sur des rôles (RBAC) pour régir l'accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise les rôles BlueXP  principaux de l'administrateur et de l'afficheur de l'organisation (non-administrateur de l'organisation).
+La protection contre les ransomwares BlueXP  emploie des rôles pour régir l'accès dont chaque utilisateur dispose pour des fonctionnalités et des actions spécifiques.
 
-Le tableau suivant indique les actions que chaque rôle peut effectuer.
+La protection contre les ransomwares BlueXP  utilise les rôles suivants :
+
+* Admin. De l'entreprise
+* Visualiseur (Admin non-organisation)
+
+
+Le tableau suivant indique les actions que chaque rôle de protection contre les ransomwares BlueXP  peut effectuer.
 
 [cols="40,20a,20a"]
 |===
-| Fonction et action | Administrateur d'entreprise BlueXP  | Non Admin (visualiseur) 
+| Fonction et action | Administrateur d'entreprise | Visualiseur 
 
 
 | Essayer gratuitement  a| 
