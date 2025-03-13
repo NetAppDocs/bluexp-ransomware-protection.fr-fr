@@ -35,7 +35,7 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exploratio
 
 . Sélectionnez le connecteur BlueXP  que vous souhaitez utiliser pour l'exercice de préparation.
 . Sélectionnez un environnement de travail de test.
-. Sélectionnez une nouvelle charge de travail de test à créer.
+. Entrez le nom d'une nouvelle charge de travail test à créer.
 . Sélectionnez *Enregistrer*.
 +
 Un message s'affiche indiquant que l'environnement de la foreuse de préparation est configuré. Dans ce message, sélectionnez *Démarrer la foreuse de préparation* pour démarrer la foreuse.
@@ -54,8 +54,8 @@ Après avoir configuré l'exercice de préparation, vous pouvez démarrer l'exer
 .Étapes
 . Effectuez l'une des opérations suivantes :
 +
-** Dans le menu Paramètres de protection contre les ransomware de BlueXP , sélectionnez *Démarrer l'exercice de préparation*.
-** OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer l'exercice de préparation*.
+** Dans le menu Paramètres de protection contre les ransomware de BlueXP , sélectionnez *exercice de préparation*, puis dans la page exercice de préparation, sélectionnez *Démarrer*.
+** OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer*.
 
 
 . Effectuez l'une des opérations suivantes :
@@ -69,41 +69,13 @@ image:screen-settings-alert-drill-needtoconfigure.png["Page des paramètres affi
 *** Continuer avec les instructions de la section précédente pour configurer l'environnement de test de la foreuse dans l'option Paramètres.
 
 
-** Si vous avez déjà configuré l'exercice de préparation, la page commencer l'exercice de préparation s'affiche :
-+
-image:screen-settings-alert-drill-start.png["Démarrer la page d'exploration de la préparation"]
+** Si vous avez déjà configuré la foreuse de préparation, après avoir sélectionné *Start*, la foreuse de préparation commence.
 
 
-
-. Sélectionnez *Démarrer*.
 
 
 
 NOTE: Une fois la foreuse commencée, vous ne pouvez pas modifier la configuration de la foreuse de préparation. Vous pouvez l'arrêter.
-
-
-
-== Nettoyez et arrêtez une perceuse de préparation
-
-Si vous devez arrêter un exercice de préparation, vous pouvez le faire à tout moment. Lorsque vous arrêtez le forage, la protection contre les ransomwares BlueXP  nettoie le workload de test et supprime les fichiers de test.
-
-.Étapes
-. Effectuez l'une des opérations suivantes :
-+
-** Dans le menu Paramètres de protection anti-ransomware de BlueXP , passez le curseur sur l'option Modifier dans la mosaïque de l'exercice de préparation et sélectionnez *exercice de préparation au nettoyage*.
-** Dans le menu BlueXP  ransomware protection, sélectionnez l'image:button-actions-vertical.png["Actions verticales"]option verticale ... en haut à droite et sélectionnez *Clean up Readiness Drill*.
-+
-image:screen-settings-alert-drill-cleanup.png["Page des paramètres montrant l'option d'arrêt de la foreuse prête à l'emploi"]
-
-+
-
-NOTE: Vous pouvez également arrêter ou nettoyer un exercice de préparation à partir de la page Paramètres affichant la carte de vérification de l'état de préparation.
-
-
-
-. Passez en revue les informations de l'exercice de préparation de la charge de travail
-. Sélectionnez *nettoyer*.
-
 
 
 
@@ -112,26 +84,19 @@ NOTE: Vous pouvez également arrêter ou nettoyer un exercice de préparation à
 Testez votre niveau de préparation en répondant à une alerte de vérification de la préparation.
 
 .Étapes
-. Effectuez l'une des opérations suivantes :
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
 +
-** Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
-** Ou, dans le menu, sélectionnez l'icône *Notifications*, sélectionnez *Afficher alerte* en regard de l'alerte de la foreuse prête à l'emploi.
-+
-image:screen-notifications-alert-drill.png["Section Notifications affichant l'alerte de la foreuse de préparation"]
+La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte), « Readiness forer » (exercice de préparation) s'affiche en regard de l'ID.
 
-+
-La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte) de la page Alerts (alertes), « Readiness Drill » (exercice de préparation) s'affiche en regard de l'ID.
-
+. Sélectionnez l'alerte avec l'indication « exercice de préparation ». Une liste d'alertes d'incident s'affiche.
 +
 image:screen-alerts-readiness.png["Page d'alertes affichant l'alerte d'exploration de l'état de préparation"]
 
-
-
-. Sélectionnez l'incident avec l'indication « exercice de préparation ».
+. Passez en revue les incidents d'alerte.
+. Sélectionnez un incident d'alerte.
 +
-image:screen-alerts-readiness-incidents.png["Page d'incident affichant l'alerte de vérification de l'état de préparation"]
+image:screen-alerts-readiness-incidents2.png["Page d'incident affichant l'alerte de vérification de l'état de préparation"]
 
-. Vérifiez les détails de l'alerte.
 +
 Voici quelques points à prendre en compte :
 
@@ -170,7 +135,7 @@ Une fois que vous avez examiné l'alerte de l'exercice de préparation, vous pou
 ** Vérifiez la confirmation et sélectionnez *Marquer la restauration nécessaire* dans la boîte de confirmation.
 +
 *** Dans le menu BlueXP ransomware protection, sélectionnez *Recovery*.
-*** Sélectionnez la charge de travail de test à restaurer.
+*** Sélectionnez la charge de travail de test marquée « exercice de préparation » que vous souhaitez restaurer.
 *** Sélectionnez *Restaurer*.
 *** Dans la page Restaurer, fournissez des informations sur la restauration :
 

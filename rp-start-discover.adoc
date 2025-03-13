@@ -51,21 +51,16 @@ Le service trouve des environnements de travail dans vos connecteurs BlueXP .
 TIP: Ce processus peut prendre quelques minutes.
 
 +
-image:screen-discover-workloads.png["Capture d'écran de découverte des workloads"]
+image:screen-discover-workloads1.png["Capture d'écran de découverte des workloads"]
 
-. Effectuez l'une des opérations suivantes :
-+
-** Pour sélectionner des environnements de travail pour tous les connecteurs, sélectionnez *Sélectionner tous les environnements de travail*.
-** Pour découvrir les charges de travail d'un connecteur spécifique, sélectionnez *Rechercher de nouveaux environnements de travail* en regard du connecteur où vous souhaitez découvrir les charges de travail.
+. Pour découvrir les charges de travail d'un connecteur spécifique, sélectionnez *Rechercher de nouveaux environnements de travail* en regard du connecteur où vous souhaitez découvrir les charges de travail.
 +
 Une liste des environnements de travail s'affiche.
-
-
 
 +
 image:screen-discover-workloads-select-no-autodiscovery.png["Capture d'écran de découverte des workloads"]
 
-. Sélectionnez les environnements de travail dans lesquels vous souhaitez détecter la charge de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.
+. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les charges de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.
 . Sélectionnez *découvrir*.
 +
 Le service détecte les données de charge de travail uniquement pour ces connecteurs avec des environnements de travail sélectionnés.
@@ -99,7 +94,7 @@ Si vous avez déjà sélectionné des environnements de travail à des fins de d
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 . Pour identifier la date de la dernière découverte, à partir du tableau de bord, regardez la date et l'heure en regard de l'icône *Actualiser* en haut à droite.
-. Dans le tableau de bord, sélectionnez l'icône *Actualiser* et dans l'info-bulle qui s'affiche, sélectionnez *découvrir les charges de travail*.
+. Dans le tableau de bord, sélectionnez l'icône *Actualiser* qui lance la découverte de nouvelles charges de travail.
 
 
 
@@ -110,10 +105,6 @@ Si vous avez déjà découvert des environnements de travail, vous pouvez décou
 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
-. Effectuez l'une des opérations suivantes :
-+
-** Dans le tableau de bord, sélectionnez *Ajouter nouveau* et dans l'info-bulle qui s'affiche, sélectionnez *Ajouter de nouveaux environnements de travail*.
-** Dans le menu BlueXP  ransomware protection, sélectionnez l'image:button-actions-vertical.png["Actions verticales"]option verticale ... en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*. Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.
-
-
+. Dans le menu BlueXP  ransomware protection, sélectionnez l'image:button-actions-vertical.png["Actions verticales"]option verticale ... en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*.
+. Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.
 

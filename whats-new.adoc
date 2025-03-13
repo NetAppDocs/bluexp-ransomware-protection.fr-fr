@@ -36,7 +36,6 @@ Cette version inclut des améliorations aux processus de découverte sélective 
 
 * Avec cette version, vous pouvez découvrir les nouveaux workloads qui ont été ajoutés aux environnements de travail précédemment sélectionnés.
 * Vous pouvez également sélectionner _New_ environnements de travail dans cette version. Cette fonctionnalité vous aide à protéger les nouvelles charges de travail ajoutées à votre environnement.
-* Si vous souhaitez choisir toutes les charges de travail découvertes, vous pouvez le faire en utilisant l'option *tout sélectionner*.
 * Vous pouvez effectuer ces processus de découverte au cours du processus de découverte initial ou à l'aide de l'option Paramètres.
 
 

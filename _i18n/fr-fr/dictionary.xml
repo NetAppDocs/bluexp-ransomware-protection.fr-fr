@@ -1527,8 +1527,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="1ad499ee6cba4f056f735fb9eae4b5ce" category="paragraph">Dans chaque connecteur, sélectionnez les environnements de travail dans lesquels vous souhaitez découvrir les workloads.</block>
   <block id="98ab4e23cce41ca38b39c7baf6ef4567" category="admonition">Ce processus peut prendre quelques minutes.</block>
   <block id="18eb5242d6e5ac768698e677b047a0eb" category="inline-image-macro">Capture d'écran de découverte des workloads</block>
-  <block id="d79f191c2ec9abafe65a74f3afd2fd3e" category="paragraph"><block ref="d79f191c2ec9abafe65a74f3afd2fd3e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="db2242d67fcc7ed40d59b104f2d8d0b1" category="list-text">Sélectionnez les environnements de travail dans lesquels vous souhaitez détecter la charge de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.</block>
   <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">Sélectionnez *découvrir*.</block>
   <block id="39d30ea27067e18c7724603fcd547e90" category="paragraph">Le service détecte les données de charge de travail uniquement pour ces connecteurs avec des environnements de travail sélectionnés.</block>
   <block id="d816d69cfca30588b735f0def37770e3" category="inline-image-macro">Captures d'écran des workloads découverts</block>
@@ -1602,7 +1600,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="61541c0b99aec5f11fccef5bcb3fe5a1" category="paragraph">Cette version inclut des améliorations aux processus de découverte sélective et de redécouverte :</block>
   <block id="cb3c0a83218c46d38ab0842ce49a7e6e" category="list-text">Avec cette version, vous pouvez découvrir les nouveaux workloads qui ont été ajoutés aux environnements de travail précédemment sélectionnés.</block>
   <block id="6a4c9cc76f7f432efa274c3ff0dae3dd" category="list-text">Vous pouvez également sélectionner _New_ environnements de travail dans cette version. Cette fonctionnalité vous aide à protéger les nouvelles charges de travail ajoutées à votre environnement.</block>
-  <block id="3b7810e8427f006590b006af43d016ef" category="list-text">Si vous souhaitez choisir toutes les charges de travail découvertes, vous pouvez le faire en utilisant l'option *tout sélectionner*.</block>
   <block id="28573ff4f820730a3eeae9cdd51b54d4" category="list-text">Vous pouvez effectuer ces processus de découverte au cours du processus de découverte initial ou à l'aide de l'option Paramètres.</block>
   <block id="16e3b92f9b1f5d1c29b18c748e6a228e" category="inline-link">Configurez les fœtus à l'aide de l'option Paramètres</block>
   <block id="98e6e30b63e5242616c686684a17c03b" category="paragraph">Pour plus de détails, reportez-vous à<block ref="7d31e5b11cc548279f7c20a9569ec8fc" category="inline-link-rx"></block> et<block ref="026d9da5e400c1054ac1084b0f63056d" category="inline-link-rx"></block>.</block>
@@ -1620,18 +1617,14 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="06135c09643e0b875311a4989ef81443" category="paragraph">Le service évalue le niveau de protection existant, notamment la protection actuelle des sauvegardes, les copies Snapshot et les options de protection anti-ransomware autonome de NetApp. En fonction de l'évaluation, le service recommande ensuite comment améliorer la protection contre les ransomwares.</block>
   <block id="bcd1f982603e49ee85ee4aa3816ec786" category="list-text">Sélectionnez _New_ environnements de travail. Cette fonctionnalité vous aide à protéger les nouvelles charges de travail ajoutées à votre environnement.</block>
   <block id="ea84e987da35b78faef15d182ea98e25" category="paragraph">Le service trouve des environnements de travail dans vos connecteurs BlueXP .</block>
-  <block id="1fe55988352f69acacdb9b10814fc08e" category="list-text">Pour sélectionner des environnements de travail pour tous les connecteurs, sélectionnez *Sélectionner tous les environnements de travail*.</block>
   <block id="656ebea707f2c709a19d8f845b2477e7" category="list-text">Pour découvrir les charges de travail d'un connecteur spécifique, sélectionnez *Rechercher de nouveaux environnements de travail* en regard du connecteur où vous souhaitez découvrir les charges de travail.</block>
   <block id="4c21761c15d83552dd8cd3a0a8db257d" category="paragraph">Une liste des environnements de travail s'affiche.</block>
   <block id="546750f8dfe95d6b98eb842b8bf02faf" category="paragraph"><block ref="546750f8dfe95d6b98eb842b8bf02faf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="683b598a3c2decc48c00425ef8b86635" category="paragraph"><block ref="683b598a3c2decc48c00425ef8b86635" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c02e66aaa8def7a1b94dfd795479c114" category="paragraph">Si vous avez déjà sélectionné des environnements de travail à des fins de découverte, vous pouvez identifier les nouveaux workloads créés pour ces environnements à partir du tableau de bord.</block>
   <block id="70b4939004396411f22f03d5d20bd5e4" category="list-text">Pour identifier la date de la dernière découverte, à partir du tableau de bord, regardez la date et l'heure en regard de l'icône *Actualiser* en haut à droite.</block>
-  <block id="0b60c421fc6bce0a5ff3b730591a0ac5" category="list-text">Dans le tableau de bord, sélectionnez l'icône *Actualiser* et dans l'info-bulle qui s'affiche, sélectionnez *découvrir les charges de travail*.</block>
   <block id="e8d91f884eae05c3d90259b4c84b75d2" category="section-title">Découvrez les nouveaux environnements de travail</block>
   <block id="a1b34a4244cd73e84bed71e0bf383360" category="paragraph">Si vous avez déjà découvert des environnements de travail, vous pouvez découvrir tous les nouveaux environnements de travail créés à partir du tableau de bord.</block>
-  <block id="a048ca602eaaea1a6182ff74398a9c85" category="list-text">Dans le tableau de bord, sélectionnez *Ajouter nouveau* et dans l'info-bulle qui s'affiche, sélectionnez *Ajouter de nouveaux environnements de travail*.</block>
-  <block id="63a31ad1e15ab514cc2378a692e2c8db" category="list-text">Dans le menu BlueXP  ransomware protection, sélectionnez l'<block ref="ddacd9651566dbd67045ad6fbaf81a6c" category="inline-image-macro-rx" type="image"></block>option verticale ... en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*. Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.</block>
   <block id="0e6eeee847f00d7ef1cb454555892f49" category="list-text"><block ref="92c4728cc5c0729bcbef66420d0a7a81" category="inline-link-macro-rx"></block>.</block>
   <block id="63de46c3feae8642d94945ea3e056fed" category="inline-link-macro">Éventuellement, effectuez une analyse du niveau de préparation à une attaque par ransomware</block>
   <block id="39bdb514f38135f0ca92651ade127954" category="list-text"><block ref="2280163364b5b58f435fe47eab713eb2" category="inline-link-macro-rx"></block>.</block>
@@ -1647,44 +1640,21 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="4733f8632e3639026823ab315aa1fde4" category="paragraph"><block ref="4733f8632e3639026823ab315aa1fde4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e8d3b4eb775e09a46424412f734068b0" category="list-text">Sélectionnez le connecteur BlueXP  que vous souhaitez utiliser pour l'exercice de préparation.</block>
   <block id="03e372e5a12da124a082cb418529a0c7" category="list-text">Sélectionnez un environnement de travail de test.</block>
-  <block id="83d67ad1d05b6c81b83e16e427218874" category="list-text">Sélectionnez une nouvelle charge de travail de test à créer.</block>
   <block id="000346285fa0b7654e9ce18381bba66f" category="paragraph">Un message s'affiche indiquant que l'environnement de la foreuse de préparation est configuré. Dans ce message, sélectionnez *Démarrer la foreuse de préparation* pour démarrer la foreuse.</block>
   <block id="b5ffafbc91e02195737c6716b418141e" category="admonition">Vous pouvez modifier la configuration de l'exercice de préparation ultérieurement à l'aide de la page Paramètres.</block>
   <block id="187666a138e7f6f15224af7bcef93040" category="section-title">Démarrez une exploration de la préparation</block>
   <block id="b30d5003eb8b470d6df77c1edbb96724" category="paragraph">Après avoir configuré l'exercice de préparation, vous pouvez démarrer l'exercice.</block>
-  <block id="948feeea05a56419435cc007ac7abd68" category="list-text">Dans le menu Paramètres de protection contre les ransomware de BlueXP , sélectionnez *Démarrer l'exercice de préparation*.</block>
-  <block id="f577e0a326d286f796539335e08e4b68" category="list-text">OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer l'exercice de préparation*.</block>
   <block id="48c1e999e8171604f472f6a173e90a06" category="list-text">Si vous n'avez pas encore configuré l'exercice de préparation, un message s'affiche indiquant que vous devez d'abord configurer l'exercice de préparation.</block>
   <block id="2bad3a1005ba6708ddbc592b74412409" category="inline-image-macro">Page des paramètres affichant le message d'exploration de la préparation que vous devez configurer pour l'exercice de préparation</block>
   <block id="fbb94dad4d4b0b642b9e4bcfccb31a40" category="paragraph"><block ref="fbb94dad4d4b0b642b9e4bcfccb31a40" category="inline-image-macro-rx" type="image"></block></block>
   <block id="648815687f26cfff9af80401c05502e1" category="list-text">Sélectionnez *configurer l'environnement de test de la foreuse de préparation*.</block>
   <block id="2e80fabefee51d121eee410fb4a3be19" category="list-text">Continuer avec les instructions de la section précédente pour configurer l'environnement de test de la foreuse dans l'option Paramètres.</block>
-  <block id="e920bf03ef2a5c4203f6db8e43f9ca34" category="list-text">Si vous avez déjà configuré l'exercice de préparation, la page commencer l'exercice de préparation s'affiche :</block>
-  <block id="65a0085cbf921f3e953b8693c2b63281" category="inline-image-macro">Démarrer la page d'exploration de la préparation</block>
-  <block id="3c118708db99643af58b322e8633f99e" category="paragraph"><block ref="3c118708db99643af58b322e8633f99e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cc99cd6550a548e2a6a10be11a7acf67" category="list-text">Sélectionnez *Démarrer*.</block>
   <block id="8c5a9997ae160f52e3c8ede0e2590504" category="admonition">Une fois la foreuse commencée, vous ne pouvez pas modifier la configuration de la foreuse de préparation. Vous pouvez l'arrêter.</block>
-  <block id="c0c593ce47c0b08a83ed2122000f2d53" category="section-title">Nettoyez et arrêtez une perceuse de préparation</block>
-  <block id="4a19556f13e6b47441abc553ac3daf39" category="paragraph">Si vous devez arrêter un exercice de préparation, vous pouvez le faire à tout moment. Lorsque vous arrêtez le forage, la protection contre les ransomwares BlueXP  nettoie le workload de test et supprime les fichiers de test.</block>
-  <block id="4ee662381f867d717a479a810920b73a" category="list-text">Dans le menu Paramètres de protection anti-ransomware de BlueXP , passez le curseur sur l'option Modifier dans la mosaïque de l'exercice de préparation et sélectionnez *exercice de préparation au nettoyage*.</block>
-  <block id="629c4b84903c512b14e9482c870995ec" category="list-text">Dans le menu BlueXP  ransomware protection, sélectionnez l'<block ref="ddacd9651566dbd67045ad6fbaf81a6c" category="inline-image-macro-rx" type="image"></block>option verticale ... en haut à droite et sélectionnez *Clean up Readiness Drill*.</block>
-  <block id="a068ddd4cd9819d66507b988292a9d04" category="inline-image-macro">Page des paramètres montrant l'option d'arrêt de la foreuse prête à l'emploi</block>
-  <block id="05a4ec5098b9bce4d19d3e7fecddeac2" category="paragraph"><block ref="05a4ec5098b9bce4d19d3e7fecddeac2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f8a4bf2c70949bcbe79cf9fdb34e3b9c" category="admonition">Vous pouvez également arrêter ou nettoyer un exercice de préparation à partir de la page Paramètres affichant la carte de vérification de l'état de préparation.</block>
-  <block id="220dce46cde86e50505d7d6717501507" category="list-text">Passez en revue les informations de l'exercice de préparation de la charge de travail</block>
-  <block id="15462a9fa9524dab33f93bd1451cd0fd" category="list-text">Sélectionnez *nettoyer*.</block>
   <block id="1e4a43fb392ed69a6d5a047ba0d88826" category="section-title">Répondez à une alerte de vérification de la préparation</block>
   <block id="6128067a6b325891717a7cfc23e60bae" category="paragraph">Testez votre niveau de préparation en répondant à une alerte de vérification de la préparation.</block>
-  <block id="845eb30eb602283ce1d22c4b4cbe210f" category="list-text">Ou, dans le menu, sélectionnez l'icône *Notifications*, sélectionnez *Afficher alerte* en regard de l'alerte de la foreuse prête à l'emploi.</block>
-  <block id="b4076ebb4154aa074b806f8ad5c2e03e" category="inline-image-macro">Section Notifications affichant l'alerte de la foreuse de préparation</block>
-  <block id="511db98909b9ae56251aa794f36145bd" category="paragraph"><block ref="511db98909b9ae56251aa794f36145bd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ef3efb89176a9b4600c400e3cafc6bc3" category="paragraph">La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte) de la page Alerts (alertes), « Readiness Drill » (exercice de préparation) s'affiche en regard de l'ID.</block>
   <block id="bfb2eabf2e2f3750c3b857a9c0072bfa" category="inline-image-macro">Page d'alertes affichant l'alerte d'exploration de l'état de préparation</block>
   <block id="fd9f53769c15c2cf878c35f4cbc5a081" category="paragraph"><block ref="fd9f53769c15c2cf878c35f4cbc5a081" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2eaecc134241ebd3fe43cec088fc9216" category="list-text">Sélectionnez l'incident avec l'indication « exercice de préparation ».</block>
   <block id="bf6725ca3f9665491e02c1818a34d256" category="inline-image-macro">Page d'incident affichant l'alerte de vérification de l'état de préparation</block>
-  <block id="e4bcff284aee2a73455b69a73101cec5" category="paragraph"><block ref="e4bcff284aee2a73455b69a73101cec5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8fccaa7f058711628b8a8a2f5f4ccc9c" category="list-text">Vérifiez les détails de l'alerte.</block>
   <block id="dba36383db70a071d84d9ad78273ce43" category="paragraph">Voici quelques points à prendre en compte :</block>
   <block id="b780e790d05aeda37075d8fd4a6d9b89" category="list-text">Examinez le type d'attaque potentielle. Si le Type indique qu'un utilisateur est soupçonné d'une activité malveillante, vérifiez le nom d'utilisateur.</block>
   <block id="8b558629c5c33cde93683d61a4115e2d" category="list-text">Vous pouvez bloquer l'utilisateur en sélectionnant *bloquer l'utilisateur*.</block>
@@ -1702,7 +1672,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="1428f7ff07a53448ce6c5a848493a542" category="list-text">Si la charge de travail de test doit être restaurée, procédez comme suit :</block>
   <block id="402892b652810818eb61e703ca333d06" category="list-text">Sélectionnez *Marquer la restauration nécessaire*.</block>
   <block id="f1a43a1191cd8e11a5db942f4175b31f" category="list-text">Vérifiez la confirmation et sélectionnez *Marquer la restauration nécessaire* dans la boîte de confirmation.</block>
-  <block id="428f9aacf80ab1666e7e9a35356b08be" category="list-text">Sélectionnez la charge de travail de test à restaurer.</block>
   <block id="98576e747c7efb09ca0d1e50a58ae308" category="list-text">Dans la page Restaurer, fournissez des informations sur la restauration :</block>
   <block id="05e2304cb46b92601ea1e826aa3fec0b" category="list-text">Sélectionnez la copie snapshot source.</block>
   <block id="773018347112b716b659352d9f401251" category="list-text">Sélectionnez le volume de destination.</block>
@@ -1755,4 +1724,19 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="574f730f175872b7e8ae030664be0b63" category="list-text">Dans le menu Paramètres de protection contre les ransomware de BlueXP , localisez la mosaïque *connexion de sécurité de la charge de travail*.</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10 mars 2025</block>
   <block id="a216cb7967dcfa49b3b976657369cd25" category="sidebar">Configurez les sauvegardes, la détection des menaces et les simulations d'attaque dans Paramètres</block>
+  <block id="8e409065d2ff7418c22e196d64a6f17c" category="paragraph"><block ref="8e409065d2ff7418c22e196d64a6f17c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="28f4eac4cfa4a0f9f4579a8d7853aa5d" category="list-text">Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les charges de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.</block>
+  <block id="6cd7d81917c9dbf1647c62c550c7a4a0" category="list-text">Dans le tableau de bord, sélectionnez l'icône *Actualiser* qui lance la découverte de nouvelles charges de travail.</block>
+  <block id="ce5939b4e8126f1cd90a90e246bba04d" category="list-text">Dans le menu BlueXP  ransomware protection, sélectionnez l'<block ref="ddacd9651566dbd67045ad6fbaf81a6c" category="inline-image-macro-rx" type="image"></block>option verticale ... en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*.</block>
+  <block id="7834f1609389d2dc0ac0789a0ac2db2f" category="list-text">Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.</block>
+  <block id="25c2a18f9bef5efa05b349a8a6bf472f" category="list-text">Entrez le nom d'une nouvelle charge de travail test à créer.</block>
+  <block id="ccf00254ed4dd27ce3cb568ef11757f1" category="list-text">Dans le menu Paramètres de protection contre les ransomware de BlueXP , sélectionnez *exercice de préparation*, puis dans la page exercice de préparation, sélectionnez *Démarrer*.</block>
+  <block id="8d2bd4422410271303c0633a19aefea9" category="list-text">OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer*.</block>
+  <block id="f54a2552361ef76d1d69e95fc2f63e90" category="list-text">Si vous avez déjà configuré la foreuse de préparation, après avoir sélectionné *Start*, la foreuse de préparation commence.</block>
+  <block id="3764eabaa6dd82955df6528cd4a5a9b7" category="paragraph">La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte), « Readiness forer » (exercice de préparation) s'affiche en regard de l'ID.</block>
+  <block id="a699ac7dcfe917f4ef6bfe5b42313497" category="list-text">Sélectionnez l'alerte avec l'indication « exercice de préparation ». Une liste d'alertes d'incident s'affiche.</block>
+  <block id="c7173a995c95a8992913692d7f8b29a3" category="list-text">Passez en revue les incidents d'alerte.</block>
+  <block id="8094150588327954ce01d91cf529ccfc" category="list-text">Sélectionnez un incident d'alerte.</block>
+  <block id="b0e402efbf054d8b9cab93c3c4e53922" category="paragraph"><block ref="b0e402efbf054d8b9cab93c3c4e53922" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="001b6bed17667ada4d5dad085e5729b3" category="list-text">Sélectionnez la charge de travail de test marquée « exercice de préparation » que vous souhaitez restaurer.</block>
 </blocks>
