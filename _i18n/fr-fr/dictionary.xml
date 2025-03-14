@@ -1649,7 +1649,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="fbb94dad4d4b0b642b9e4bcfccb31a40" category="paragraph"><block ref="fbb94dad4d4b0b642b9e4bcfccb31a40" category="inline-image-macro-rx" type="image"></block></block>
   <block id="648815687f26cfff9af80401c05502e1" category="list-text">Sélectionnez *configurer l'environnement de test de la foreuse de préparation*.</block>
   <block id="2e80fabefee51d121eee410fb4a3be19" category="list-text">Continuer avec les instructions de la section précédente pour configurer l'environnement de test de la foreuse dans l'option Paramètres.</block>
-  <block id="8c5a9997ae160f52e3c8ede0e2590504" category="admonition">Une fois la foreuse commencée, vous ne pouvez pas modifier la configuration de la foreuse de préparation. Vous pouvez l'arrêter.</block>
   <block id="1e4a43fb392ed69a6d5a047ba0d88826" category="section-title">Répondez à une alerte de vérification de la préparation</block>
   <block id="6128067a6b325891717a7cfc23e60bae" category="paragraph">Testez votre niveau de préparation en répondant à une alerte de vérification de la préparation.</block>
   <block id="bfb2eabf2e2f3750c3b857a9c0072bfa" category="inline-image-macro">Page d'alertes affichant l'alerte d'exploration de l'état de préparation</block>
@@ -1687,11 +1686,6 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="e0a30b860c06e610cadc21ebf64426da" category="list-text">Rejeté : si vous soupçonnez que l'activité ne constitue pas une attaque par ransomware, remplacez le statut par rejeté.</block>
   <block id="ff8d215b189dca41bf900d6545392594" category="admonition">Après avoir rejeté une attaque, vous ne pouvez plus la rechanter. Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées. Si vous rejetez l'alerte, l'exercice de préparation est considéré comme terminé.</block>
   <block id="36b45588cbfa3653d0bdeb91883b49f4" category="list-text">Résolu : l'incident a été atténué.</block>
-  <block id="1be5568d0c3f299b7d0fa2b810d4b90d" category="section-title">Passez en revue les rapports sur l'exercice de préparation</block>
-  <block id="1618fcb06831249fd4142102d83577f5" category="paragraph">Une fois l'exercice de préparation terminé, vous pouvez consulter et enregistrer un rapport sur l'exercice.</block>
-  <block id="50ca22b8d354f001a742f726d3cf2be9" category="inline-image-macro">Page Rapports affichant le rapport de la foreuse de préparation</block>
-  <block id="179e5ea4317177f519c688d15ef67987" category="paragraph"><block ref="179e5ea4317177f519c688d15ef67987" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e462715e9b155f4f9638da4f314c8aff" category="list-text">Sélectionnez *exercices d'état de préparation* et *Télécharger* pour télécharger le rapport d'exercice d'état de préparation.</block>
   <block id="7491606097f73ec9ee4cd8649e24e37b" category="list-text">Lorsque le chiffrement est élevé, sans modification de l'extension de fichier</block>
   <block id="0152e4b08d769def55f114d835660cb2" category="list-text">Déclenché par la sécurité des workloads Data Infrastructure Insights. Cette opération nécessite une licence pour la sécurité des workloads Data Infrastructure Insights et que vous l'activez dans la protection BlueXP  contre les ransomware. Cette fonctionnalité détecte les comportements anormaux des utilisateurs dans vos workloads de stockage et vous permet de bloquer cet utilisateur pour qu'il n'y ait plus d'accès.</block>
   <block id="900224a7eb4d4424692600ce3e4b5262" category="paragraph">Pour activer la sécurité de la charge de travail dans la protection contre les ransomware BlueXP , rendez-vous sur la page *Paramètres* et sélectionnez l'option *connexion de sécurité de la charge de travail*.</block>
@@ -1739,4 +1733,5 @@ En savoir plus sur<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline
   <block id="8094150588327954ce01d91cf529ccfc" category="list-text">Sélectionnez un incident d'alerte.</block>
   <block id="b0e402efbf054d8b9cab93c3c4e53922" category="paragraph"><block ref="b0e402efbf054d8b9cab93c3c4e53922" category="inline-image-macro-rx" type="image"></block></block>
   <block id="001b6bed17667ada4d5dad085e5729b3" category="list-text">Sélectionnez la charge de travail de test marquée « exercice de préparation » que vous souhaitez restaurer.</block>
+  <block id="241197791593ba6fe12006bc7c44e045" category="admonition">Une fois la foreuse commencée, vous ne pouvez pas modifier la configuration de la foreuse de préparation. Vous pouvez le réinitialiser pour redémarrer.</block>
 </blocks>
