@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: rp-reference-limitations.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
+summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"accès basé sur des rôles (RBAC) pour régir l"accès dont chaque utilisateur dispose à des fonctionnalités et des actions spécifiques. Le service utilise des rôles spécifiques à la protection contre les ransomware BlueXP  (RPS).' 
+---
+= Limitations connues de la protection contre les ransomwares BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.
+
+
+
+== Problème d'option de réinitialisation de la fonction de vérification de la disponibilité
+
+Si vous sélectionnez un volume ONTAP 9.11.1 pour l'exercice de préparation aux attaques par ransomware, la protection BlueXP  contre les ransomwares vous avertit. Si vous restaurez les données à l'aide de l'option « clone-to-volume » et que vous réinitialisez la foreuse, l'opération de réinitialisation échoue.

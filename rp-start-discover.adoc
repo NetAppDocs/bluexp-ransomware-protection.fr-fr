@@ -25,7 +25,6 @@ Vous pouvez effectuer les opérations suivantes :
 
 * Dans chaque connecteur, sélectionnez les environnements de travail dans lesquels vous souhaitez découvrir les workloads. Vous pouvez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et non d'autres.
 * Découvrez les nouveaux workloads créés pour les environnements de travail précédemment sélectionnés.
-* Sélectionnez _New_ environnements de travail. Cette fonctionnalité vous aide à protéger les nouvelles charges de travail ajoutées à votre environnement.
 
 
 
@@ -99,12 +98,16 @@ Si vous avez déjà sélectionné des environnements de travail à des fins de d
 
 
 
-== Découvrez les nouveaux environnements de travail
+== Découvrez de nouveaux environnements de travail
 
-Si vous avez déjà découvert des environnements de travail, vous pouvez découvrir tous les nouveaux environnements de travail créés à partir du tableau de bord.
+Si vous avez déjà découvert des environnements de travail, vous pouvez découvrir les nouveaux environnements de travail ou environnements de travail que vous n'avez pas précédemment sélectionnés lors des processus de découverte précédents.
 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 . Dans le menu BlueXP  ransomware protection, sélectionnez l'image:button-actions-vertical.png["Actions verticales"]option verticale ... en haut à droite. Dans le menu déroulant, sélectionnez *Paramètres*.
 . Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.
++
+
+TIP: Ce processus peut prendre quelques minutes, comme indiqué par une icône de chargement en cours de traitement.
+
 

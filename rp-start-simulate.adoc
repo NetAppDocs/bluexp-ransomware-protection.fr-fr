@@ -25,7 +25,7 @@ Avant d'effectuer une simulation, vous devez configurer une exploration à l'aid
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
-. Dans le menu déroulant, sélectionnez *Paramètres*.
+. Dans le menu déroulant, sélectionnez *exercice préparation* ou *Paramètres*.
 . Dans la carte de vérification de l'état de préparation de la page Paramètres, sélectionnez *configurer*.
 +
 La page configurer l'exercice de préparation s'affiche.
@@ -37,9 +37,6 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exploratio
 . Sélectionnez un environnement de travail de test.
 . Entrez le nom d'une nouvelle charge de travail test à créer.
 . Sélectionnez *Enregistrer*.
-+
-Un message s'affiche indiquant que l'environnement de la foreuse de préparation est configuré. Dans ce message, sélectionnez *Démarrer la foreuse de préparation* pour démarrer la foreuse.
-
 
 
 
@@ -51,6 +48,11 @@ TIP: Vous pouvez modifier la configuration de l'exercice de préparation ultéri
 
 Après avoir configuré l'exercice de préparation, vous pouvez démarrer l'exercice.
 
+Lorsque vous démarrez l'exercice de préparation, la protection contre les ransomware BlueXP  ignore le mode d'apprentissage et démarre l'exercice en mode actif. L'état de détection de la charge de travail est actif.
+
+
+TIP: Une charge de travail peut avoir un état de détection des ransomware *Learning mode* qui indique qu'une politique de détection des ransomware a été récemment affectée à la charge de travail et que le service analyse les charges de travail. Un état de détection de *Active* indique qu'une stratégie de protection contre les ransomware est attribuée.
+
 .Étapes
 . Effectuez l'une des opérations suivantes :
 +
@@ -58,20 +60,7 @@ Après avoir configuré l'exercice de préparation, vous pouvez démarrer l'exer
 ** OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer*.
 
 
-. Effectuez l'une des opérations suivantes :
-+
-** Si vous n'avez pas encore configuré l'exercice de préparation, un message s'affiche indiquant que vous devez d'abord configurer l'exercice de préparation.
-+
-image:screen-settings-alert-drill-needtoconfigure.png["Page des paramètres affichant le message d'exploration de la préparation que vous devez configurer pour l'exercice de préparation"]
-
-+
-*** Sélectionnez *configurer l'environnement de test de la foreuse de préparation*.
-*** Continuer avec les instructions de la section précédente pour configurer l'environnement de test de la foreuse dans l'option Paramètres.
-
-
-** Si vous avez déjà configuré la foreuse de préparation, après avoir sélectionné *Start*, la foreuse de préparation commence.
-
-
+. Si vous avez déjà configuré la foreuse de préparation, après avoir sélectionné *Start*, la foreuse de préparation commence.
 
 
 
@@ -88,37 +77,38 @@ Testez votre niveau de préparation en répondant à une alerte de vérification
 +
 La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte), « Readiness forer » (exercice de préparation) s'affiche en regard de l'ID.
 
-. Sélectionnez l'alerte avec l'indication « exercice de préparation ». Une liste d'alertes d'incident s'affiche.
 +
 image:screen-alerts-readiness.png["Page d'alertes affichant l'alerte d'exploration de l'état de préparation"]
+
+. Sélectionnez l'alerte avec l'indication « exercice de préparation ». La liste des alertes d'incident s'affiche sur la page Détails des alertes.
++
+image:screen-alerts-readiness-details.png["Page de détails des alertes affichant l'alerte d'exploration de l'état de préparation"]
 
 . Passez en revue les incidents d'alerte.
 . Sélectionnez un incident d'alerte.
 +
 image:screen-alerts-readiness-incidents2.png["Page d'incident affichant l'alerte de vérification de l'état de préparation"]
 
-+
+
+
 Voici quelques points à prendre en compte :
 
+* Examinez le type d'attaque potentielle.
 +
-** Examinez le type d'attaque potentielle. Si le Type indique qu'un utilisateur est soupçonné d'une activité malveillante, vérifiez le nom d'utilisateur.
+Si le Type indique qu'un utilisateur est soupçonné d'une activité malveillante, vérifiez le nom d'utilisateur. Vous pouvez examiner l'utilisateur plus en détail dans Data Infrastructure Insights Workload Security en sélectionnant *enquêter sur la sécurité des charges de travail*.
+
+
+
+* Examinez l'activité des fichiers et les processus suspects :
 +
-*** Vous pouvez bloquer l'utilisateur en sélectionnant *bloquer l'utilisateur*.
-*** Vous pouvez également examiner l'utilisateur plus en détail dans Data Infrastructure Insights Workload Security en sélectionnant *enquêter sur la sécurité des charges de travail*.
+** Examinez les données détectées entrantes par rapport aux données attendues.
+** Examinez le taux de création des fichiers détectés par rapport au taux prévu.
+** Examinez le taux de renommage du fichier détecté par rapport au taux attendu.
+** Examinez le taux de suppression par rapport au taux prévu.
 
 
-** Examinez l'activité des fichiers et les processus suspects :
-+
-*** Examinez les données détectées entrantes par rapport aux données attendues.
-*** Examinez le taux de création des fichiers détectés par rapport au taux prévu.
-*** Examinez le taux de renommage du fichier détecté par rapport au taux attendu.
-*** Examinez le taux de suppression par rapport au taux prévu.
-
-
-** Consultez la liste des fichiers affectés. Regardez les extensions qui pourraient être à l'origine de l'attaque.
-** Déterminez l'impact et l'ampleur de l'attaque en examinant le nombre de fichiers et de répertoires affectés.
-
-
+* Consultez la liste des fichiers affectés. Regardez les extensions qui pourraient être à l'origine de l'attaque.
+* Déterminez l'impact et l'ampleur de l'attaque en examinant le nombre de fichiers et de répertoires affectés.
 
 
 
@@ -166,15 +156,25 @@ Après avoir vérifié l'alerte de niveau de préparation et restauré la charge
 .Étapes
 . Retournez à la page Détails de l'alerte.
 . Sélectionnez à nouveau l'alerte.
-. Indiquez l'état en sélectionnant *Modifier* et changez l'état à l'un des suivants :
+. Indiquez l'état en sélectionnant *Modifier l'état* et changez l'état à l'un des suivants :
 +
 ** Rejeté : si vous soupçonnez que l'activité ne constitue pas une attaque par ransomware, remplacez le statut par rejeté.
 +
 
 IMPORTANT: Après avoir rejeté une attaque, vous ne pouvez plus la rechanter. Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées. Si vous rejetez l'alerte, l'exercice de préparation est considéré comme terminé.
 
-** En cours
 ** Résolu : l'incident a été atténué.
 
 
+
+
+
+
+== Téléchargez le rapport d'exercice de préparation
+
+Une fois l'exercice de préparation terminé, vous pouvez consulter et enregistrer un rapport CSV sur l'exercice.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
+. Sélectionnez l'alerte et sélectionnez la flèche *Télécharger* pour télécharger un fichier CSV.
 
