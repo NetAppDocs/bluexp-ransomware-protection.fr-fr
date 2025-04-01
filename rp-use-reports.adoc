@@ -42,6 +42,6 @@ image:screen-dashboard.png["Page de tableau de bord"]
 
 . Si vous avez sélectionné l'option *Rapports*, sélectionnez l'un des noms de fichier CSV préconfigurés et sélectionnez *Télécharger (CSV)* ou *Télécharger (JSON)*.
 +
-image:screen-reports.png["Page de rapports"]
+image:screen-reports0.png["Page de rapports"]
 
 

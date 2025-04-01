@@ -167,14 +167,3 @@ IMPORTANT: Après avoir rejeté une attaque, vous ne pouvez plus la rechanter. S
 
 
 
-
-
-
-== Téléchargez le rapport d'exercice de préparation
-
-Une fois l'exercice de préparation terminé, vous pouvez consulter et enregistrer un rapport CSV sur l'exercice.
-
-.Étapes
-. Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
-. Sélectionnez l'alerte et sélectionnez la flèche *Télécharger* pour télécharger un fichier CSV.
-

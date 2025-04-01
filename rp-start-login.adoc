@@ -35,7 +35,7 @@ image:screen-landing.png["Copie d'écran de la page d'accueil pour la protection
 Sinon, le tableau de bord de protection BlueXP contre les ransomwares s'affiche.
 
 +
-image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
+image:screen-dashboard2.png["Tableau de bord de protection BlueXP contre les ransomwares"]
 
 +
 

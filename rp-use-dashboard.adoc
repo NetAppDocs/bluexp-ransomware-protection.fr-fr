@@ -26,7 +26,7 @@ Vous pouvez également utiliser le tableau de bord pour consulter les recommanda
 Après la découverte, le tableau de bord indique l'état de santé de la protection des données des workloads.
 
 +
-image:screen-dashboard.png["Page de tableau de bord"]
+image:screen-dashboard2.png["Page de tableau de bord"]
 
 . Dans chaque volet du tableau de bord, vous pouvez effectuer les actions suivantes :
 +
@@ -164,7 +164,7 @@ Les fichiers CSV incluent des données pour tous les workloads dans tous les env
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 +
-image:screen-dashboard.png["Page de tableau de bord"]
+image:screen-dashboard2.png["Page de tableau de bord"]
 
 . Dans la page, sélectionnez l'option *Rafraîchir* image:button-refresh.png["Option d'actualisation"] en haut à droite pour actualiser les données qui apparaîtront dans les fichiers.
 . Effectuez l'une des opérations suivantes :
