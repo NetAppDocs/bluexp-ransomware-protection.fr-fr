@@ -17,7 +17,7 @@ Avec la protection contre les ransomwares BlueXP, vous pouvez utiliser différen
 Vous pouvez utiliser les types de licence suivants :
 
 * Inscrivez-vous pour bénéficier d'un essai gratuit de 30 jours.
-* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) pour Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace ou Azure Marketplace (prochainement).
+* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace ou Azure Marketplace.
 * BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
 
@@ -80,6 +80,8 @@ Pour ajouter un connecteur, voir https://docs.netapp.com/us-en/bluexp-setup-admi
 *Une fois la période d'essai terminée, obtenez un abonnement ou une licence*
 
 Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via l'un des Marketplaces ou acheter une licence auprès de NetApp.
+
+Si vous avez déjà un abonnement PAYGO, la licence est automatiquement basculée sur l'abonnement une fois la période d'essai gratuite terminée.
 
 <<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Abonnez-vous via Google Cloud Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
 
@@ -286,4 +288,17 @@ Une fois que vous avez payé la licence et qu'elle est enregistrée sur le site 
 .. Sélectionnez l'onglet *licences de services de données*, sélectionnez l'icône *actions ...* pour le numéro de série de service que vous mettez à jour, puis sélectionnez *mettre à jour la licence*.
 
 
+
+
+
+
+== Mettez fin à l'abonnement PAYGO
+
+Si vous souhaitez mettre fin à votre abonnement PAYGO, vous pouvez le faire à tout moment.
+
+.Étapes
+. Dans le coin supérieur droit de la protection BlueXP  contre les ransomware, sélectionnez l'option de licence.
+. Sélectionnez *Afficher les modes de paiement*.
+. Dans les détails de la liste déroulante, décochez la case *utiliser après expiration du mode de paiement actuel*.
+. Sélectionnez *Enregistrer*.
 

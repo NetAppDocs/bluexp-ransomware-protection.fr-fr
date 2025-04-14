@@ -26,12 +26,12 @@ Chaque alerte peut avoir plusieurs incidents sur des volumes différents avec de
 Le service fournit des informations appelées _Evidence_ sur ce qui a provoqué l'émission de l'alerte, telles que :
 
 * Les extensions de fichier ont été créées ou modifiées
-* La création du fichier s'est produite et a augmenté d'un pourcentage répertorié
-* La suppression du fichier s'est produite et a augmenté d'un pourcentage répertorié
+* Création de fichier avec une comparaison des taux détectés et attendus
+* Suppression de fichier avec une comparaison des taux détectés par rapport aux taux attendus
 * Lorsque le chiffrement est élevé, sans modification de l'extension de fichier
 
 
-Une alerte est basée sur les types de comportement suivants :
+Une alerte est classée comme suit :
 
 * *Attaque potentielle* : une alerte se produit lorsque la protection anti-ransomware autonome détecte une nouvelle extension et que l'occurrence est répétée plus de 20 fois au cours des 24 dernières heures (comportement par défaut).
 * *Avertissement* : un avertissement se produit en fonction des comportements suivants :

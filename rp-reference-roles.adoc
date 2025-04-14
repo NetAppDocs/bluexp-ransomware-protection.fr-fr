@@ -14,218 +14,322 @@ summary: 'La protection contre les ransomwares BlueXP  utilise le contrôle d"a
 [role="lead"]
 La protection contre les ransomwares BlueXP  emploie des rôles pour régir l'accès dont chaque utilisateur dispose pour des fonctionnalités et des actions spécifiques.
 
-La protection contre les ransomwares BlueXP  utilise les rôles suivants :
+Le service utilise les rôles suivants propres à la protection contre les ransomwares BlueXP .
 
-* Admin. De l'entreprise
-* Visualiseur (Admin non-organisation)
+* *Protection anti-ransomware admin* : gestion des actions dans les onglets protéger, alertes, récupérer, Paramètres et Rapports.
+* *Visualiseur de protection contre les ransomware* : afficher les données de charge de travail, afficher les données d'alerte, télécharger les données de récupération et télécharger les rapports.
 
+
+La plateforme BlueXP  pour tous les services BlueXP  utilise les types de rôles suivants :
+
+* *Les rôles de plate-forme* vous permettent de gérer des utilisateurs, de les affecter à des ressources et de leur donner des rôles ainsi que d'autres actions à l'échelle de la plate-forme.
++
+
+TIP: Pour la découverte de la protection contre les ransomware BlueXP , vous devez avoir le rôle *Administrateur de l'organisation* en plus du rôle *Administrateur de la protection contre les ransomware*.
+
+* *Les rôles des services de données* sont limités à un seul service de données spécifique. Vous pouvez avoir plusieurs rôles de services de données en fonction de votre travail. La protection contre les ransomwares BlueXP  est l'un des services de données BlueXP .
+
+
+Pour plus de détails sur les rôles de plate-forme, voir https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Documentation d'installation et d'administration de BlueXP "^].
 
 Le tableau suivant indique les actions que chaque rôle de protection contre les ransomwares BlueXP  peut effectuer.
 
 [cols="40,20a,20a"]
 |===
-| Fonction et action | Administrateur d'entreprise | Visualiseur 
+| Fonction et action | Administrateur de la protection contre les ransomwares | Visualiseur de protection contre les ransomware 
+
+
+| Afficher le tableau de bord et tous les onglets  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Sur le tableau de bord, mettez à jour l'état des recommandations  a| 
+Oui
+ a| 
+Non
+
 
 
 | Essayer gratuitement  a| 
-Y
+Oui
  a| 
-N
-
-
-
-| Voir le tableau de bord  a| 
-Y
- a| 
-Y
-
-
-
-| Afficher l'onglet protection  a| 
-Y
- a| 
-Y
-
-
-
-| Afficher l'onglet alertes  a| 
-Y
- a| 
-Y
-
-
-
-| Afficher l'onglet récupérer  a| 
-Y
- a| 
-Y
-
-
-
-| Afficher l'onglet Rapports  a| 
-Y
- a| 
-Y
-
-
-
-| Afficher l'onglet Paramètres  a| 
-Y
- a| 
-Y
+Non
 
 
 
 | Lancez la découverte des charges de travail  a| 
-Y
+Oui
  a| 
-N
+Non
 
 
 
-| Protégez : modifiez ou supprimez des règles  a| 
-Y
+| Lancez la redécouverte des charges de travail  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Protéger : ajoutez des règles  a| 
-Y
+3+| *Sur l'onglet protéger* : 
+
+
+| Ajoutez, modifiez ou supprimez des plans de protection  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Protégez : protégez les workloads  a| 
-Y
+| Protégez les workloads  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Protégez : identifiez les données sensibles  a| 
-Y
+| Identifiez l'exposition aux données sensibles  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Protéger : modifiez la protection des charges de travail  a| 
-Y
+| Répertoriez les plans de protection et les détails  a| 
+Oui
  a| 
-N
+Oui
 
 
 
-| Protégez : affichez les détails du workload  a| 
-Y
+| Répertorier les groupes de protection  a| 
+Oui
  a| 
-Y
+Oui
 
 
 
-| Protéger : télécharger les données  a| 
-Y
+| Afficher les détails du groupe de protection  a| 
+Oui
  a| 
-Y
+Oui
 
 
 
-| Alertes : permet d'afficher les détails des alertes  a| 
-Y
+| Créer, modifier ou supprimer un groupe de protection  a| 
+Oui
  a| 
-Y
+Non
 
 
 
-| Alertes : permet de modifier l'état d'un incident  a| 
-Y
+| Téléchargez les données  a| 
+Oui
  a| 
-N
+Oui
 
 
 
-| Alertes : permet d'afficher les détails de l'incident  a| 
-Y
+3+| *Sur l'onglet alertes* : 
+
+
+| Afficher les alertes et les détails des alertes  a| 
+Oui
  a| 
-Y
+Oui
 
 
 
-| Alertes : obtenez la liste complète des fichiers affectés  a| 
-Y
+| Modifier l'état de l'incident  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Alertes : téléchargez les données d'alertes  a| 
-Y
+| Marquer l'alerte pour la restauration  a| 
+Oui
  a| 
-Y
+Non
 
 
 
-| Restaurer : téléchargez les fichiers affectés  a| 
-Y
+| Afficher les détails de l'incident  a| 
+Oui
  a| 
-N
+Oui
 
 
 
-| Restaurer : restaurez la charge de travail  a| 
-Y
+| Ignorer ou résoudre les incestes  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Restaurer : téléchargez les données de récupération  a| 
-Y
+| Bloquer l'utilisateur  a| 
+Oui
  a| 
-Y
+Non
 
 
 
-| Restaurer : téléchargez des rapports  a| 
-Y
+| Obtenir la liste complète des fichiers affectés  a| 
+Oui
  a| 
-Y
+Non
 
 
 
-| Paramètres : permet d'ajouter ou de modifier des cibles de sauvegarde  a| 
-Y
+| Télécharger les données d'alertes  a| 
+Oui
  a| 
-N
+Oui
 
 
 
-| Paramètres : permet d'ajouter ou de modifier des cibles SIEM  a| 
-Y
+3+| *Sur l'onglet récupérer* : 
+
+
+| Télécharger les fichiers impactés  a| 
+Oui
  a| 
-N
+Non
 
 
 
-| Rapports : télécharger des rapports  a| 
-Y
+| Restaurer la charge de travail  a| 
+Oui
  a| 
-Y
+Non
 
 
 
-| Documentation : permet d'afficher la documentation relative au produit  a| 
-Y
+| Télécharger les données de récupération  a| 
+Oui
  a| 
-Y
+Oui
 
 
 
-| Documentation : consultez la documentation sur les nouveautés du produit  a| 
-Y
+| Télécharger des rapports  a| 
+Oui
  a| 
-Y
+Oui
+
+
+
+3+| *Sur l'onglet Paramètres* : 
+
+
+| Ajouter ou modifier des destinations de sauvegarde  a| 
+Oui
+ a| 
+Non
+
+
+
+| Liste des destinations de sauvegarde  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Afficher les cibles SIEM connectées  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Ajouter ou modifier des cibles SIEM  a| 
+Oui
+ a| 
+Non
+
+
+
+| Connecter les cibles de sécurité des charges de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Afficher l'état de connexion de sécurité de la charge de travail  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Déconnectez les cibles de sécurité de la charge de travail  a| 
+Oui
+ a| 
+Non
+
+
+
+| Configurer l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Commencer l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Réinitialiser l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Modifier l'exercice de préparation  a| 
+Oui
+ a| 
+Non
+
+
+
+| Passez en revue le statut de l'exercice de préparation  a| 
+Oui
+ a| 
+Oui
+
+
+
+| Mettre à jour la configuration de découverte  a| 
+Oui
+ a| 
+Non
+
+
+
+| Afficher la configuration de découverte  a| 
+Oui
+ a| 
+Oui
+
+
+
+3+| *Sur l'onglet Rapports* : 
+
+
+| Télécharger des rapports  a| 
+Oui
+ a| 
+Oui
 
 |===

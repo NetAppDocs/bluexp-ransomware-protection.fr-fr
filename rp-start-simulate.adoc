@@ -167,3 +167,17 @@ IMPORTANT: Après avoir rejeté une attaque, vous ne pouvez plus la rechanter. S
 
 
 
+
+
+
+== Passez en revue les rapports sur l'exercice de préparation
+
+Une fois l'exercice de préparation terminé, vous pouvez consulter et enregistrer un rapport sur l'exercice.
+
+.Étapes
+. Dans le menu protection contre les ransomwares BlueXP, sélectionnez *Rapports*.
++
+image:screen-reports.png["Page Rapports affichant le rapport de la foreuse de préparation"]
+
+. Sélectionnez *exercices d'état de préparation* et *Télécharger* pour télécharger le rapport d'exercice d'état de préparation.
+
