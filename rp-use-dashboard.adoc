@@ -153,7 +153,7 @@ Vous pouvez exporter des données et télécharger des fichiers CSV contenant de
 Vous pouvez télécharger des fichiers CSV à partir de l'une des options du menu principal :
 
 * *Protection* : contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges protégées et à risque.
-* *Alertes* : comprend l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et de snapshots automatisés.
+* *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et de snapshots automatisés.
 * *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « en cours », « échec de la restauration » et « Restauration réussie ».
 
 

@@ -54,8 +54,7 @@ Pour plus d'informations sur ces modes dans tous les services BlueXP, reportez-v
 
 == Interaction avec d'autres services
 
-*La protection contre les ransomware BlueXP est-elle consciente des paramètres de protection créés dans NetApp ONTAP ?*
-Oui, la protection contre les ransomware BlueXP découvre les calendriers Snapshot définis dans ONTAP.
+*La protection contre les ransomware BlueXP est-elle consciente des paramètres de protection créés dans NetApp ONTAP ?* Oui, la protection contre les ransomware de BlueXP  découvre les calendriers des snapshots définis dans ONTAP.
 
 *Si vous avez défini une stratégie à l'aide de la protection contre les ransomware BlueXP, devez-vous apporter des modifications futures uniquement dans ce service ?*
 Nous vous recommandons de modifier les règles à partir du service de protection contre les ransomwares BlueXP.
@@ -76,10 +75,9 @@ En outre, la protection contre les ransomwares BlueXP  utilise la sauvegarde et
 
 *Qu'est-ce qui constitue une charge de travail?* Une charge de travail est une application, un ordinateur virtuel ou un partage de fichiers. Une charge de travail inclut tous les volumes utilisés par une seule instance d'application. Par exemple, une instance de base de données Oracle déployée sur ora3.host.com peut avoir vol1 et vol2 pour ses données et ses journaux, respectivement. Ces volumes constituent ensemble la charge de travail de cette instance spécifique de l'instance Oracle DB.
 
-*Comment la protection par ransomware BlueXP hiérarchise-t-elle les données de workload ?*
-La priorité des données est déterminée par les copies Snapshot effectuées et les sauvegardes planifiées.
+*Comment la protection par ransomware BlueXP hiérarchise-t-elle les données de workload ?* La priorité des données est déterminée par les copies Snapshot effectuées et les sauvegardes planifiées.
 
-La priorité de la charge de travail (critique, standard, importante) est déterminée par les fréquences Snapshot déjà appliquées à chaque volume associé à la charge de travail.
+La priorité de la charge de travail (critique, standard, importante) est déterminée par les fréquences d'instantanés déjà appliquées à chaque volume associé à la charge de travail.
 
 link:rp-use-protect.html["En savoir plus sur les priorités ou l'importance des charges de travail"].
 

@@ -30,7 +30,9 @@ TIP: Pour la découverte de la protection contre les ransomware BlueXP , vous d
 * *Les rôles des services de données* sont limités à un seul service de données spécifique. Vous pouvez avoir plusieurs rôles de services de données en fonction de votre travail. La protection contre les ransomwares BlueXP  est l'un des services de données BlueXP .
 
 
-Pour plus de détails sur les rôles de plate-forme, voir https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Documentation d'installation et d'administration de BlueXP "^].
+Les autres rôles de la plateforme BlueXP  sont traités comme des téléspectateurs dans la protection contre les ransomware BlueXP . Par exemple, le rôle *Visualiseur d'organisation* vous permet d'afficher les plans de protection, mais ne vous permet pas d'effectuer des actions dans la protection contre les ransomware BlueXP .
+
+Pour plus de détails sur tous les rôles de plate-forme BlueXP , voir https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Documentation d'installation et d'administration de BlueXP "^].
 
 Le tableau suivant indique les actions que chaque rôle de protection contre les ransomwares BlueXP  peut effectuer.
 

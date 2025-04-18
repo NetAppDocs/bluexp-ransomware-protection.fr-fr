@@ -18,4 +18,4 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 == Problème d'option de réinitialisation de la fonction de vérification de la disponibilité
 
-Si vous sélectionnez un volume ONTAP 9.11.1 pour l'exercice de préparation aux attaques par ransomware, la protection BlueXP  contre les ransomwares vous avertit. Si vous restaurez les données à l'aide de l'option « clone-to-volume » et que vous réinitialisez la foreuse, l'opération de réinitialisation échoue.
+Si vous sélectionnez un volume ONTAP 9.11.1 pour l'exercice de préparation aux attaques par ransomware, la protection BlueXP  contre les ransomwares vous avertit. Si vous restaurez les données à l'aide de l'option « clone-to-volume » et réinitialisez la foreuse, l'opération de réinitialisation échoue.

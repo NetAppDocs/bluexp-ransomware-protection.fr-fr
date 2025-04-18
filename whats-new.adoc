@@ -257,7 +257,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["
 
 === Verrouillage des copies Snapshot sur le stockage primaire
 
-Activez cette fonctionnalité pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware parvient à atteindre la destination du stockage de sauvegarde.
+Activez cette fonctionnalité pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware réussit à atteindre la destination du stockage de sauvegarde.
 
 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["En savoir plus sur la protection des charges de travail et l'activation du verrouillage de sauvegarde dans une stratégie de protection contre les ransomware"].
 
@@ -317,7 +317,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["
 
 === Stratégies de protection contre les ransomware
 
-Si des règles Snapshot ou de sauvegarde n'existent pas sur le workload, vous pouvez créer une stratégie de protection contre les ransomware, qui peut inclure les règles suivantes que vous créez dans ce service :
+Si des snapshots ou des règles de sauvegarde n'existent pas sur le workload, vous pouvez créer une stratégie de protection contre les ransomware qui peut inclure les règles suivantes que vous créez dans ce service :
 
 * Règle Snapshot
 * Politique de sauvegarde

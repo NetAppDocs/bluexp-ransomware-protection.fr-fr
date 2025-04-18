@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-alert.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
-summary: 'Si la protection contre les ransomwares BlueXP  détecte une attaque, une alerte s"affiche sur le tableau de bord de protection contre les ransomwares de BlueXP  pour indiquer une attaque potentielle. Par ailleurs, le service initie immédiatement la création d"une copie Snapshot. À ce stade, vous devez étudier le risque potentiel dans l"onglet alertes de protection contre les ransomwares BlueXP.' 
+summary: 'Si la protection contre les ransomwares BlueXP  détecte une attaque, une alerte s"affiche sur le tableau de bord de protection contre les ransomwares de BlueXP  pour indiquer une attaque potentielle. Le service lance également immédiatement la création d"une copie Snapshot. À ce stade, vous devez étudier le risque potentiel dans l"onglet alertes de protection contre les ransomwares BlueXP.' 
 ---
 = Répondez à la détection d'une alerte par ransomware
 :hardbreaks:
@@ -61,6 +61,7 @@ CAUTION: Une fois que vous avez rejeté une attaque, vous ne pouvez plus la modi
 
 * *Rejet*: L'incident est en train d'être rejeté.
 * *Résolu*: L'incident a été atténué.
+* *Résolution automatique* : pour les alertes de faible priorité, l'incident est automatiquement résolu s'il n'y a pas eu d'action sur celui-ci dans les 5 jours.
 
 
 
@@ -232,7 +233,7 @@ image:screen-alerts-status-edit.png["Page État de modification des alertes"]
 
 . Dans la zone Modifier l'état, sélectionnez l'état *“rejeté”*.
 +
-Pour plus d'informations sur la charge de travail et sur les copies Snapshot à supprimer, reportez-vous à la section.
+Des informations supplémentaires sur la charge de travail et sur les copies Snapshot à supprimer s'affichent.
 
 . Sélectionnez *Enregistrer*.
 +

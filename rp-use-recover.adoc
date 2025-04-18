@@ -233,7 +233,7 @@ image:screen-alerts-incidents-impacted-files.png["liste des fichiers affectés p
 . *Point de restauration* : sélectionnez la flèche vers le bas en regard de *point de restauration* pour afficher les détails. Sélectionnez le point de restauration que vous souhaitez utiliser pour restaurer les données.
 +
 
-NOTE: La colonne raison du volet points de restauration affiche la raison pour laquelle la copie Snapshot ou la sauvegarde est planifiée ou « réponse automatisée à un incident de ransomware ».
+NOTE: La colonne raison du volet points de restauration affiche la raison pour laquelle la copie Snapshot ou la sauvegarde est « planifiée » ou « réponse automatisée à un incident de ransomware ».
 
 . *Fichiers* :
 +
