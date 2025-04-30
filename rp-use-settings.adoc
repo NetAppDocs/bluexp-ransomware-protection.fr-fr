@@ -105,6 +105,9 @@ Pour protéger ces charges de travail, vous devez ajouter une destination de sau
 * Microsoft Azure
 
 
+
+NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les workloads dans Amazon FSX pour NetApp ONTAP. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSX pour ONTAP.
+
 Vous pouvez ajouter une destination de sauvegarde en fonction d'une action recommandée à partir du tableau de bord ou en accédant à l'option Paramètres du menu.
 
 

@@ -18,4 +18,14 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 == Problème d'option de réinitialisation de la fonction de vérification de la disponibilité
 
-Si vous sélectionnez un volume ONTAP 9.11.1 pour l'exercice de préparation aux attaques par ransomware, la protection BlueXP  contre les ransomwares vous avertit. Si vous restaurez les données à l'aide de l'option « clone-to-volume » et réinitialisez la foreuse, l'opération de réinitialisation échoue.
+Si vous sélectionnez un volume ONTAP 9.11.1 pour l'exercice de préparation aux attaques par ransomware, la protection BlueXP  contre les ransomwares vous avertit. Si vous restaurez les données à l'aide de l'option « clone-to-volume » et que vous réinitialisez la foreuse, l'opération de réinitialisation échoue.
+
+
+
+== Limites d'Amazon FSX pour NetApp ONTAP
+
+L'environnement de travail Amazon FSX pour NetApp ONTAP est pris en charge par la protection BlueXP  contre les ransomware. Les limitations suivantes s'appliquent à cet environnement de travail :
+
+* Les règles de sauvegarde ne sont pas prises en charge par FSX pour ONTAP. Dans cet environnement, vous devez effectuer des opérations de sauvegarde à l'aide du service de sauvegarde Amazon FS pour ONTAP. Vous pouvez restaurer ces workloads à l'aide des snapshots de protection contre les ransomwares de BlueXP .
+* Les opérations de restauration sont réalisées à partir de snapshots uniquement.
+

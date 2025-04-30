@@ -57,7 +57,7 @@ image:screen-discover-workloads1.png["Capture d'écran de découverte des worklo
 Une liste des environnements de travail s'affiche.
 
 +
-image:screen-discover-workloads-select-no-autodiscovery.png["Capture d'écran de découverte des workloads"]
+image:screen-discover-workloads-select.png["Capture d'écran de découverte des workloads"]
 
 . Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les charges de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.
 . Sélectionnez *découvrir*.
