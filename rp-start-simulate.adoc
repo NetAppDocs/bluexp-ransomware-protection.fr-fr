@@ -33,9 +33,14 @@ La page configurer l'exercice de préparation s'affiche.
 +
 image:screen-settings-alert-drill-configure.png["Configurer la page d'exploration de la préparation"]
 
-. Sélectionnez le connecteur BlueXP  que vous souhaitez utiliser pour l'exercice de préparation.
-. Sélectionnez un environnement de travail de test.
-. Entrez le nom d'une nouvelle charge de travail test à créer.
+. Procédez comme suit :
++
+.. Sélectionnez le connecteur BlueXP  que vous souhaitez utiliser pour l'exercice de préparation.
+.. Sélectionnez un environnement de travail de test.
+.. Sélectionner un SVM de stockage de test.
+.. Entrez le nom d'une nouvelle charge de travail test à créer. Ne pas inclure de tirets dans le nom.
+
+
 . Sélectionnez *Enregistrer*.
 
 

@@ -17,7 +17,7 @@ Pour utiliser la protection contre les ransomwares BlueXP, le service doit d'abo
 La protection contre les ransomwares BlueXP évalue les applications MySQL, les applications Oracle, les datastores VMware et les partages de fichiers.
 
 
-NOTE: Les charges de travail avec des volumes qui utilisent FlexGroup ou iSCSI ne seront pas découvertes. Les workloads sur Amazon FSX pour NetApp ONTAP ou sur Azure NetApp Files ne sont pas pris en charge. La protection contre les ransomwares BlueXP  génère des rapports sur des volumes non pris en charge sur le tableau de bord après le processus de détection.
+NOTE: Les charges de travail avec des volumes qui utilisent FlexGroup ou iSCSI ne seront pas découvertes. Les charges de travail sur Azure NetApp Files ne sont pas prises en charge. Le service détecte et affiche les configurations d'environnement de travail prises en charge et non prises en charge.
 
 Le service évalue le niveau de protection existant, notamment la protection actuelle des sauvegardes, les copies Snapshot et les options de protection anti-ransomware autonome de NetApp. En fonction de l'évaluation, le service recommande ensuite comment améliorer la protection contre les ransomwares.
 
@@ -25,6 +25,7 @@ Vous pouvez effectuer les opérations suivantes :
 
 * Dans chaque connecteur, sélectionnez les environnements de travail dans lesquels vous souhaitez découvrir les workloads. Vous pouvez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et non d'autres.
 * Découvrez les nouveaux workloads créés pour les environnements de travail précédemment sélectionnés.
+* Découvrez de nouveaux environnements de travail.
 
 
 
@@ -43,35 +44,21 @@ image:screen-landing.png["Copie d'écran de la page d'accueil pour la protection
 
 . Sur la page d'accueil initiale, sélectionnez *commencer par découvrir les charges de travail*.
 +
-Le service trouve des environnements de travail dans vos connecteurs BlueXP .
+Le service détecte les environnements de travail pris en charge et non pris en charge. Ce processus peut prendre quelques minutes.
 
 +
+image:screen-discover-workloads-unsupported.png["Capture d'écran de découverte des workloads"]
 
-TIP: Ce processus peut prendre quelques minutes.
-
-+
-image:screen-discover-workloads1.png["Capture d'écran de découverte des workloads"]
-
-. Pour découvrir les charges de travail d'un connecteur spécifique, sélectionnez *Rechercher de nouveaux environnements de travail* en regard du connecteur où vous souhaitez découvrir les charges de travail.
-+
-Une liste des environnements de travail s'affiche.
-
-+
-image:screen-discover-workloads-select.png["Capture d'écran de découverte des workloads"]
-
-. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les charges de travail ou cochez la case en haut du tableau pour identifier les charges de travail dans tous les environnements de charges de travail découverts.
+. Pour découvrir les charges de travail d'un connecteur spécifique, sélectionnez *Sélectionner les environnements de travail* en regard du connecteur où vous souhaitez découvrir les charges de travail.
+. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les workloads.
 . Sélectionnez *découvrir*.
 +
-Le service détecte les données de charge de travail uniquement pour ces connecteurs avec des environnements de travail sélectionnés.
+Le service détecte les données de charge de travail uniquement pour ces connecteurs avec des environnements de travail sélectionnés. Ce processus peut prendre quelques minutes.
 
 +
+image:screen-discover-workloads-unsupported-collected.png["Captures d'écran des workloads découverts"]
 
-TIP: Ce processus peut prendre quelques minutes.
-
-+
-image:screen-discover-workloads-found2.png["Captures d'écran des workloads découverts"]
-
-. Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats (CSV)*.
+. Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de protection contre les ransomware de BlueXP , sélectionnez *aller au tableau de bord*.
 +
 Le tableau de bord indique l'état de santé de la protection des données. Le nombre de workloads à risque ou protégés augmente en fonction des nouveaux workloads détectés.
@@ -110,4 +97,6 @@ Si vous avez déjà découvert des environnements de travail, vous pouvez décou
 
 TIP: Ce processus peut prendre quelques minutes, comme indiqué par une icône de chargement en cours de traitement.
 
+. Le service détecte les environnements de travail pris en charge et non pris en charge. Il existe de nombreuses raisons pour lesquelles le service ne prend pas en charge un environnement de travail. Par exemple, la version ONTAP de votre environnement de travail peut être inférieure à la version requise. Lorsque vous placez le pointeur de la souris sur un environnement de travail non pris en charge, une info-bulle affiche la raison. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les workloads.
+. Sélectionnez *découvrir*.
 
