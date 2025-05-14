@@ -1796,7 +1796,6 @@ Reportez-vous à la section <block ref="2d12612123ced7dcaea608fc8db14aca" catego
   <block id="392d70ca39f31f10bd637936769788df" category="list-text">StorageGRID</block>
   <block id="579848aa0d8bdd4f7904793483675637" category="paragraph">Vous pouvez afficher les environnements de travail non pris en charge lors de la découverte initiale et ultérieurement à partir de l'option *Workload Discovery* de la page Paramètres. Il existe de nombreuses raisons pour lesquelles le service ne prend pas en charge un environnement de travail. Par exemple, la version ONTAP de votre environnement de travail peut être inférieure à la version requise. Lorsque vous placez le pointeur de la souris sur un environnement de travail non pris en charge, une info-bulle affiche la raison.</block>
   <block id="4c47a495695584c11b9bc39a46126b3f" category="paragraph">Vous pouvez télécharger les résultats du processus de détection après la découverte.</block>
-  <block id="39c54f7d4df40cc8068c415171304f04" category="paragraph">Pour plus de détails, reportez-vous à<block ref="52ea2f296b1d66ace77da9b46bb70668" category="inline-link-rx"></block> .</block>
   <block id="aad9baa97ac0eac36d06a06e92779e20" category="admonition">Les charges de travail avec des volumes qui utilisent FlexGroup ou iSCSI ne seront pas découvertes. Les charges de travail sur Azure NetApp Files ne sont pas prises en charge. Le service détecte et affiche les configurations d'environnement de travail prises en charge et non prises en charge.</block>
   <block id="63e2bb0c5a3c29dbfc9712f5986829f5" category="list-text">Découvrez de nouveaux environnements de travail.</block>
   <block id="ba0a4542cb75319d2d7ef0f3aedde438" category="paragraph">Le service détecte les environnements de travail pris en charge et non pris en charge. Ce processus peut prendre quelques minutes.</block>
@@ -1811,4 +1810,5 @@ Reportez-vous à la section <block ref="2d12612123ced7dcaea608fc8db14aca" catego
   <block id="9d5c8a6e3597683b4559e2c596a2ead9" category="list-text">Sélectionner un SVM de stockage de test.</block>
   <block id="6773f809e3f238c4a8a25adcd8e46f13" category="list-text">Entrez le nom d'une nouvelle charge de travail test à créer. Ne pas inclure de tirets dans le nom.</block>
   <block id="71df7d09aaee8e6796df0c3d10989fbd" category="section-title">13 mai 2025</block>
+  <block id="61583743ac80f4ba16bec0d30aa9b643" category="paragraph">Pour plus de détails, reportez-vous à<block ref="fccc7436e00c13bc9cd8b09f936b4c8c" category="inline-link-rx"></block> .</block>
 </blocks>

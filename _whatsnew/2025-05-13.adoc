@@ -21,4 +21,4 @@ Vous pouvez afficher les environnements de travail non pris en charge lors de la
 
 Vous pouvez télécharger les résultats du processus de détection après la découverte.
 
-Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discovery.html["Découvrez les workloads dans la solution de protection BlueXP contre les ransomwares"] .
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Découvrez les workloads dans la solution de protection BlueXP contre les ransomwares"] .
