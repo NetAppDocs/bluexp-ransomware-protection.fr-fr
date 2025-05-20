@@ -32,7 +32,7 @@ Après la fin de la période d'essai gratuite ou l'expiration de la licence ou d
 
 
 
-=== Autres considérations relatives à la licence
+== Autres licences
 
 La licence de protection contre les ransomwares BlueXP  n'inclut pas d'autres produits NetApp. La protection contre les ransomwares de BlueXP  peut utiliser la sauvegarde et la restauration BlueXP  même si vous ne disposez pas d'une licence pour celle-ci.
 
@@ -83,7 +83,7 @@ Une fois la période d'essai gratuite terminée, vous pouvez vous abonner via l'
 
 Si vous avez déjà un abonnement PAYGO, la licence est automatiquement basculée sur l'abonnement une fois la période d'essai gratuite terminée.
 
-<<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Subscribe through Google Cloud Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
+<<Abonnez-vous sur AWS Marketplace>> <<Abonnez-vous via Microsoft Azure Marketplace>> <<Abonnez-vous via Google Cloud Platform Marketplace>> <<Modèle BYOL (Bring Your Own License)>>
 
 
 
@@ -103,7 +103,7 @@ image:screen-license-payment-methods3.png["Page méthodes de paiement de la prot
 
 . Sur la page modes de paiement, sélectionnez *s'abonner* pour *Amazon Web Services*.
 . Dans AWS Marketplace, sélectionnez *Afficher les options d'achat*.
-. Utilisez AWS Marketplace pour souscrire à la protection BlueXP contre les ransomwares.
+. Utilisez AWS Marketplace pour vous abonner à *NetApp Intelligent Services* et *BlueXP  ransomware protection*.
 . Lorsque vous revenez à la protection contre les ransomwares BlueXP, un message indique que vous êtes abonné.
 +
 
@@ -151,7 +151,7 @@ image:screen-license-payment-methods3.png["Page méthodes de paiement de la prot
 
 . Sur la page modes de paiement, sélectionnez *s'abonner* pour *Microsoft Azure Marketplace*.
 . Dans Azure Marketplace, sélectionnez *Afficher les options d'achat*.
-. Utilisez Azure Marketplace pour souscrire à la protection BlueXP contre les ransomwares.
+. Utilisez Azure Marketplace pour vous abonner à *NetApp Intelligent Services* et *BlueXP  ransomware protection*.
 . Lorsque vous revenez à la protection contre les ransomwares BlueXP, un message indique que vous êtes abonné.
 +
 
@@ -199,7 +199,7 @@ image:screen-license-payment-methods3.png["Page méthodes de paiement de la prot
 
 . Sur la page modes de paiement, sélectionnez *s'abonner* pour Google Cloud Platform Marketplace*.
 . Dans Google Cloud Platform Marketplace, sélectionnez *s'abonner*.
-. Utilisez Google Cloud Platform Marketplace pour vous abonner à la protection BlueXP  contre les ransomwares. image:screen-license-payments-gcp.png["Page d'abonnement Google Cloud Marketplace"]
+. Utilisez Google Cloud Platform Marketplace pour vous abonner à *NetApp Intelligent Services* et *BlueXP  ransomware protection*. image:screen-license-payments-gcp2.png["Page d'abonnement Google Cloud Marketplace"]
 . Lorsque vous revenez à la protection contre les ransomwares BlueXP, un message indique que vous êtes abonné.
 +
 

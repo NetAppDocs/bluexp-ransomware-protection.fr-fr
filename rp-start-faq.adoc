@@ -23,7 +23,7 @@ Cette FAQ peut vous aider si vous cherchez juste une réponse rapide à une ques
 Vous pouvez utiliser les types de licence suivants :
 
 * Inscrivez-vous pour bénéficier d'un essai gratuit de 30 jours.
-* Achetez un abonnement de paiement basé sur l'utilisation (PAYGO) avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace et Microsoft Azure Marketplace (prochainement).
+* Achetez un abonnement PAYGO (paiement basé sur l'utilisation) pour NetApp Intelligent Services et la protection contre les ransomwares BlueXP  avec Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace et Microsoft Azure Marketplace.
 * BYOL (Bring Your Own License), un fichier de licence NetApp (NLF) que vous obtenez auprès de votre ingénieur commercial NetApp Vous pouvez utiliser le numéro de série de licence pour activer la fonction BYOL dans le portefeuille digital BlueXP.
 
 
@@ -101,8 +101,6 @@ BlueXP  anti-ransomware associe les données à une charge de travail de la man
 
 *Nouveau volume ajouté, mais n'apparaît pas encore* si vous avez ajouté un nouveau volume à votre environnement, lancez à nouveau la découverte et appliquez des stratégies de protection pour protéger ce nouveau volume.
 
-*Le tableau de bord n'affiche pas toutes mes charges de travail. Qu'est-ce qui pourrait ne pas se passer?* Actuellement, seuls les volumes NFS et CIFS sont pris en charge. Les volumes iSCSI et les autres configurations non prises en charge sont filtrés et n'apparaissent pas dans le tableau de bord.
-
 
 
 == Règles de protection
@@ -148,6 +146,6 @@ Oui, vous pouvez modifier vos règles à partir de ONTAP dans la protection cont
 
 *Pouvez-vous désactiver les stratégies ?*
 
-Vous pouvez désactiver le protocole ARP dans les règles de détection à l'aide de l'interface utilisateur, des API ou de l'interface de ligne de commande de System Manager.
+Vous pouvez désactiver le protocole ARP dans les stratégies de détection à l'aide de l'interface utilisateur, des API ou de l'interface de ligne de commande de System Manager.
 
 Vous pouvez désactiver FPolicy et les règles de sauvegarde en appliquant une autre règle qui ne les inclut pas.
