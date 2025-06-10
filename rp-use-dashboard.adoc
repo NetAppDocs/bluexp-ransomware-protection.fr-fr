@@ -4,7 +4,7 @@ permalink: rp-use-dashboard.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: 'Le tableau de bord de protection contre les ransomwares BlueXP fournit des informations sur l"état de protection de vos workloads. Vous pouvez déterminer rapidement les charges de travail à risque ou protégées, les charges de travail impactées par un incident ou en cours de restauration, et évaluer l"étendue de la protection en examinant la quantité de stockage protégée ou en péril. Vous pouvez également utiliser le tableau de bord pour examiner les recommandations de protection et agir en conséquence.' 
 ---
-= Consultez rapidement l'état des workloads à l'aide du tableau de bord
+= Surveillez l'état de la charge de travail à l'aide du tableau de bord de protection contre les ransomwares BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,7 +14,9 @@ summary: 'Le tableau de bord de protection contre les ransomwares BlueXP fournit
 [role="lead"]
 Le tableau de bord de protection contre les ransomwares BlueXP fournit des informations d'un coup d'œil sur l'état de la protection de vos workloads. Vous pouvez identifier rapidement les workloads à risque ou protégés, identifier les workloads impactés par un incident ou par la restauration, et évaluer l'étendue de la protection en examinant la quantité de stockage protégée ou en péril.
 
-Vous pouvez également utiliser le tableau de bord pour consulter les recommandations de protection et agir en conséquence, accéder aux paramètres globaux, télécharger des rapports et accéder à cette documentation technique.
+Utilisez le tableau de bord pour examiner les suggestions de protection, modifier les paramètres, télécharger des rapports et afficher la documentation.
+
+*Rôle BlueXP requis* Rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de protection contre les ransomwares ou de visualiseur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 
 
@@ -23,19 +25,19 @@ Vous pouvez également utiliser le tableau de bord pour consulter les recommanda
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 +
-Après la découverte, le tableau de bord indique l'état de santé de la protection des données des workloads.
+Une fois que BlueXP a découvert vos charges de travail, le tableau de bord affiche l’état de protection des données de la charge de travail.
 
 +
 image:screen-dashboard2.png["Page de tableau de bord"]
 
 . Dans chaque volet du tableau de bord, vous pouvez effectuer les actions suivantes :
 +
-** *Protection des données de charge de travail* : cliquez sur *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la section link:rp-use-protect.html["Protégez les workloads"].
+** *Protection des données de charge de travail* : sélectionnez *Afficher tout* pour voir toutes les charges de travail qui sont à risque ou protégées sur la page Protection. Les charges de travail sont menacées lorsque les niveaux de protection ne correspondent pas à une règle de protection. Reportez-vous à la link:rp-use-protect.html["Protégez les workloads"].
 +
 
-TIP: Cliquez sur la note « i » pour voir des conseils sur ces données. Pour augmenter la limite de la charge de travail, cliquez sur *augmenter la limite de la charge de travail* à l'intérieur de ce i note. Cliquez sur ce bouton pour accéder à la page de support BlueXP , où vous pouvez créer un ticket de dossier.
+TIP: Sélectionnez la note « i » pour obtenir des conseils sur ces données. Pour augmenter la limite de charge de travail, sélectionnez « Augmenter la limite de charge de travail » dans cette note. Cliquez sur ce bouton pour accéder à la page de support BlueXP , où vous pouvez créer un ticket de dossier.
 
-** *Alertes et récupération des données de charge de travail* : cliquez *Afficher tout* pour voir les incidents actifs qui ont affecté votre charge de travail, sont prêts pour la récupération après que les incidents sont neutralisés ou sont en cours de récupération. Reportez-vous à la section link:rp-use-alert.html["Répondre à une alerte détectée"].
+** *Alertes et récupération des données de charge de travail* : sélectionnez *Afficher tout* pour voir les incidents actifs qui ont eu un impact sur votre charge de travail, qui sont prêts à être récupérés après la neutralisation des incidents ou qui sont en cours de récupération. Reportez-vous à la link:rp-use-alert.html["Répondre à une alerte détectée"].
 +
 *** Un incident est classé dans l'un des États suivants :
 +
@@ -61,15 +63,15 @@ TIP: Cliquez sur la note « i » pour voir des conseils sur ces données. Pour a
 
 
 
-** *Actions recommandées* : pour augmenter la protection, examinez chaque recommandation et cliquez sur *revoir et corriger*.
+** *Actions recommandées* : Pour augmenter la protection, examinez chaque recommandation et sélectionnez *Examiner et corriger*.
 +
-Reportez-vous à la section link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Passez en revue les recommandations de protection sur le tableau de bord"] ou link:rp-use-protect.html["Protégez les workloads"].
+Voir link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Consultez les suggestions de protection sur le tableau de bord"] ou link:rp-use-protect.html["Protégez les workloads"] .
 
 +
-Toutes les recommandations ajoutées depuis la dernière visite du tableau de bord sont indiquées par « Nouveau » pendant au moins 24 heures. Les actions sont répertoriées par ordre de priorité, les plus importantes étant affichées en haut. Vous pouvez examiner et agir sur chacun d'eux ou le rejeter.
+BlueXP indique les nouvelles recommandations depuis votre dernière visite sur le tableau de bord avec le symbole « Nouveau » pendant 24 heures. Les actions apparaissent par ordre de priorité, la plus importante en haut. Consultez, appliquez ou ignorez chaque recommandation.
 
 +
-Le nombre total d'actions n'inclut pas les actions rejetées.
+Le nombre total d’actions n’inclut pas les actions que vous avez rejetées.
 
 ** *Données sur la charge de travail* : surveiller les changements dans la couverture de protection au cours des 7 derniers jours.
 ** *Sauvegardes de charge de travail* : surveillez les modifications des sauvegardes de charge de travail créées par le service qui ont échoué ou qui ont réussi au cours des 7 derniers jours.
@@ -152,12 +154,12 @@ Vous pouvez exporter des données et télécharger des fichiers CSV contenant de
 
 Vous pouvez télécharger des fichiers CSV à partir de l'une des options du menu principal :
 
-* *Protection* : contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges protégées et à risque.
+* *Protection* : contient l’état et les détails de toutes les charges de travail, y compris le nombre total de charges de travail que BlueXP marque comme protégées ou à risque.
 * *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et de snapshots automatisés.
-* *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail marquées « Restauration nécessaire », « en cours », « échec de la restauration » et « Restauration réussie ».
+* *Récupération* : inclut l'état et les détails de toutes les charges de travail qui doivent être restaurées, y compris le nombre total de charges de travail que BlueXP marque comme « Restauration nécessaire », « En cours », « Échec de la restauration » et « Restauration réussie ».
 
 
-Si vous téléchargez des fichiers CSV à partir de la page protection, alertes ou récupération, seules les données de cette page sont incluses dans le fichier CSV.
+Le téléchargement d'un fichier CSV à partir d'une page inclut uniquement les données de cette page.
 
 Les fichiers CSV incluent des données pour tous les workloads dans tous les environnements de travail BlueXP.
 

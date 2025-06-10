@@ -24,3 +24,11 @@ TIP: Les stratégies de sauvegarde d'un workload s'exécutant sur FSX pour ONTAP
 Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Découvrez la protection contre les ransomwares de BlueXP  et les environnements de travail"] .
 
 Pour plus d'informations sur les options prises en charge, reportez-vous au https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-limitations.html["Limites de la protection contre les ransomware de BlueXP "].
+
+
+
+=== Rôle d'accès BlueXP requis
+
+Vous avez désormais besoin de l’un des rôles d’accès suivants pour afficher, découvrir ou gérer la protection contre les ransomwares BlueXP : administrateur de l’organisation, administrateur de dossier ou de projet, administrateur de la protection contre les ransomwares ou visualiseur de protection contre les ransomwares.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^].

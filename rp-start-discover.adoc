@@ -14,14 +14,18 @@ summary: Pendant la découverte, la protection contre les ransomwares BlueXP ana
 [role="lead"]
 Pour utiliser la protection contre les ransomwares BlueXP, le service doit d'abord détecter les données. Pendant la découverte, la protection contre les ransomwares de BlueXP  analyse tous les volumes et fichiers des environnements de travail sur tous les connecteurs BlueXP  et les projets d'une entreprise.
 
-La protection contre les ransomwares BlueXP évalue les applications MySQL, les applications Oracle, les datastores VMware et les partages de fichiers.
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou rôle d'administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
+*Que découvre le service ?* La protection contre les ransomwares BlueXP évalue les applications MySQL, les applications Oracle, les datastores VMware et les partages de fichiers.
 
 
-NOTE: Les charges de travail avec des volumes qui utilisent FlexGroup ou iSCSI ne seront pas découvertes. Les charges de travail sur Azure NetApp Files ne sont pas prises en charge. Le service détecte et affiche les configurations d'environnement de travail prises en charge et non prises en charge.
+NOTE: Le service ne détecte pas les charges de travail avec des volumes qui utilisent FlexGroup ou iSCSI.
 
-Le service évalue le niveau de protection existant, notamment la protection actuelle des sauvegardes, les copies Snapshot et les options de protection anti-ransomware autonome de NetApp. En fonction de l'évaluation, le service recommande ensuite comment améliorer la protection contre les ransomwares.
+La protection contre les ransomwares BlueXP découvre et affiche les configurations d'environnement de travail prises en charge et non prises en charge dans le tableau de bord.
 
-Vous pouvez effectuer les opérations suivantes :
+Le service vérifie vos sauvegardes actuelles, vos copies instantanées et vos options de protection autonome contre les ransomwares NetApp. Il recommande ensuite des solutions pour améliorer votre protection contre les ransomwares.
+
+*Comment pouvez-vous découvrir les charges de travail ?* Vous pouvez effectuer les opérations suivantes :
 
 * Dans chaque connecteur, sélectionnez les environnements de travail dans lesquels vous souhaitez découvrir les workloads. Vous pouvez bénéficier de cette fonctionnalité si vous souhaitez protéger des charges de travail spécifiques dans votre environnement et non d'autres.
 * Découvrez les nouveaux workloads créés pour les environnements de travail précédemment sélectionnés.
@@ -37,10 +41,14 @@ Dans chaque connecteur, sélectionnez les environnements de travail dans lesquel
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 +
-S'il s'agit de votre première connexion à ce service, la page d'accueil s'affiche.
+S'il s'agit de votre première connexion, la page de destination apparaît.
 
 +
 image:screen-landing.png["Copie d'écran de la page d'accueil pour la protection BlueXP contre les ransomware"]
+
++
+
+NOTE: Si vous avez démarré l'essai gratuit, le libellé du bouton *Démarrer l'essai gratuit de 30 jours* devient *Commencer par découvrir les charges de travail*.
 
 . Sur la page d'accueil initiale, sélectionnez *commencer par découvrir les charges de travail*.
 +
@@ -61,10 +69,10 @@ image:screen-discover-workloads-unsupported-collected.png["Captures d'écran des
 . Pour télécharger la liste des charges de travail découvertes, sélectionnez *Télécharger les résultats*.
 . Pour afficher le tableau de bord de protection contre les ransomware de BlueXP , sélectionnez *aller au tableau de bord*.
 +
-Le tableau de bord indique l'état de santé de la protection des données. Le nombre de workloads à risque ou protégés augmente en fonction des nouveaux workloads détectés.
+Le tableau de bord affiche l'état de la protection des données. Le nombre de charges de travail à risque ou protégées est mis à jour à mesure que de nouvelles charges de travail sont découvertes.
 
 +
-image:screen-dashboard.png["Tableau de bord de protection BlueXP contre les ransomwares"]
+image:screen-dashboard3.png["Tableau de bord de protection BlueXP contre les ransomwares"]
 
 +
 link:rp-use-dashboard.html["Découvrez ce que le tableau de bord vous montre."]
@@ -80,14 +88,14 @@ Si vous avez déjà sélectionné des environnements de travail à des fins de d
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 . Pour identifier la date de la dernière découverte, à partir du tableau de bord, regardez la date et l'heure en regard de l'icône *Actualiser* en haut à droite.
-. Dans le tableau de bord, sélectionnez l'icône *Actualiser* qui lance la découverte de nouvelles charges de travail.
+. Depuis le tableau de bord, sélectionnez l’icône *Actualiser* pour rechercher de nouvelles charges de travail.
 
 
 
 
 == Découvrez de nouveaux environnements de travail
 
-Si vous avez déjà découvert des environnements de travail, vous pouvez découvrir les nouveaux environnements de travail ou environnements de travail que vous n'avez pas précédemment sélectionnés lors des processus de découverte précédents.
+Si vous avez déjà découvert des environnements de travail, vous pouvez en trouver de nouveaux ou des non sélectionnés auparavant.
 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
@@ -95,8 +103,8 @@ Si vous avez déjà découvert des environnements de travail, vous pouvez décou
 . Dans la carte de détection de charge de travail, sélectionnez *découvrir les charges de travail*.
 +
 
-TIP: Ce processus peut prendre quelques minutes, comme indiqué par une icône de chargement en cours de traitement.
+TIP: Ce processus peut prendre quelques minutes et une icône de chargement indique la progression.
 
-. Le service détecte les environnements de travail pris en charge et non pris en charge. Il existe de nombreuses raisons pour lesquelles le service ne prend pas en charge un environnement de travail. Par exemple, la version ONTAP de votre environnement de travail peut être inférieure à la version requise. Lorsque vous placez le pointeur de la souris sur un environnement de travail non pris en charge, une info-bulle affiche la raison. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les workloads.
+. Le service détecte les environnements de travail pris en charge et non pris en charge. Le service ne prend pas en charge un environnement de travail si sa version ONTAP est inférieure à la version requise. Lorsque vous placez le pointeur de la souris sur un environnement de travail non pris en charge, une info-bulle affiche la raison. Sélectionnez les environnements de travail dans lesquels vous souhaitez identifier les workloads.
 . Sélectionnez *découvrir*.
 

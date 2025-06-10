@@ -4,7 +4,7 @@ permalink: rp-use-alert.html
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
 summary: 'Si la protection contre les ransomwares BlueXP  détecte une attaque, une alerte s"affiche sur le tableau de bord de protection contre les ransomwares de BlueXP  pour indiquer une attaque potentielle. Le service lance également immédiatement la création d"une copie Snapshot. À ce stade, vous devez étudier le risque potentiel dans l"onglet alertes de protection contre les ransomwares BlueXP.' 
 ---
-= Répondez à la détection d'une alerte par ransomware
+= Gérez les alertes de ransomware détectées avec la protection contre les ransomwares BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,16 +12,16 @@ summary: 'Si la protection contre les ransomwares BlueXP  détecte une attaque,
 
 
 [role="lead"]
-Si la protection contre les ransomwares BlueXP détecte une attaque, une alerte s'affiche dans le tableau de bord de protection contre les ransomwares BlueXP et dans les notifications BlueXP en haut à droite indiquant une attaque potentielle par ransomware. Le service lance également immédiatement la création d'une copie Snapshot. À ce stade, vous devez examiner le risque potentiel dans l'onglet * alertes * de la protection contre les ransomwares BlueXP.
+Lorsque la protection BlueXP contre les ransomwares détecte une attaque potentielle, une alerte s'affiche sur le tableau de bord et dans la zone Notifications. Le service prend immédiatement un instantané. Consultez l'onglet *Alertes* de la protection BlueXP contre les ransomwares pour évaluer le risque potentiel.
 
 Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement.
 
 
-TIP: Si vous décidez de rejeter l'alerte, le service apprendra ce comportement et l'associera aux opérations normales et ne déclenchera plus d'alerte sur un tel comportement.
+TIP: Si vous ignorez l'alerte, le service apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte.
 
 Pour commencer à restaurer vos données, cochez l'alerte comme étant prête pour la restauration afin que votre administrateur de stockage puisse commencer le processus de restauration.
 
-Chaque alerte peut avoir plusieurs incidents sur des volumes différents avec des États différents. Veillez donc à examiner tous les incidents.
+Chaque alerte peut inclure plusieurs incidents sur des volumes et des statuts différents. Examinez tous les incidents.
 
 Le service fournit des informations appelées _Evidence_ sur ce qui a provoqué l'émission de l'alerte, telles que :
 
@@ -38,7 +38,7 @@ Une alerte est classée comme suit :
 +
 ** La détection d'une nouvelle extension n'a pas été identifiée auparavant et le même comportement ne se répète pas suffisamment de fois pour la déclarer comme une attaque.
 ** Une entropie élevée est observée.
-** Les opérations de lecture/écriture/renommage/suppression de fichiers ont généré une augmentation de 100 % de l'activité au-delà de la base de données.
+** L'activité de lecture, d'écriture, de renommage ou de suppression de fichiers a doublé par rapport aux niveaux normaux.
 
 
 
@@ -51,7 +51,7 @@ Une alerte peut avoir l'un des États suivants :
 * *Inactif*
 
 
-Un incident d'alerte est classé dans l'un des États suivants :
+Un incident d’alerte peut avoir l’un des états suivants :
 
 * *Nouveau*: Tous les incidents sont marqués "nouveau" lorsqu'ils sont identifiés pour la première fois.
 * *Rejeté* : si vous soupçonnez que l'activité n'est pas une attaque par ransomware, vous pouvez changer le statut en « rejeté ».
@@ -60,8 +60,8 @@ Un incident d'alerte est classé dans l'un des États suivants :
 CAUTION: Une fois que vous avez rejeté une attaque, vous ne pouvez plus la modifier. Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées.
 
 * *Rejet*: L'incident est en train d'être rejeté.
-* *Résolu*: L'incident a été atténué.
-* *Résolution automatique* : pour les alertes de faible priorité, l'incident est automatiquement résolu s'il n'y a pas eu d'action sur celui-ci dans les 5 jours.
+* *Résolu* : L'incident a été résolu.
+* *Résolution automatique* : pour les alertes de faible priorité, l'incident est automatiquement résolu si aucune mesure n'a été prise dans les cinq jours.
 
 
 
@@ -70,11 +70,13 @@ CAUTION: Une fois que vous avez rejeté une attaque, vous ne pouvez plus la modi
 
 Vous pouvez accéder aux alertes depuis le tableau de bord de protection contre les ransomwares de BlueXP  ou depuis l'onglet *alertes*.
 
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet, administrateur de protection contre les ransomwares ou rôle de visualiseur de ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
 .Étapes
 . Dans le tableau de bord de protection contre les ransomwares BlueXP, consultez le volet alertes.
 . Sélectionnez *Afficher tout* sous l'un des États.
-. Cliquez sur une alerte pour examiner tous les incidents sur chaque volume pour chaque alerte.
-. Pour consulter d'autres alertes, cliquez sur *Alert* dans le fil d'Ariane en haut à gauche.
+. Sélectionnez une alerte pour examiner tous les incidents sur chaque volume pour chaque alerte.
+. Pour consulter des alertes supplémentaires, sélectionnez *Alerte* dans le fil d'Ariane en haut à gauche.
 . Consultez les alertes sur la page alertes.
 +
 image:screen-alerts.png["Page alertes"]
@@ -92,7 +94,11 @@ image:screen-alerts.png["Page alertes"]
 
 == Détectez les activités malveillantes et les comportements anormaux des utilisateurs
 
-L'onglet alertes vous permet d'identifier les activités malveillantes. Les détails qui s'affichent dépendent de la manière dont l'alerte a été déclenchée :
+L'onglet alertes vous permet d'identifier les activités malveillantes.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
+*Quels détails apparaissent ?* Les détails qui s'affichent dépendent de la manière dont l'alerte a été déclenchée :
 
 * Déclenché par la fonctionnalité de protection anti-ransomware autonome de ONTAP. Cette action détecte les activités malveillantes en fonction du comportement des fichiers présents dans le volume.
 * Déclenché par la sécurité des workloads Data Infrastructure Insights. Cette opération nécessite une licence pour la sécurité des workloads Data Infrastructure Insights et que vous l'activez dans la protection BlueXP  contre les ransomware. Cette fonctionnalité détecte les comportements anormaux des utilisateurs dans vos workloads de stockage et vous permet de bloquer cet utilisateur pour qu'il n'y ait plus d'accès.
@@ -179,7 +185,9 @@ image:screen-alerts-incidents-diiws-diiwspage.png["Analysez la sécurité des wo
 
 == Marquer les incidents de ransomware comme prêts pour la restauration (après neutralisation des incidents)
 
-Une fois que vous avez atténué l'attaque et que vous êtes prêt à restaurer des charges de travail, vous devez communiquer avec l'équipe d'administration du stockage que les données sont prêtes pour la restauration afin qu'elles puissent démarrer le processus de restauration.
+Après avoir arrêté l’attaque, informez votre administrateur de stockage que les données sont prêtes afin qu’il puisse commencer la récupération.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
@@ -203,14 +211,16 @@ Une fois l'alerte marquée pour la restauration, elle passe de l'onglet alertes 
 
 == Rejeter les incidents qui ne sont pas des attaques potentielles
 
-Après avoir examiné les incidents, vous devez déterminer si ces incidents sont des attaques potentielles. Si ce n'est pas le cas, ils peuvent être rejetés.
+Après avoir examiné les incidents, vous devez déterminer si ces incidents sont des attaques potentielles. Si la condition précédente n’est pas remplie, ils peuvent être licenciés.
 
-Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement. Si vous décidez de rejeter l'alerte, le service apprendra ce comportement et l'associera aux opérations normales et ne déclenchera plus d'alerte sur un tel comportement.
+Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement. Si vous ignorez l'alerte, le service apprendra ce comportement et l'associera aux opérations normales et ne déclenchera plus d'alerte sur un tel comportement.
 
-Si vous rejetez un workload, toutes les copies Snapshot effectuées automatiquement en réponse à une attaque potentielle par ransomware seront définitivement supprimées.
+Si vous supprimez une charge de travail, toutes les copies instantanées prises automatiquement en réponse à une attaque potentielle de ransomware sont définitivement supprimées.
 
 
 CAUTION: Si vous rejetez une alerte, vous ne pouvez pas rétablir cet état à un autre et vous ne pouvez pas annuler cette modification.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
@@ -233,7 +243,7 @@ image:screen-alerts-status-edit.png["Page État de modification des alertes"]
 
 . Dans la zone Modifier l'état, sélectionnez l'état *“rejeté”*.
 +
-Des informations supplémentaires sur la charge de travail et sur les copies Snapshot à supprimer s'affichent.
+Des informations supplémentaires sur la charge de travail et sur la suppression des copies instantanées s'affichent.
 
 . Sélectionnez *Enregistrer*.
 +
@@ -246,6 +256,8 @@ Le statut de l'incident ou des incidents passe à « rejeté ».
 == Afficher la liste des fichiers affectés
 
 Avant de restaurer une charge applicative au niveau fichier, vous pouvez afficher la liste des fichiers affectés. Vous pouvez accéder à la page alertes pour télécharger la liste des fichiers affectés. Utilisez ensuite la page récupération pour télécharger la liste et choisir les fichiers à restaurer.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 Utilisez la page alertes pour récupérer la liste des fichiers affectés.

@@ -35,7 +35,7 @@ sidebar:
       url: "/rp-start-licenses.html"
     - title: Découvrir les workloads
       url: "/rp-start-discover.html"
-    - title: Simulez une attaque par ransomware
+    - title: Simulez une attaque de ransomware avec un exercice de préparation
       url: "/rp-start-simulate.html"
     - title: Configurez les sauvegardes, la détection des menaces et les simulations
         d'attaque dans Paramètres
@@ -62,10 +62,6 @@ sidebar:
     - title: Télécharger des rapports
       url: "/rp-use-reports.html"
   - section: support
-  - title: Référence
-    entries:
-    - title: Contrôle d'accès basé sur des rôles Privileges
-      url: "/rp-reference-roles.html"
   - title: Mentions légales
     url: "/legal-notices.html"
 product-family:

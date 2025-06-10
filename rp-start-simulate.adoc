@@ -4,7 +4,7 @@ permalink: rp-start-simulate.html
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert, simulate, readiness drill, practice, ransomware attack, ransomware attack response, ransomware attack readiness drill 
 summary: 'Effectuez une analyse de préparation en cas de ransomware en simulant une attaque par ransomware sur un workload échantillon nouvellement créé. Ensuite, étudiez l"attaque simulée et restaurez la charge de travail de l"échantillon. Vous pouvez effectuer plusieurs exercices de préparation aux ransomwares.' 
 ---
-= Simulez une attaque par ransomware en menant des exercices de préparation
+= Effectuer un exercice de préparation aux attaques de ransomware dans la protection contre les ransomwares BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,23 +12,36 @@ summary: 'Effectuez une analyse de préparation en cas de ransomware en simulant
 
 
 [role="lead"]
-Effectuez une analyse de préparation en cas de ransomware en simulant une attaque par ransomware sur un workload échantillon nouvellement créé. Ensuite, étudiez l'attaque simulée et restaurez la charge de travail de l'échantillon. Cette fonctionnalité vous aide à être sûr d'être préparé en cas d'attaque par ransomware réelle en testant les processus de notification d'alerte, de réponse et de restauration. Vous pouvez effectuer plusieurs exercices de préparation aux ransomwares.
+Exécutez un exercice de préparation aux attaques de rançongiciels en simulant une attaque sur un nouvel échantillon de charge de travail. Analysez l'attaque simulée et récupérez la charge de travail. Utilisez cette fonctionnalité pour tester les notifications d'alerte, la réponse et la récupération. Exécutez l'exercice aussi souvent que nécessaire.
 
 
-TIP: Les données réelles de vos workloads ne seront pas affectées.
+TIP: Vos données de charge de travail réelles ne sont pas affectées.
+
+Vous pouvez exécuter des exercices de préparation sur les charges de travail NFS et CIFS (SMB).
 
 
 
 == Configurez une exploration de la préparation à une attaque par ransomware
 
-Avant d'effectuer une simulation, vous devez configurer une exploration à l'aide de la page Paramètres. Vous pouvez facilement accéder à la page Paramètres à partir de l'option actions située près du menu supérieur.
+Avant de lancer une simulation, configurez un exercice sur la page Paramètres. Accédez à la page Paramètres depuis l'option Actions du menu supérieur.
+
+Vous devrez saisir un nom d'utilisateur et un mot de passe dans les situations suivantes :
+
+* Si des modifications du nom d'utilisateur ou du mot de passe ont eu lieu pour la machine virtuelle de stockage précédemment sélectionnée
+* Si vous sélectionnez une autre machine virtuelle de stockage CIFS (SMB)
+* Si vous entrez un nom de charge de travail de test différent
+
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
-. Dans le menu BlueXP ransomware protection, sélectionnez le vertical image:button-actions-vertical.png["Actions verticales"]... option en haut à droite.
-. Dans le menu déroulant, sélectionnez *exercice préparation* ou *Paramètres*.
+. Dans le menu de protection contre les ransomwares BlueXP, sélectionnez le bouton *Exécuter l'exercice de préparation* en haut à droite.
++
+image:screen-dashboard3.png["Page du tableau de bord affichant le bouton Exécuter l'exercice de préparation"]
+
 . Dans la carte de vérification de l'état de préparation de la page Paramètres, sélectionnez *configurer*.
 +
-La page configurer l'exercice de préparation s'affiche.
+BlueXP affiche la page Configurer l'exercice de préparation.
 
 +
 image:screen-settings-alert-drill-configure.png["Configurer la page d'exploration de la préparation"]
@@ -38,6 +51,7 @@ image:screen-settings-alert-drill-configure.png["Configurer la page d'exploratio
 .. Sélectionnez le connecteur BlueXP  que vous souhaitez utiliser pour l'exercice de préparation.
 .. Sélectionnez un environnement de travail de test.
 .. Sélectionner un SVM de stockage de test.
+.. Si vous avez sélectionné une machine virtuelle de stockage CIFS (SMB), les champs Nom d'utilisateur et Mot de passe s'affichent. Saisissez le nom d'utilisateur et le mot de passe de la machine virtuelle de stockage.
 .. Entrez le nom d'une nouvelle charge de travail test à créer. Ne pas inclure de tirets dans le nom.
 
 
@@ -53,15 +67,20 @@ TIP: Vous pouvez modifier la configuration de l'exercice de préparation ultéri
 
 Après avoir configuré l'exercice de préparation, vous pouvez démarrer l'exercice.
 
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
 Lorsque vous démarrez l'exercice de préparation, la protection contre les ransomware BlueXP  ignore le mode d'apprentissage et démarre l'exercice en mode actif. L'état de détection de la charge de travail est actif.
 
 
-TIP: Une charge de travail peut avoir un état de détection des ransomware *Learning mode* qui indique qu'une politique de détection des ransomware a été récemment affectée à la charge de travail et que le service analyse les charges de travail. Un état de détection de *Active* indique qu'une stratégie de protection contre les ransomware est attribuée.
+TIP: Une charge de travail peut avoir un statut de détection de ransomware *Mode d'apprentissage* lorsqu'une politique de détection est récemment attribuée et que le service analyse les charges de travail.
 
 .Étapes
 . Effectuez l'une des opérations suivantes :
 +
-** Dans le menu Paramètres de protection contre les ransomware de BlueXP , sélectionnez *exercice de préparation*, puis dans la page exercice de préparation, sélectionnez *Démarrer*.
+** Dans le menu de protection contre les ransomwares BlueXP, sélectionnez le bouton *Exécuter l'exercice de préparation* en haut à droite.
++
+image:screen-dashboard3.png["Page du tableau de bord affichant le bouton Exécuter l'exercice de préparation"]
+
 ** OU, à partir de la page Paramètres, dans la carte d'exercice de préparation, sélectionnez *Démarrer*.
 
 
@@ -77,10 +96,12 @@ NOTE: Une fois la foreuse commencée, vous ne pouvez pas modifier la configurati
 
 Testez votre niveau de préparation en répondant à une alerte de vérification de la préparation.
 
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *Alerts*.
 +
-La page alertes s'affiche. Dans la colonne Alert ID (ID d'alerte), « Readiness forer » (exercice de préparation) s'affiche en regard de l'ID.
+BlueXP affiche la page Alertes. Dans la colonne ID d'alerte, vous verrez « Exercice de préparation » à côté de l'ID.
 
 +
 image:screen-alerts-readiness.png["Page d'alertes affichant l'alerte d'exploration de l'état de préparation"]
@@ -120,7 +141,9 @@ Si le Type indique qu'un utilisateur est soupçonné d'une activité malveillant
 
 == Restaurer la charge de travail test
 
-Une fois que vous avez examiné l'alerte de l'exercice de préparation, vous pouvez restaurer la charge de travail de test.
+Après avoir examiné l’alerte d’exercice de préparation, restaurez la charge de travail de test si nécessaire.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 . Retournez à la page Détails de l'alerte.
@@ -141,10 +164,10 @@ Une fois que vous avez examiné l'alerte de l'exercice de préparation, vous pou
 
 . Dans la page Restaurer révision, sélectionnez *Restaurer*.
 +
-La page récupération affiche l'état de la restauration de l'exercice Readiness comme « en cours ».
+BlueXP affiche l'état de la restauration de l'exercice de préparation comme « En cours » sur la page de récupération.
 
 +
-Une fois la restauration terminée, l'état de la charge de travail passe à *restauré*.
+Une fois la restauration terminée, BlueXP modifie le statut de la charge de travail sur *Restauré*.
 
 . Vérifiez le workload restauré.
 
@@ -156,7 +179,9 @@ TIP: Pour plus de détails sur le processus de restauration, reportez-vous à li
 
 == Modifiez l'état des alertes après l'exercice de préparation
 
-Après avoir vérifié l'alerte de niveau de préparation et restauré la charge de travail, vous pouvez modifier l'état de l'alerte.
+Après avoir examiné l’alerte d’exercice de préparation et restauré la charge de travail, modifiez l’état de l’alerte si nécessaire.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 . Retournez à la page Détails de l'alerte.
@@ -178,6 +203,8 @@ IMPORTANT: Après avoir rejeté une attaque, vous ne pouvez plus la rechanter. S
 == Passez en revue les rapports sur l'exercice de préparation
 
 Une fois l'exercice de préparation terminé, vous pouvez consulter et enregistrer un rapport sur l'exercice.
+
+*Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet, administrateur de protection contre les ransomwares ou rôle de visualiseur de ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
 .Étapes
 . Dans le menu protection contre les ransomwares BlueXP, sélectionnez *Rapports*.

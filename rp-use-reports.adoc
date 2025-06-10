@@ -4,7 +4,7 @@ permalink: rp-use-reports.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: Avec la protection BlueXP contre les ransomwares, vous pouvez télécharger des rapports qui présentent les détails de la protection, des alertes et de la restauration, et les enregistrer sous . Fichiers CSV. 
 ---
-= Télécharger des rapports
+= Télécharger les rapports dans la protection contre les ransomwares BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,9 +14,12 @@ summary: Avec la protection BlueXP contre les ransomwares, vous pouvez télécha
 [role="lead"]
 Vous pouvez exporter les données de protection et télécharger les fichiers CSV ou JSON. Ceux-ci affichent les détails des exercices de préparation aux attaques, de protection, d'alertes et de restauration.
 
-Avant de télécharger les fichiers, vous devez actualiser les données, ce qui actualise également les données qui apparaîtront dans les fichiers.
 
-Vous pouvez télécharger des fichiers à partir de n'importe quelle option du menu principal :
+TIP: Avant de télécharger les fichiers, vous devez actualiser les données, ce qui actualise également les données qui apparaîtront dans les fichiers.
+
+*Rôle BlueXP requis* Rôle d'administrateur d'organisation, d'administrateur de dossier ou de projet, d'administrateur de protection contre les ransomwares ou de visualiseur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
+
+*Quelles données pouvez-vous télécharger ?* Vous pouvez télécharger des fichiers à partir de n'importe quelle option du menu principal :
 
 * *Protection* : contient l'état et les détails de toutes les charges de travail, y compris le nombre total de charges protégées et à risque.
 * *Alertes* : inclut l'état et les détails de toutes les alertes, y compris le nombre total d'alertes et de snapshots automatisés.
@@ -35,7 +38,7 @@ Les fichiers CSV ou JSON incluent les données de toutes les charges de travail 
 .Étapes
 . Dans le menu de navigation de gauche de BlueXP, sélectionnez *protection* > *protection contre les ransomware*.
 +
-image:screen-dashboard.png["Page de tableau de bord"]
+image:screen-dashboard3.png["Page de tableau de bord"]
 
 . Sur la page Tableau de bord ou autre, sélectionnez *Actualiser* image:button-refresh.png["Option d'actualisation"] dans le coin supérieur droit pour actualiser les données qui apparaîtront dans les rapports.
 . Effectuez l'une des opérations suivantes :
