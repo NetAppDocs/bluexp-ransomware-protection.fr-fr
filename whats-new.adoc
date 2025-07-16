@@ -18,6 +18,38 @@ Découvrez les nouveautés de la protection contre les ransomwares BlueXP.
 
 
 
+== 15 juillet 2025
+
+
+
+=== Prise en charge de la charge de travail SAN
+
+Cette version inclut la prise en charge des charges de travail SAN dans la BlueXP ransomware protection. Vous pouvez désormais protéger les charges de travail SAN en plus des charges de travail NFS et CIFS.
+
+Pour plus d'informations, reportez-vous link:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-prerequisites.html["Protection BlueXP contre les ransomware requise"]à .
+
+
+
+=== Protection améliorée de la charge de travail
+
+Cette version inclut un workflow amélioré pour la protection des charges de travail, avec ou sans protection des données. Si vous utilisez d'autres outils de protection des données NetApp , tels que SnapCenter ou la BlueXP backup and recovery , pour vos snapshots ou sauvegardes, la BlueXP ransomware protection BlueXP ransomware protection ou continuer à utiliser les politiques existantes.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["Protégez les workloads"] .
+
+
+
+=== Notifications par e-mail
+
+Si la BlueXP ransomware protection détecte une attaque potentielle, une notification apparaît dans les notifications BlueXP et un e-mail est envoyé à l'adresse e-mail configurée. Le service lance également immédiatement un instantané.
+
+À ce stade, vous devez consulter l'e-mail, qui répertorie la gravité et les ressources affectées et examiner le risque potentiel dans l'onglet *Alertes* de BlueXP ransomware protection .
+
+Si vous avez configuré une gestion de la sécurité et des événements (SIEM) dans la BlueXP ransomware protection, le service envoie les détails des alertes à votre système SIEM.
+
+Pour plus de détails, reportez-vous à https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Gérer les alertes de ransomware détectées"] .
+
+
+
 == 9 juin 2025
 
 

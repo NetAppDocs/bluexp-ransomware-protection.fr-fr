@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rp-use-protect.html 
-keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, protect, malware, attack 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
 summary: Vous pouvez protéger vos workloads contre les attaques par ransomware en définissant des règles à un workload dans la solution de protection BlueXP. 
 ---
 = Protégez les charges de travail avec les stratégies de protection contre les ransomwares BlueXP
@@ -16,53 +16,50 @@ Vous pouvez protéger les charges de travail contre les attaques de ransomware e
 
 *Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou rôle d'administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
-*Comment pouvez-vous protéger les charges de travail ?* La protection des charges de travail avec la protection contre les ransomwares BlueXP comprend les tâches suivantes :
-
-* Bénéficiez d'une protection cohérente avec les charges de travail, qui fonctionne avec le logiciel SnapCenter ou le plug-in SnapCenter pour VMware vSphere.
-* Créez ou gérez des stratégies de protection contre les ransomware, notamment des règles que vous créez pour les copies Snapshot, les sauvegardes et la protection contre les ransomware (connues sous le nom de _règles de détection_).
-* Importez une stratégie et ajustez-la.
-* Regroupez les partages de fichiers pour simplifier la protection des workloads au lieu de les protéger individuellement.
-* Supprimez une stratégie de protection contre les ransomware.
 
 
-*Quels services sont utilisés dans la protection?* Les services suivants peuvent être utilisés pour gérer les règles de protection. Les informations de protection de ces services sont disponibles dans BlueXP  ransomware protection :
+== Comprendre les stratégies de BlueXP ransomware protection
+
+Les stratégies de BlueXP ransomware protection englobent à la fois des politiques de _détection_ et de _protection_.
+
+* **Les politiques de détection** détectent les menaces de ransomware et bloquent éventuellement les extensions de fichiers suspectes.
+* **Les politiques de protection** incluent les politiques de capture instantanée et de sauvegarde. Les politiques de détection et de capture instantanée sont obligatoires dans une stratégie de protection. Les politiques de sauvegarde sont facultatives.
++
+Si vous utilisez d'autres produits NetApp pour protéger votre charge de travail, la BlueXP ransomware protection les découvre et offre la possibilité de :
+
++
+** utiliser une politique de détection de ransomware et continuer à utiliser les politiques de snapshot et de sauvegarde créées par d'autres outils NetApp , ou
+** utilisez la BlueXP ransomware protection pour gérer la détection, les instantanés et les sauvegardes.
+
+
+
+
+
+TIP: Pour une gestion et une protection améliorées de votre parc de données, vous pouvez créer link:#group-file-shares-for-easier-protection["partages de fichiers de groupe"] pour protéger collectivement les volumes dans le cadre d'une stratégie unique.
+
+
+
+=== Politiques de protection avec d'autres services gérés par NetApp
+
+Au-delà de la BlueXP ransomware protection, les services suivants peuvent être utilisés pour gérer la protection :
 
 * Sauvegarde et restauration BlueXP  pour les partages de fichiers et les partages de fichiers de machines virtuelles
 * SnapCenter pour VMware pour les datastores de VM
 * SnapCenter pour Oracle et MySQL
 
 
+Les informations de protection de ces services apparaissent dans la BlueXP ransomware protection. Vous pouvez ajouter des stratégies de détection à ces services avec la BlueXP ransomware protection. L'ajout d'une stratégie de protection avec la BlueXP ransomware protection remplace les stratégies de protection existantes.
 
-
-== Règles de protection
-
-Il peut être utile de consulter des informations sur les stratégies de protection que vous pouvez modifier et sur les types de stratégies qui figurent dans une stratégie de protection.
-
-*Quelles politiques de protection pouvez-vous modifier ?*
-
-Vous pouvez modifier des règles de protection en fonction de la protection des workloads dont vous disposez :
-
-* *Charges de travail non protégées par les applications NetApp* : ces charges de travail ne sont pas gérées par SnapCenter, le plug-in SnapCenter pour VMware vSphere ou la sauvegarde et restauration BlueXP . Des snapshots peuvent être effectués dans ces workloads avec ONTAP ou d'autres produits. Si la protection ONTAP FPolicy est en place, vous pouvez la modifier à l'aide de ONTAP.
-* *Charges de travail avec protection existante par les applications NetApp* : ces charges de travail disposent de stratégies de sauvegarde ou de snapshot gérées par SnapCenter, SnapCenter pour VMware vSphere ou la sauvegarde et la restauration BlueXP .
-+
-** Si les snapshots ou les politiques de sauvegarde sont gérés par SnapCenter, SnapCenter pour VMware ou la sauvegarde et la restauration BlueXP , ils continueront à être gérés par ces applications. Avec la protection contre les ransomware de BlueXP , vous pouvez également appliquer une stratégie de détection des ransomwares à ces workloads.
-** Si une politique de détection des ransomware est gérée par la protection anti-ransomware autonome (ARP ou ARP/ai, selon la version de ONTAP) et FPolicy dans ONTAP, ces workloads sont protégés et continueront à être gérés par ARP et FPolicy.
-
-
-
+Si une politique de détection de ransomware est gérée par Autonomous Ransomware Protection (ARP ou ARP/AI, selon la version ONTAP ) et FPolicy dans ONTAP, ces charges de travail sont protégées et continueront d'être gérées par ARP et FPolicy.
 
 
 NOTE: Les destinations de sauvegarde ne sont pas disponibles pour les workloads dans Amazon FSX pour NetApp ONTAP. Effectuez les opérations de sauvegarde à l'aide du service de sauvegarde FSX pour ONTAP. Vous définissez des règles de sauvegarde pour les workloads dans FSX pour ONTAP dans AWS, et non dans la protection contre les ransomware de BlueXP . Les politiques de sauvegarde apparaissent dans la protection contre les ransomwares de BlueXP  et restent inchangées par rapport à AWS.
 
-*Quelles sont les politiques requises dans une stratégie de protection contre les ransomware ?*
-
-Les règles suivantes sont requises dans la stratégie de protection contre les ransomwares :
-
-* Politique de détection des ransomwares
-* Règle Snapshot
 
 
-Aucune règle de sauvegarde n'est requise dans la stratégie de protection contre les ransomwares de BlueXP .
+=== Politiques de protection pour les charges de travail non protégées par les applications NetApp
+
+Si votre charge de travail n'est pas gérée par la BlueXP backup and recovery, la BlueXP ransomware protection, SnapCenter ou le SnapCenter Plug-in for VMware vSphere, des instantanés peuvent être pris dans le cadre d' ONTAP ou d'autres produits. Si la protection ONTAP FPolicy est en place, vous pouvez la modifier à l'aide de ONTAP.
 
 
 
@@ -71,8 +68,9 @@ Aucune règle de sauvegarde n'est requise dans la stratégie de protection contr
 L'une des premières étapes de la protection des charges de travail consiste à consulter vos charges de travail actuelles et leur état de protection. Vous pouvez voir les types de charges de travail suivants :
 
 * Workloads applicatifs
-* Workloads de VM
+* Bloquer les charges de travail
 * Workloads de partage de fichiers
+* Workloads de VM
 
 
 .Étapes
@@ -90,11 +88,11 @@ image:screen-protection.png["Page protection"]
 
 
 
-NOTE: Pour les charges de travail qui disposent déjà d'une règle de protection avec le service de sauvegarde et de restauration SnapCenter ou BlueXP, vous ne pouvez pas modifier la protection. Pour ces workloads, le ransomware BlueXP  permet la protection autonome contre les ransomwares et FPolicy s'ils sont déjà activés dans d'autres services. En savoir plus sur https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^], https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Sauvegarde et restauration BlueXP"^]et https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^].
+NOTE: Voir link:#add-a-ransomware-protection-strategy["Ajouter une stratégie de protection contre les ransomwares"] pour en savoir plus sur l'utilisation de la BlueXP ransomware protection lorsqu'il existe une politique de protection existante avec SnapCenter ou le service de BlueXP backup and recovery .
 
 
 
-=== Détails de la protection sur la page protection
+=== Comprendre la page Protection
 
 La page protection affiche les informations suivantes sur la protection des charges de travail :
 
@@ -138,7 +136,7 @@ La protection contre les ransomwares BlueXP attribue une importance ou une prior
 * *Standard*: Copies snapshot prises plus de 1 par jour
 
 
-*Politiques de détection prédéfinies*
+*Politiques de détection prédéfinies* [[prédéfinies]]
 
 Vous pouvez choisir l'une des règles de protection anti-ransomware prédéfinies de BlueXP  suivantes, adaptées à l'importance des workloads :
 
@@ -232,7 +230,7 @@ Pour en savoir plus sur l'enregistrement de SnapCenter ou du plug-in SnapCenter 
 
 . Suivez les informations pour enregistrer le plug-in SnapCenter ou SnapCenter pour l'hôte VMware vSphere à l'aide de la sauvegarde et de la restauration BlueXP.
 . Revenez à la protection BlueXP contre les ransomware.
-. Depuis la protection BlueXP contre les ransomwares, accédez au tableau de bord et relancez le processus de détection.
+. À partir de la BlueXP ransomware protection, accédez au tableau de bord et relancez le processus de découverte.
 . Depuis la protection BlueXP contre les ransomware, sélectionnez *protection* pour afficher la page protection.
 . Consultez les détails de la colonne snapshot and backup policies de la page protection pour voir si les règles sont gérées ailleurs.
 
@@ -241,16 +239,35 @@ Pour en savoir plus sur l'enregistrement de SnapCenter ou du plug-in SnapCenter 
 
 == Ajouter une stratégie de protection contre les ransomwares
 
-Vous pouvez ajouter une stratégie de protection contre les ransomwares à vos workloads. La façon dont vous procédez dépend si les règles de snapshot et de sauvegarde existent déjà :
+Il existe trois approches pour ajouter une stratégie de protection contre les ransomwares :
 
-* *Créez une stratégie de protection contre les ransomware si vous n'avez pas de stratégie de snapshot ou de sauvegarde*. Si des snapshots ou des règles de sauvegarde n'existent pas sur le workload, vous pouvez créer une stratégie de protection contre les ransomware, qui peut inclure les règles suivantes que vous créez dans BlueXP  de protection contre les ransomware :
+* **Créez une stratégie de protection contre les ransomwares si vous n'avez pas de politiques de snapshot ou de sauvegarde.**
++
+La stratégie de protection contre les ransomwares comprend :
+
 +
 ** Règle Snapshot
-** Politique de sauvegarde
 ** Politique de détection des ransomwares
+** Politique de sauvegarde
 
 
-* *Créez une stratégie de détection pour les charges de travail qui ont déjà des stratégies de snapshot et de sauvegarde*, qui sont gérées dans d'autres produits ou services NetApp. La politique de détection ne modifie pas les politiques gérées dans d'autres produits.
+* **Remplacez les stratégies de capture instantanée ou de sauvegarde existantes de SnapCenter ou de protection de BlueXP backup and recovery par des stratégies de protection gérées par la BlueXP ransomware protection.**
++
+La stratégie de protection contre les ransomwares comprend :
+
++
+** Règle Snapshot
+** Politique de détection des ransomwares
+** Politique de sauvegarde
+
+
+* *Créez une politique de détection pour les charges de travail avec des politiques de snapshot et de sauvegarde existantes gérées dans d'autres produits ou services NetApp .*
++
+La politique de détection ne modifie pas les politiques gérées dans d’autres produits.
+
++
+La politique de détection active la protection autonome contre les ransomwares et la protection FPolicy si elles sont déjà activées dans d'autres services. En savoir plus link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Protection autonome contre les ransomwares"^] , link:https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Sauvegarde et restauration BlueXP"^] , et link:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^] .
+
 
 
 
@@ -264,12 +281,12 @@ Si des snapshots ou des règles de sauvegarde n'existent pas sur le workload, vo
 * Politique de détection des ransomwares
 
 
-.Étapes de création d'une stratégie de protection contre les ransomwares
+.Étapes pour créer une stratégie de protection contre les ransomwares [[étapes]]
 . Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
 +
 image:screen-protection.png["Page gérer la stratégie"]
 
-. Dans la page protection, sélectionnez *gérer les stratégies de protection*.
+. Depuis la page Protection, sélectionnez une charge de travail puis *Protéger*.
 +
 image:screen-protection-strategy.png["Gérer les stratégies"]
 
@@ -296,7 +313,7 @@ Si vous souhaitez modifier les extensions de fichier bloquées, modifiez-les dan
 
 ** *Politique Snapshot* :
 +
-*** *Nom de la base de règles de snapshot* : sélectionnez une stratégie ou sélectionnez *Créer* et entrez un nom pour la stratégie de snapshot.
+*** *Nom de base de la politique d'instantané* : sélectionnez une politique ou sélectionnez *Créer* et saisissez un nom pour la politique d'instantané.
 *** *Verrouillage Snapshot* : activez cette option pour verrouiller les copies Snapshot sur le stockage primaire afin qu'elles ne puissent pas être modifiées ou supprimées pendant un certain temps, même si une attaque par ransomware parvient à se rendre à la destination du stockage de sauvegarde. On parle également de _stockage immuable_. Cela permet une restauration plus rapide.
 +
 Lorsqu'un snapshot est verrouillé, la durée d'expiration du volume est définie sur l'heure d'expiration de la copie Snapshot.
@@ -324,63 +341,72 @@ TIP: Pour activer le verrouillage des sauvegardes sur le stockage secondaire, co
 
 
 
-=== Ajoutez une stratégie de détection aux charges de travail qui disposent déjà de règles de snapshots et de sauvegarde
+=== Ajoutez une politique de détection aux charges de travail avec des politiques de snapshot et de sauvegarde existantes gérées par SnapCenter ou la BlueXP backup and recovery
 
-Avec la protection BlueXP  contre les ransomware, vous pouvez attribuer une stratégie de détection des ransomwares à des workloads qui disposent déjà de copies Snapshot et de politiques de sauvegarde, gérées par d'autres produits ou services NetApp. La politique de détection ne modifie pas les politiques gérées dans d'autres produits.
+La BlueXP ransomware protection vous permet d'attribuer une politique de détection ou de protection aux charges de travail disposant d'une protection existante par snapshots et sauvegardes gérée par d'autres produits ou services NetApp . D'autres services, tels que la BlueXP backup and recovery et SnapCenter, utilisent des politiques qui régissent les snapshots, la réplication vers un stockage secondaire ou les sauvegardes vers un stockage objet.
 
-D'autres services, tels que la sauvegarde et la restauration BlueXP et SnapCenter, utilisent les types de règles suivants pour régir les charges de travail :
 
-* Règles régissant les snapshots
-* Règles régissant la réplication sur le stockage secondaire
-* Règles régissant les sauvegardes vers le stockage objet
 
+==== Ajouter une politique de détection aux charges de travail avec des politiques de sauvegarde ou de snapshot existantes
+
+Si vous disposez déjà de stratégies de sauvegarde ou d'instantanés avec BlueXP backup and recovery ou SnapCenter, vous pouvez ajouter une stratégie pour détecter les attaques de rançongiciels. Pour gérer la protection et la détection avec BlueXP ransomware protection, consultez la section <<protection,Protégez-vous avec la BlueXP ransomware protection>> .
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
 +
 image:screen-protection.png["Page gérer la stratégie"]
 
-. Dans la page protection, sélectionnez une charge de travail et sélectionnez *protéger*.
+. Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
+. La BlueXP ransomware protection détecte s'il existe des politiques de sauvegarde et de récupération SnapCenter ou BlueXP backup and recovery actives.
+. Pour conserver vos politiques de BlueXP backup and recovery ou SnapCenter existantes et appliquer uniquement une politique de _détection_, laissez la case **Remplacer les politiques existantes** décochée.
+. Pour voir les détails des politiques SnapCenter , sélectionnez la *flèche vers le bas*.
 +
-La page protéger affiche les règles gérées par le logiciel SnapCenter, SnapCenter pour VMware vSphere et la sauvegarde et restauration BlueXP.
+Sélectionnez une politique de détection, puis sélectionnez **Protéger**.
 
+. Sur la page Protection, vérifiez l'**état de détection** pour confirmer que la détection est active.
+
+
+
+
+==== Remplacez les politiques de sauvegarde ou de snapshot existantes par une stratégie de BlueXP ransomware protection
+
+Vous pouvez remplacer vos stratégies de sauvegarde ou de snapshot existantes par une stratégie de BlueXP ransomware protection . Cette approche supprime votre protection gérée en externe et configure la détection et la protection dans la BlueXP ransomware protection.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
 +
-L'exemple suivant montre les règles gérées par SnapCenter :
+image:screen-protection.png["Page gérer la stratégie"]
 
-+
-image:screen-protect-sc-policies.png["Page protéger affichant les règles SnapCenter"]
-
-+
-L'exemple suivant montre les règles gérées par BlueXP Backup and Recovery :
-
-+
-image:screen-protect-br-policies.png["Page protéger affichant les politiques de sauvegarde et de restauration BlueXP"]
-
-. Pour afficher les détails des politiques gérées ailleurs, cliquez sur la flèche *Bas*.
-. Pour appliquer une stratégie de détection en plus des règles de snapshot et de sauvegarde gérées ailleurs, sélectionnez la règle de détection.
-. Sélectionnez *protéger*.
-. Sur la page protection, consultez la colonne politique de détection pour voir la stratégie de détection attribuée. Par ailleurs, la colonne snapshot et backup policies affiche le nom du produit ou service qui gère les règles.
+. Depuis la page Protection, sélectionnez une charge de travail, puis sélectionnez *Protéger*.
+. La BlueXP ransomware protection détecte la présence de stratégies de BlueXP backup and recovery ou de stratégies SnapCenter actives. BlueXP backup and recovery SnapCenter ces stratégies, cochez la case **Remplacer les stratégies existantes**. Lorsque vous cochez cette case, la BlueXP ransomware protection remplace la liste des stratégies de détection par des stratégies de détection.
+. Choisissez une politique de protection. Si aucune politique de protection n'existe, sélectionnez **Ajouter** pour en créer une. Pour plus d'informations sur la création d'une politique, consultez la section <<steps,Créer une règle de protection>> . Sélectionnez **Suivant**.
+. Sélectionnez une destination de sauvegarde ou créez-en une nouvelle. Sélectionnez **Suivant**.
+. Passez en revue la nouvelle stratégie de protection, puis sélectionnez **Protéger** pour l’appliquer.
+. Sur la page Protection, vérifiez l'**état de détection** pour confirmer que la détection est active.
 
 
 
 
 === Attribuez une autre stratégie
 
-Vous pouvez attribuer une stratégie de protection différente en remplacement de la stratégie actuelle.
+Vous pouvez remplacer la politique existante par une autre.
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
 . Dans la page protection, sur la ligne charge de travail, sélectionnez *Modifier la protection*.
-. Dans la page stratégies, cliquez sur la flèche vers le bas de la stratégie que vous souhaitez affecter pour examiner les détails.
+. Si la charge de travail dispose d'une stratégie de BlueXP backup and recovery ou SnapCenter existante que vous souhaitez conserver, décochez la case **Remplacer les stratégies existantes**. Pour remplacer les stratégies existantes, cochez la case **Remplacer les stratégies existantes**.
+. Dans la page Politiques, sélectionnez la flèche vers le bas correspondant à la politique que vous souhaitez attribuer pour consulter les détails.
 . Sélectionnez la stratégie à attribuer.
-. Sélectionnez *Protect* pour terminer la modification.
+. Sélectionnez *Protéger* pour terminer la modification.
 
 
 
 
 == Regroupez les partages de fichiers pour simplifier la protection
 
-Le regroupement des partages de fichiers simplifie la protection de votre patrimoine de données. Ce service peut protéger simultanément tous les volumes d'un groupe au lieu de protéger chaque volume séparément.
+Regrouper les partages de fichiers dans un groupe de protection simplifie la protection de votre parc de données. Le service peut protéger simultanément tous les volumes d'un groupe plutôt que chaque volume séparément.
+
+Vous pouvez créer des groupes quel que soit leur statut de protection (c'est-à-dire des groupes protégés ou non). Lorsque vous ajoutez une politique de protection à un groupe de protection, la nouvelle politique remplace toute politique existante, y compris les politiques gérées par BlueXP backup and recovery et SnapCenter.
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
@@ -396,22 +422,6 @@ image:screen-protection-groups.png["Page groupes de protection"]
 image:screen-protection-groups-add.png["Ajouter une page de groupe de protection"]
 
 . Entrez un nom pour le groupe de protection.
-. Effectuez l'une des opérations suivantes :
-+
-.. Si vous avez déjà mis en place des règles de protection, indiquez si vous souhaitez regrouper les charges de travail selon qu'elles sont gérées par l'une des méthodes suivantes :
-+
-*** Protection BlueXP contre les ransomware
-*** Sauvegarde et restauration SnapCenter ou BlueXP 
-
-
-.. Si vous ne disposez pas encore de règles de protection, la page affiche les stratégies préconfigurées de protection contre les ransomware.
-+
-... Choisissez-en un pour protéger votre groupe et sélectionnez *Suivant*.
-... Si la charge de travail que vous avez choisie comporte des volumes dans plusieurs environnements de travail, sélectionnez la destination de sauvegarde pour les différents environnements de travail afin qu'ils puissent être sauvegardés dans le cloud.
-
-
-
-
 . Sélectionnez les charges de travail à ajouter au groupe.
 +
 
@@ -421,10 +431,25 @@ TIP: Pour plus d'informations sur les charges de travail, faites défiler vers l
 +
 image:screen-protection-groups-policy.png["Ajouter un groupe de protection - page Stratégie"]
 
-. Sélectionnez la stratégie qui régira la protection de ce groupe.
+. Sélectionnez la politique qui régira la protection de ce groupe.
 . Sélectionnez *Suivant*.
 . Passez en revue les sélections pour le groupe de protection.
 . Sélectionnez *Ajouter*.
+
+
+
+
+=== Modifier la protection de groupe
+
+Vous pouvez modifier la stratégie de détection d'un groupe existant.
+
+.Étapes
+. Dans le menu BlueXP ransomware protection, sélectionnez *protection*.
+. Depuis la page Protection, sélectionnez l'onglet *Groupes de protection* puis sélectionnez le groupe dont vous souhaitez modifier la politique.
+. Depuis la page d'aperçu du groupe de protection, sélectionnez *Modifier la protection*.
+. Sélectionnez une politique de protection existante à appliquer ou cliquez sur **Ajouter** pour en créer une. Pour plus d'informations sur l'ajout d'une politique de protection, consultez : <<steps,Créer une règle de protection>> . Sélectionnez ensuite **Enregistrer**.
+. Dans l'aperçu de la destination de sauvegarde, sélectionnez une destination de sauvegarde existante ou **Ajoutez une nouvelle destination de sauvegarde**.
+. Sélectionnez **Suivant** pour examiner vos modifications.
 
 
 
@@ -485,7 +510,7 @@ La page stratégies de protection contre les ransomware affiche une liste de str
 +
 image:screen-protection-strategy-list.png["Écran des stratégies de protection contre les ransomwares affichant une liste de stratégies"]
 
-. Sur la page stratégies de protection contre les ransomwares, dans la colonne workloads protégés, cliquez sur la flèche vers le bas à la fin de la ligne.
+. Sur la page Stratégies de protection contre les ransomwares dans la colonne Charges de travail protégées, sélectionnez la flèche vers le bas à la fin de la ligne.
 
 
 

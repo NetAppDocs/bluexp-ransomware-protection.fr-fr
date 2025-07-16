@@ -103,7 +103,7 @@ L'administrateur du stockage de sécurité peut restaurer les données à diffé
 * Restaurez vos données à partir d'un datastore au niveau d'une VM.
 
 
-Le processus diffère légèrement selon le type de charge de travail.
+Le processus diffère selon le type de charge de travail.
 
 .Étapes
 . Dans le menu BlueXP ransomware protection, sélectionnez *Recovery*.
@@ -115,6 +115,10 @@ Le processus diffère légèrement selon le type de charge de travail.
 ** Tous volumes
 ** Par volume
 ** Par fichier : vous pouvez spécifier un dossier ou des fichiers individuels à restaurer.
++
+
+IMPORTANT: Pour les charges de travail SAN, vous ne pouvez restaurer que par charge de travail.
+
 +
 
 TIP: Vous pouvez sélectionner jusqu'à 100 fichiers ou un seul dossier.

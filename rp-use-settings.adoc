@@ -12,7 +12,7 @@ summary: Vous pouvez configurer plusieurs options, notamment la destination de l
 
 
 [role="lead"]
-Vous pouvez configurer les destinations de sauvegarde, activer la détection des menaces, effectuer une étude de préparation aux attaques, configurer la détection des charges de travail ou configurer la connexion à la sécurité de la charge de travail de Data Infrastructure Insights en accédant à l'option *Settings*.
+Vous pouvez configurer des destinations de sauvegarde, envoyer des données à un système externe de gestion de la sécurité et des événements (SIEM), effectuer un exercice de préparation aux attaques, configurer la découverte de la charge de travail ou configurer la connexion à la sécurité de la charge de travail Data Infrastructure Insights en accédant à l'option *Paramètres*.
 
 *Rôle BlueXP requis* Administrateur d'organisation, administrateur de dossier ou de projet ou rôle d'administrateur de protection contre les ransomwares.  https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["En savoir plus sur les rôles d'accès BlueXP pour tous les services"^] .
 
@@ -22,7 +22,7 @@ Vous pouvez configurer les destinations de sauvegarde, activer la détection des
 * Configurer la détection des charges de travail.
 * Configurez la connexion au système de sécurité des workloads Data Infrastructure Insights pour voir les informations concernant les utilisateurs suspects dans des alertes de ransomware.
 * Ajouter une destination de sauvegarde.
-* Activez la détection des menaces et connectez votre système de sécurité et de gestion des événements (SIEM) pour l'analyse et la détection des menaces. L'activation de la détection des menaces envoie automatiquement des données à votre SIEM pour analyse des menaces.
+* Connectez votre système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces. L'activation de la détection des menaces envoie automatiquement des données à votre SIEM pour analyse des menaces.
 
 
 
@@ -315,7 +315,7 @@ image:screen-settings-backup-destinations-list2.png["Page destinations de sauveg
 
 
 
-== Activer la détection des menaces
+== Connectez-vous à un système de gestion de la sécurité et des événements (SIEM) pour l'analyse et la détection des menaces
 
 Vous pouvez envoyer automatiquement des données à votre système de gestion de la sécurité et des événements (SIEM) à des fins d'analyse et de détection des menaces. Vous pouvez sélectionner AWS Security Hub, Microsoft Sentinel ou Splunk Cloud en tant que système SIEM.
 
