@@ -157,9 +157,7 @@ image:diagram-rp-architecture-preview3.png["Schéma de l'architecture de protect
 
 == Cibles de sauvegarde, environnements de travail et sources de données de charge de travail pris en charge
 
-Utilisez la BlueXP ransomware protection pour voir dans quelle mesure vos données sont résilientes à une cyberattaque sur les types de cibles de sauvegarde, d'environnements de travail et de sources de données de charge de travail suivants :
-
-Le ransomware BlueXP prend en charge les environnements de travail et les destinations de sauvegarde suivants :
+Le ransomware BlueXP prend en charge les cibles de sauvegarde, les environnements de travail et les sources de données suivants :
 
 *Cibles de sauvegarde prises en charge*
 
