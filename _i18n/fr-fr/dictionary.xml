@@ -210,8 +210,6 @@ La protection contre les ransomwares BlueXP ne nécessite aucune activation. L'o
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
   <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
-  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Cloud Volumes Service pour Google Cloud</block>
-  <block id="cf14bff66a8b72d3675db8ffe0f02ee3" category="list-text"><block ref="cf14bff66a8b72d3675db8ffe0f02ee3" category="inline-link-macro-rx"></block></block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Présentation de l'inscription au support</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Il existe deux types d'inscription pour activer les droits d'assistance :</block>
   <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">Il sert d'ID d'abonnement unique pour tous les services de BlueXP. Chaque abonnement au support BlueXP au niveau du compte doit être enregistré.</block>
@@ -1893,4 +1891,6 @@ Reportez-vous à la section <block ref="2d12612123ced7dcaea608fc8db14aca" catego
   <block id="a411a37a314e9f2b77d0a4559ae70ea2" category="admonition">Si vous ne disposez pas d'une licence pour la sécurité de la charge de travail de l'infrastructure de données et que vous ne l'activez pas dans la BlueXP ransomware protection, vous ne verrez pas les informations sur le comportement anormal des utilisateurs.</block>
   <block id="05526b7ad3e4bf2881f5ccf1a99ea6c2" category="paragraph">Vous pouvez ignorer les faux positifs ou décider de restaurer vos données immédiatement. Si vous ignorez l'alerte, le service apprend ce comportement, l'associe aux opérations normales et ne déclenche plus d'alerte sur un tel comportement.</block>
   <block id="a815e68282b1aa9bd3ce4985ebc97a8f" category="paragraph">Le ransomware BlueXP prend en charge les cibles de sauvegarde, les environnements de travail et les sources de données suivants :</block>
+  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
+  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
 </blocks>
