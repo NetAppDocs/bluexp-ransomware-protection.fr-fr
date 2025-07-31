@@ -222,8 +222,6 @@ La protection contre les ransomwares BlueXP ne nécessite aucune activation. L'o
   <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Sélectionnez *informations d'identification utilisateur*.</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Sélectionnez *Ajouter des informations d'identification NSS* et suivez l'invite authentification du site de support NetApp (NSS).</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Pour confirmer que le processus d'enregistrement a réussi, sélectionnez l'icône aide et sélectionnez *support*.</block>
-  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Capture d'écran affichant un numéro de série de compte, une case à cocher verte et le texte enregistré pour le support.</block>
-  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Client existant mais aucun compte NSS</block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Si vous possédez déjà des licences et des numéros de série NetApp, mais que vous possédez un compte NSS, vous devez créer un compte NSS et l'associer à votre connexion BlueXP.</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulaire d'inscription de l'utilisateur du site de support NetApp</block>
@@ -306,7 +304,6 @@ La protection contre les ransomwares BlueXP ne nécessite aucune activation. L'o
   <block id="52ba8ac12050d2494572b940a0d65b25" category="list-text"><block ref="52ba8ac12050d2494572b940a0d65b25" category="inline-link-rx"></block></block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp prend en charge BlueXP de plusieurs façons. De nombreuses options d'auto-assistance gratuites sont disponibles 24 h/24 et 7 j/7, comme des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut un support technique à distance via la création de tickets en ligne.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenez de l'aide</block>
-  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp prend en charge BlueXP et ses services cloud de différentes manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24 h/24 et 7 j/7, comme des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut un support technique à distance via la création de tickets en ligne.</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Bénéficiez du support pour les services de fichiers d'un fournisseur cloud</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Pour obtenir de l'aide concernant un service de fichiers d'un fournisseur cloud, son infrastructure ou toute solution utilisant le service, consultez la section « obtention d'aide » de la documentation BlueXP associée à ce produit.</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Pour bénéficier du support technique spécifique à BlueXP et à ses solutions et services de stockage, utilisez les options de support décrites ci-dessous.</block>
@@ -1893,4 +1890,22 @@ Reportez-vous à la section <block ref="2d12612123ced7dcaea608fc8db14aca" catego
   <block id="a815e68282b1aa9bd3ce4985ebc97a8f" category="paragraph">Le ransomware BlueXP prend en charge les cibles de sauvegarde, les environnements de travail et les sources de données suivants :</block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
   <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
+  <block id="7e15fa4f52a2b2bbe9c0fde780818748" category="paragraph-title">À propos des données d'événement envoyées à un SIEM</block>
+  <block id="c3ea2ea9eda0d30909acf8f3da44184e" category="paragraph">La BlueXP ransomware protection peut envoyer les données d’événement suivantes à votre système SIEM :</block>
+  <block id="5976a11ab4dca8b4245edb915c6dfbd7" category="list-text">*contexte*:</block>
+  <block id="c01e6c1876fd41a917ea803c3ef48d66" category="list-text">*os*: Il s'agit d'une constante avec la valeur ONTAP.</block>
+  <block id="4ce1af6db0b7df02b195e4f7c30882be" category="list-text">*os_version* : la version d' ONTAP exécutée sur l'environnement de travail.</block>
+  <block id="25a4742d179cd759793bc39ccefdd462" category="list-text">*connector_id* : L'ID du connecteur gérant l'environnement de travail.</block>
+  <block id="41666dddb2dd6789196dfc1183e219c8" category="list-text">*cluster_id* : l'ID de cluster signalé par ONTAP pour l'environnement de travail.</block>
+  <block id="262ebd5abbf16e73f5fabe65a492b6fc" category="list-text">*svm_name* : Le nom du SVM où l'alerte a été trouvée.</block>
+  <block id="481c8fc04854f327e5cb7147753f228f" category="list-text">*volume_name* : Le nom du volume sur lequel l'alerte est trouvée.</block>
+  <block id="293f7fc5e89030b45a78f1244c3fa921" category="list-text">*volume_id* : l'ID du volume signalé par ONTAP pour l'environnement de travail.</block>
+  <block id="fbc1ce5001bb72336a31bd6789ea9410" category="list-text">*incident*:</block>
+  <block id="d9302760dcf4ba292a94a28e1de80e58" category="list-text">*incident_id* : l'ID d'incident généré par la BlueXP ransomware protection pour le volume attaqué dans le service.</block>
+  <block id="fc971b044a752949d181c3330f8b3e64" category="list-text">*alert_id* : l'ID généré par la BlueXP ransomware protection pour la charge de travail.</block>
+  <block id="09471f7939b8b27b32ee107cd9b1c44b" category="list-text">*gravité* : L'un des niveaux d'alerte suivants : « CRITIQUE », « ÉLEVÉ », « MOYEN », « FAIBLE ».</block>
+  <block id="6f51b5c965cb508d8d37085592031c21" category="list-text">*description* : Détails sur l'alerte détectée, par exemple : « Une attaque potentielle de rançongiciel détectée sur la charge de travail arp_learning_mode_test_2630 »</block>
+  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">NetApp propose une assistance pour BlueXP et ses services cloud de différentes manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24h/24 et 7j/7, telles que des articles de la base de connaissances et un forum communautaire. Votre inscription au support inclut une assistance technique à distance via un ticket web.</block>
+  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">Une capture d'écran qui montre un numéro de série de compte, une case à cocher verte et le texte Enregistré pour l'assistance.</block>
+  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
